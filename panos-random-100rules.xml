@@ -1,0 +1,1505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Project A - PAN-OS Random Import-Ready Ruleset
+  LLM-based Firewall Rule Compliance Analysis
+
+  Generated  : 2026-03-29 14:38:34
+  Seed       : 1
+  Total rules: 100
+  Perfect    : 60
+  Collisions : 20
+  Redundant  : 20
+
+  Zone layout:
+    Internal  - 10.0.1.0/24
+    DMZ       - 10.0.2.0/24
+    External  - any
+
+  To reproduce this ruleset use seed: 1
+
+  IMPORT INSTRUCTIONS:
+  1. scp this file to admin@<firewall-ip>:/tmp/
+  2. ssh admin@<firewall-ip>
+  3. load config from <filename>
+  4. show rulebase security rules
+  5. commit
+-->
+<config version="10.1.0" urldb="paloaltonetworks">
+  <devices>
+    <entry name="localhost.localdomain">
+      <vsys>
+        <entry name="vsys1">
+
+          <address>
+            <entry name="Internal-Subnet">
+              <ip-netmask>10.0.1.0/24</ip-netmask>
+              <description>Internal LAN</description>
+            </entry>
+            <entry name="DMZ-Subnet">
+              <ip-netmask>10.0.2.0/24</ip-netmask>
+              <description>DMZ zone</description>
+            </entry>
+            <entry name="Admin-Workstation">
+              <ip-netmask>10.0.1.10/32</ip-netmask>
+              <description>Admin workstation</description>
+            </entry>
+            <entry name="DB-Server">
+              <ip-netmask>10.0.1.100/32</ip-netmask>
+              <description>Internal database server</description>
+            </entry>
+            <entry name="File-Server">
+              <ip-netmask>10.0.1.200/32</ip-netmask>
+              <description>Internal file server</description>
+            </entry>
+            <entry name="Web-Server">
+              <ip-netmask>10.0.2.10/32</ip-netmask>
+              <description>DMZ web server</description>
+            </entry>
+            <entry name="Mail-Server">
+              <ip-netmask>10.0.2.20/32</ip-netmask>
+              <description>DMZ mail server</description>
+            </entry>
+            <entry name="DNS-Server-DMZ">
+              <ip-netmask>10.0.2.30/32</ip-netmask>
+              <description>DMZ DNS server</description>
+            </entry>
+          </address>
+
+          <zone>
+            <entry name="Internal">
+              <network><layer3/></network>
+            </entry>
+            <entry name="DMZ">
+              <network><layer3/></network>
+            </entry>
+            <entry name="External">
+              <network><layer3/></network>
+            </entry>
+          </zone>
+
+          <rulebase>
+            <security>
+              <rules>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P001-Allow-smb-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>DB-Server</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>smb</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow smb from Internal to DMZ</description>
+                  <tag><member>DMZ-to-Internal</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P002-Allow-smb-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>smb</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow smb from External to DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P003-Allow-ntp-DMZ-to-External" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>External</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ntp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ntp from DMZ to External</description>
+                  <tag><member>Admin-Access</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P054-Allow-web-browsing-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>Mail-Server</member></destination>
+                  <application><member>web-browsing</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow web-browsing from External to DMZ</description>
+                  <tag><member>Internal-to-DMZ</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P041-Allow-ftp-Internal-to-External" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>External</member></to>
+                  <source><member>DB-Server</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ftp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ftp from Internal to External</description>
+                  <tag><member>Outbound</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Shadowed by P009-Allow-ssh-External-to-DMZ. Broader rule above already matches. -->
+                <entry name="R018-REDUNDANT-Shadowed-ssh-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>Mail-Server</member></destination>
+                  <application><member>ssh</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Shadowed by P009-Allow-ssh-External-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Shadowed by P046-Allow-ssl-External-to-Internal. Broader rule above already matches. -->
+                <entry name="R002-REDUNDANT-Shadowed-ssl-External-to-Internal" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>File-Server</member></destination>
+                  <application><member>ssl</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Shadowed by P046-Allow-ssl-External-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P021-Allow-smb-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>Internal-Subnet</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>smb</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow smb from Internal to DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P010-Allow-smtp-External-to-DMZ. Same traffic — opposite actions. -->
+                <entry name="C004-COLLISION-Deny-smtp-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P010-Allow-smtp-External-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Exact duplicate of P004-Allow-dns-Internal-to-DMZ. Will never be reached. -->
+                <entry name="R008-REDUNDANT-Duplicate-dns-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>DB-Server</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>dns</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Exact duplicate of P004-Allow-dns-Internal-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P005-Allow-ntp-Internal-to-External" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>External</member></to>
+                  <source><member>Admin-Workstation</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ntp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ntp from Internal to External</description>
+                  <tag><member>Inbound</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Shadowed by P044-Allow-ping-Internal-to-DMZ. Broader rule above already matches. -->
+                <entry name="R010-REDUNDANT-Shadowed-ping-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>File-Server</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>ping</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Shadowed by P044-Allow-ping-Internal-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Shadowed by P055-Allow-any-Internal-to-DMZ. Broader rule above already matches. -->
+                <entry name="R012-REDUNDANT-Shadowed-any-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>DB-Server</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>any</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Shadowed by P055-Allow-any-Internal-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P053-Allow-smtp-DMZ-to-External" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>External</member></to>
+                  <source><member>DMZ-Subnet</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow smtp from DMZ to External</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P055-Allow-any-Internal-to-DMZ. Same traffic — opposite actions. -->
+                <entry name="C003-COLLISION-Deny-any-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>DB-Server</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>any</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P055-Allow-any-Internal-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P046-Allow-ssl-External-to-Internal" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>File-Server</member></destination>
+                  <application><member>ssl</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ssl from External to Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P019-Allow-telnet-Internal-to-External" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>External</member></to>
+                  <source><member>File-Server</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>telnet</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow telnet from Internal to External</description>
+                  <tag><member>Inbound</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P012-Allow-ssl-DMZ-to-Internal. Same traffic — opposite actions. -->
+                <entry name="C014-COLLISION-Deny-ssl-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>DNS-Server-DMZ</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ssl</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P012-Allow-ssl-DMZ-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P049-Deny-mssql-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>Admin-Workstation</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>mssql</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny mssql from Internal to DMZ</description>
+                  <tag><member>DMZ-to-Internal</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P022-Allow-telnet-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>Mail-Server</member></source>
+                  <destination><member>Internal-Subnet</member></destination>
+                  <application><member>telnet</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow telnet from DMZ to Internal</description>
+                  <tag><member>Internal-to-DMZ</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P050-Allow-ftp-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>ftp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ftp from External to DMZ</description>
+                  <tag><member>Admin-Access</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P016-Allow-mssql-DMZ-to-External" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>External</member></to>
+                  <source><member>Mail-Server</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>mssql</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow mssql from DMZ to External</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P059-Deny-ms-rdp-Internal-to-External" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>External</member></to>
+                  <source><member>Internal-Subnet</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ms-rdp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny ms-rdp from Internal to External</description>
+                  <tag><member>Admin-Access</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P018-Allow-any-External-to-Internal" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>Admin-Workstation</member></destination>
+                  <application><member>any</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow any from External to Internal</description>
+                  <tag><member>Internal-to-DMZ</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P056-Allow-smtp-DMZ-to-Internal. Same traffic — opposite actions. -->
+                <entry name="C019-COLLISION-Deny-smtp-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>File-Server</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P056-Allow-smtp-DMZ-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P045-Allow-ssh-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>ssh</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ssh from Internal to DMZ</description>
+                  <tag><member>Internal-to-DMZ</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P043-Allow-ssl-Internal-to-External. Same traffic — opposite actions. -->
+                <entry name="C012-COLLISION-Deny-ssl-Internal-to-External" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>External</member></to>
+                  <source><member>Internal-Subnet</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ssl</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P043-Allow-ssl-Internal-to-External</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Shadowed by P012-Allow-ssl-DMZ-to-Internal. Broader rule above already matches. -->
+                <entry name="R006-REDUNDANT-Shadowed-ssl-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>Mail-Server</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ssl</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Shadowed by P012-Allow-ssl-DMZ-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P023-Allow-ssh-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>Web-Server</member></source>
+                  <destination><member>DB-Server</member></destination>
+                  <application><member>ssh</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ssh from DMZ to Internal</description>
+                  <tag><member>Inbound</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Shadowed by P004-Allow-dns-Internal-to-DMZ. Broader rule above already matches. -->
+                <entry name="R016-REDUNDANT-Shadowed-dns-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>Internal-Subnet</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>dns</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Shadowed by P004-Allow-dns-Internal-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P008-Allow-ntp-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>DB-Server</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>ntp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ntp from Internal to DMZ</description>
+                  <tag><member>Admin-Access</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P021-Allow-smb-Internal-to-DMZ. Same traffic — opposite actions. -->
+                <entry name="C020-COLLISION-Deny-smb-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>Internal-Subnet</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>smb</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P021-Allow-smb-Internal-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P027-Allow-web-browsing-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>Internal-Subnet</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>web-browsing</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow web-browsing from Internal to DMZ</description>
+                  <tag><member>Inbound</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P012-Allow-ssl-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>DNS-Server-DMZ</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ssl</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ssl from DMZ to Internal</description>
+                  <tag><member>DMZ-Outbound</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P053-Allow-smtp-DMZ-to-External. Same traffic — opposite actions. -->
+                <entry name="C018-COLLISION-Deny-smtp-DMZ-to-External" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>External</member></to>
+                  <source><member>DMZ-Subnet</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P053-Allow-smtp-DMZ-to-External</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P052-Allow-ftp-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>ftp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ftp from External to DMZ</description>
+                  <tag><member>Outbound</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P031-Allow-ssh-DMZ-to-Internal. Same traffic — opposite actions. -->
+                <entry name="C001-COLLISION-Deny-ssh-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>DMZ-Subnet</member></source>
+                  <destination><member>File-Server</member></destination>
+                  <application><member>ssh</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P031-Allow-ssh-DMZ-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P037-Deny-telnet-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>Admin-Workstation</member></source>
+                  <destination><member>Mail-Server</member></destination>
+                  <application><member>telnet</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny telnet from Internal to DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P006-Allow-ftp-DMZ-to-External" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>External</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ftp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ftp from DMZ to External</description>
+                  <tag><member>Inbound</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P038-Allow-ssh-Internal-to-External" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>External</member></to>
+                  <source><member>File-Server</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ssh</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ssh from Internal to External</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P014-Allow-ms-rdp-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>Web-Server</member></destination>
+                  <application><member>ms-rdp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ms-rdp from External to DMZ</description>
+                  <tag><member>Outbound</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P057-Deny-telnet-Internal-to-External" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>External</member></to>
+                  <source><member>Admin-Workstation</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>telnet</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny telnet from Internal to External</description>
+                  <tag><member>Internal-to-DMZ</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P055-Allow-any-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>DB-Server</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>any</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow any from Internal to DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Exact duplicate of P038-Allow-ssh-Internal-to-External. Will never be reached. -->
+                <entry name="R017-REDUNDANT-Duplicate-ssh-Internal-to-External" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>External</member></to>
+                  <source><member>File-Server</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ssh</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Exact duplicate of P038-Allow-ssh-Internal-to-External</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Shadowed by P026-Deny-smtp-DMZ-to-Internal. Broader rule above already matches. -->
+                <entry name="R013-REDUNDANT-Shadowed-smtp-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>DMZ-Subnet</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Shadowed by P026-Deny-smtp-DMZ-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P029-Allow-mssql-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>Internal-Subnet</member></destination>
+                  <application><member>mssql</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow mssql from DMZ to Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P035-Deny-ssl-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>ssl</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny ssl from External to DMZ</description>
+                  <tag><member>DMZ-to-Internal</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P007-Deny-any-DMZ-to-External" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>External</member></to>
+                  <source><member>DMZ-Subnet</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>any</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny any from DMZ to External</description>
+                  <tag><member>Admin-Access</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Exact duplicate of P058-Allow-smtp-Internal-to-External. Will never be reached. -->
+                <entry name="R003-REDUNDANT-Duplicate-smtp-Internal-to-External" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>External</member></to>
+                  <source><member>Internal-Subnet</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Exact duplicate of P058-Allow-smtp-Internal-to-External</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P017-Allow-dns-External-to-Internal" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>Admin-Workstation</member></destination>
+                  <application><member>dns</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow dns from External to Internal</description>
+                  <tag><member>Internal-to-DMZ</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P031-Allow-ssh-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>DMZ-Subnet</member></source>
+                  <destination><member>File-Server</member></destination>
+                  <application><member>ssh</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ssh from DMZ to Internal</description>
+                  <tag><member>DMZ-to-Internal</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P020-Deny-telnet-External-to-Internal" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>telnet</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny telnet from External to Internal</description>
+                  <tag><member>Internal-to-DMZ</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P010-Allow-smtp-External-to-DMZ. Same traffic — opposite actions. -->
+                <entry name="C017-COLLISION-Deny-smtp-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P010-Allow-smtp-External-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P015-Deny-ftp-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>File-Server</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ftp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny ftp from Internal to DMZ</description>
+                  <tag><member>DMZ-Outbound</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P028-Allow-imap-DMZ-to-External" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>External</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>imap</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow imap from DMZ to External</description>
+                  <tag><member>DMZ-Outbound</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P040-Allow-web-browsing-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>Internal-Subnet</member></source>
+                  <destination><member>Web-Server</member></destination>
+                  <application><member>web-browsing</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow web-browsing from Internal to DMZ</description>
+                  <tag><member>DMZ-Outbound</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P036-Deny-ping-DMZ-to-External" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>External</member></to>
+                  <source><member>DMZ-Subnet</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ping</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny ping from DMZ to External</description>
+                  <tag><member>Internal-to-DMZ</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P056-Allow-smtp-DMZ-to-Internal. Same traffic — opposite actions. -->
+                <entry name="C002-COLLISION-Deny-smtp-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>File-Server</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P056-Allow-smtp-DMZ-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P011-Allow-ntp-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>Mail-Server</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ntp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ntp from DMZ to Internal</description>
+                  <tag><member>Admin-Access</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P058-Allow-smtp-Internal-to-External" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>External</member></to>
+                  <source><member>Internal-Subnet</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow smtp from Internal to External</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P009-Allow-ssh-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>Mail-Server</member></destination>
+                  <application><member>ssh</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ssh from External to DMZ</description>
+                  <tag><member>DMZ-to-Internal</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P012-Allow-ssl-DMZ-to-Internal. Same traffic — opposite actions. -->
+                <entry name="C013-COLLISION-Deny-ssl-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>DNS-Server-DMZ</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ssl</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P012-Allow-ssl-DMZ-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Exact duplicate of P040-Allow-web-browsing-Internal-to-DMZ. Will never be reached. -->
+                <entry name="R020-REDUNDANT-Duplicate-web-browsing-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>Internal-Subnet</member></source>
+                  <destination><member>Web-Server</member></destination>
+                  <application><member>web-browsing</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Exact duplicate of P040-Allow-web-browsing-Internal-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Shadowed by P017-Allow-dns-External-to-Internal. Broader rule above already matches. -->
+                <entry name="R014-REDUNDANT-Shadowed-dns-External-to-Internal" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>Admin-Workstation</member></destination>
+                  <application><member>dns</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Shadowed by P017-Allow-dns-External-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Shadowed by P026-Deny-smtp-DMZ-to-Internal. Broader rule above already matches. -->
+                <entry name="R019-REDUNDANT-Shadowed-smtp-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>DMZ-Subnet</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Shadowed by P026-Deny-smtp-DMZ-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P048-Allow-mssql-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>Admin-Workstation</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>mssql</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow mssql from Internal to DMZ</description>
+                  <tag><member>DMZ-to-Internal</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P025-Allow-ftp-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>DB-Server</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>ftp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ftp from Internal to DMZ</description>
+                  <tag><member>Inbound</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Exact duplicate of P020-Deny-telnet-External-to-Internal. Will never be reached. -->
+                <entry name="R001-REDUNDANT-Duplicate-telnet-External-to-Internal" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>telnet</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Exact duplicate of P020-Deny-telnet-External-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P005-Allow-ntp-Internal-to-External. Same traffic — opposite actions. -->
+                <entry name="C010-COLLISION-Deny-ntp-Internal-to-External" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>External</member></to>
+                  <source><member>Admin-Workstation</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ntp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P005-Allow-ntp-Internal-to-External</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P042-Allow-web-browsing-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>Admin-Workstation</member></destination>
+                  <application><member>web-browsing</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow web-browsing from DMZ to Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P043-Allow-ssl-Internal-to-External" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>External</member></to>
+                  <source><member>Internal-Subnet</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ssl</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ssl from Internal to External</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P030-Deny-web-browsing-DMZ-to-External" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>External</member></to>
+                  <source><member>DMZ-Subnet</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>web-browsing</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny web-browsing from DMZ to External</description>
+                  <tag><member>Outbound</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P010-Allow-smtp-External-to-DMZ. Same traffic — opposite actions. -->
+                <entry name="C016-COLLISION-Deny-smtp-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P010-Allow-smtp-External-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P024-Allow-ntp-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>ntp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ntp from External to DMZ</description>
+                  <tag><member>DMZ-to-Internal</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P051-Deny-telnet-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>DMZ-Subnet</member></source>
+                  <destination><member>Internal-Subnet</member></destination>
+                  <application><member>telnet</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny telnet from DMZ to Internal</description>
+                  <tag><member>Internal-to-DMZ</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P021-Allow-smb-Internal-to-DMZ. Same traffic — opposite actions. -->
+                <entry name="C009-COLLISION-Deny-smb-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>Internal-Subnet</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>smb</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P021-Allow-smb-Internal-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P013-Allow-smb-DMZ-to-External" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>External</member></to>
+                  <source><member>DNS-Server-DMZ</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>smb</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow smb from DMZ to External</description>
+                  <tag><member>Admin-Access</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P010-Allow-smtp-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow smtp from External to DMZ</description>
+                  <tag><member>DMZ-to-Internal</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Exact duplicate of P010-Allow-smtp-External-to-DMZ. Will never be reached. -->
+                <entry name="R004-REDUNDANT-Duplicate-smtp-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Exact duplicate of P010-Allow-smtp-External-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P039-Deny-telnet-DMZ-to-External" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>External</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>telnet</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny telnet from DMZ to External</description>
+                  <tag><member>Inbound</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P050-Allow-ftp-External-to-DMZ. Same traffic — opposite actions. -->
+                <entry name="C015-COLLISION-Deny-ftp-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>ftp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P050-Allow-ftp-External-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P047-Allow-ssl-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>Internal-Subnet</member></destination>
+                  <application><member>ssl</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ssl from DMZ to Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P056-Allow-smtp-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>File-Server</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow smtp from DMZ to Internal</description>
+                  <tag><member>Internal-to-DMZ</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Exact duplicate of P017-Allow-dns-External-to-Internal. Will never be reached. -->
+                <entry name="R009-REDUNDANT-Duplicate-dns-External-to-Internal" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>Admin-Workstation</member></destination>
+                  <application><member>dns</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Exact duplicate of P017-Allow-dns-External-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P007-Deny-any-DMZ-to-External. Same traffic — opposite actions. -->
+                <entry name="C005-COLLISION-Allow-any-DMZ-to-External" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>External</member></to>
+                  <source><member>DMZ-Subnet</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>any</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P007-Deny-any-DMZ-to-External</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P050-Allow-ftp-External-to-DMZ. Same traffic — opposite actions. -->
+                <entry name="C007-COLLISION-Deny-ftp-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>ftp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P050-Allow-ftp-External-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Shadowed by P051-Deny-telnet-DMZ-to-Internal. Broader rule above already matches. -->
+                <entry name="R015-REDUNDANT-Shadowed-telnet-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>DMZ-Subnet</member></source>
+                  <destination><member>Internal-Subnet</member></destination>
+                  <application><member>telnet</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Shadowed by P051-Deny-telnet-DMZ-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P034-Allow-ftp-External-to-Internal" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DB-Server</member></destination>
+                  <application><member>ftp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ftp from External to Internal</description>
+                  <tag><member>DMZ-Outbound</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P032-Deny-ms-rdp-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>ms-rdp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny ms-rdp from External to DMZ</description>
+                  <tag><member>Outbound</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Shadowed by P050-Allow-ftp-External-to-DMZ. Broader rule above already matches. -->
+                <entry name="R005-REDUNDANT-Shadowed-ftp-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>ftp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Shadowed by P050-Allow-ftp-External-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Shadowed by P036-Deny-ping-DMZ-to-External. Broader rule above already matches. -->
+                <entry name="R011-REDUNDANT-Shadowed-ping-DMZ-to-External" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>External</member></to>
+                  <source><member>DNS-Server-DMZ</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>ping</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Shadowed by P036-Deny-ping-DMZ-to-External</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P060-Allow-telnet-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>Internal-Subnet</member></source>
+                  <destination><member>Mail-Server</member></destination>
+                  <application><member>telnet</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow telnet from Internal to DMZ</description>
+                  <tag><member>DMZ-to-Internal</member></tag>
+                </entry>
+
+                <!-- Rule [REDUNDANT] | ANOMALY: Exact duplicate of P035-Deny-ssl-External-to-DMZ. Will never be reached. -->
+                <entry name="R007-REDUNDANT-Duplicate-ssl-External-to-DMZ" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DNS-Server-DMZ</member></destination>
+                  <application><member>ssl</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>REDUNDANT: Exact duplicate of P035-Deny-ssl-External-to-DMZ</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P051-Deny-telnet-DMZ-to-Internal. Same traffic — opposite actions. -->
+                <entry name="C008-COLLISION-Allow-telnet-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>DMZ-Subnet</member></source>
+                  <destination><member>Internal-Subnet</member></destination>
+                  <application><member>telnet</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P051-Deny-telnet-DMZ-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P044-Allow-ping-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>DB-Server</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>ping</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow ping from Internal to DMZ</description>
+                  <tag><member>DMZ-to-Internal</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P033-Deny-any-External-to-Internal. Same traffic — opposite actions. -->
+                <entry name="C011-COLLISION-Allow-any-External-to-Internal" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DB-Server</member></destination>
+                  <application><member>any</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P033-Deny-any-External-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P026-Deny-smtp-DMZ-to-Internal" type="universal">
+                  <from><member>DMZ</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>Mail-Server</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>smtp</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny smtp from DMZ to Internal</description>
+                  <tag><member>DMZ-to-Internal</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P004-Allow-dns-Internal-to-DMZ" type="universal">
+                  <from><member>Internal</member></from>
+                  <to><member>DMZ</member></to>
+                  <source><member>DB-Server</member></source>
+                  <destination><member>DMZ-Subnet</member></destination>
+                  <application><member>dns</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>Allow dns from Internal to DMZ</description>
+                  <tag><member>DMZ-Outbound</member></tag>
+                </entry>
+
+                <!-- Rule [COLLISION] | ANOMALY: Conflicts with P033-Deny-any-External-to-Internal. Same traffic — opposite actions. -->
+                <entry name="C006-COLLISION-Allow-any-External-to-Internal" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DB-Server</member></destination>
+                  <application><member>any</member></application>
+                  <service><member>application-default</member></service>
+                  <action>allow</action>
+                  <log-end>yes</log-end>
+                  <description>COLLISION: conflicts with P033-Deny-any-External-to-Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P033-Deny-any-External-to-Internal" type="universal">
+                  <from><member>External</member></from>
+                  <to><member>Internal</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>DB-Server</member></destination>
+                  <application><member>any</member></application>
+                  <service><member>application-default</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Deny any from External to Internal</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+
+                <!-- Rule [PERFECT] -->
+                <entry name="P000-Deny-All-Cleanup" type="universal">
+                  <from><member>any</member></from>
+                  <to><member>any</member></to>
+                  <source><member>any</member></source>
+                  <destination><member>any</member></destination>
+                  <application><member>any</member></application>
+                  <service><member>any</member></service>
+                  <action>deny</action>
+                  <log-end>yes</log-end>
+                  <description>Cleanup rule — deny and log all unmatched traffic</description>
+                  <tag><member>Security-Baseline</member></tag>
+                </entry>
+              </rules>
+            </security>
+          </rulebase>
+
+        </entry>
+      </vsys>
+    </entry>
+  </devices>
+</config>

@@ -1,0 +1,8 @@
+python-docx
+PyPDF2
+click
+pydantic
+z3-solver
+fastapi
+uvicorn
+openai

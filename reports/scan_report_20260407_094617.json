@@ -1,0 +1,3241 @@
+{
+  "metadata": {
+    "timestamp": "2026-04-07T09:46:17.451480",
+    "target_file": "sample_rules.txt",
+    "vendor": "paloalto",
+    "total_rules_parsed": 100
+  },
+  "comprehensive_analysis_issues": [
+    {
+      "severity": "medium",
+      "rule_id": "987f7ed2-1ccd-4f11-8b53-95d76d50e18c",
+      "rule_name": "Synthetic-Rule-11",
+      "description": "Redundancy: Rule 987f7ed2-1ccd-4f11-8b53-95d76d50e18c is fully covered by earlier rule 11111111-1111-1111-1111-111111111111",
+      "details": {
+        "covered_by": "11111111-1111-1111-1111-111111111111"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "def96445-d7e3-4ccc-95da-2e14c3249a19",
+      "rule_name": "Synthetic-Rule-96",
+      "description": "Redundancy: Rule def96445-d7e3-4ccc-95da-2e14c3249a19 is fully covered by earlier rule 11111111-1111-1111-1111-111111111111",
+      "details": {
+        "covered_by": "11111111-1111-1111-1111-111111111111"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c67e1665-bc49-45a6-8d41-1afbf2977c9e",
+      "rule_name": "Synthetic-Rule-97",
+      "description": "Redundancy: Rule c67e1665-bc49-45a6-8d41-1afbf2977c9e is fully covered by earlier rule 11111111-1111-1111-1111-111111111111",
+      "details": {
+        "covered_by": "11111111-1111-1111-1111-111111111111"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "44444444-4444-4444-4444-444444444444-9d58c477-fafc-4083-a6b0-9b9b93629a96",
+      "rule_name": "Synthetic-Rule-4-Shadowed-Deny<->Synthetic-Rule-40",
+      "description": "SMT Shadowing Conflict detected between 44444444-4444-4444-4444-444444444444 and 9d58c477-fafc-4083-a6b0-9b9b93629a96",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "25d1e59a-3482-4906-a55a-6da8ed51a627",
+      "rule_name": "Synthetic-Rule-56",
+      "description": "Redundancy: Rule 25d1e59a-3482-4906-a55a-6da8ed51a627 is fully covered by earlier rule 44444444-4444-4444-4444-444444444444",
+      "details": {
+        "covered_by": "44444444-4444-4444-4444-444444444444"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "44444444-4444-4444-4444-444444444444-43b90ac4-70d3-4824-bfdf-11df3646fb39",
+      "rule_name": "Synthetic-Rule-4-Shadowed-Deny<->Synthetic-Rule-74",
+      "description": "SMT Shadowing Conflict detected between 44444444-4444-4444-4444-444444444444 and 43b90ac4-70d3-4824-bfdf-11df3646fb39",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "44444444-4444-4444-4444-444444444444-7e8f7cac-49d8-40a2-8e9b-fbdd3b40c1ff",
+      "rule_name": "Synthetic-Rule-4-Shadowed-Deny<->Synthetic-Rule-75",
+      "description": "SMT Shadowing Conflict detected between 44444444-4444-4444-4444-444444444444 and 7e8f7cac-49d8-40a2-8e9b-fbdd3b40c1ff",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "44444444-4444-4444-4444-444444444444-6a22ae11-4ab2-4f76-bded-c70c148ca235",
+      "rule_name": "Synthetic-Rule-4-Shadowed-Deny<->Synthetic-Rule-88",
+      "description": "SMT Shadowing Conflict detected between 44444444-4444-4444-4444-444444444444 and 6a22ae11-4ab2-4f76-bded-c70c148ca235",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "267b765e-f3ef-4790-9933-8423a5cb6061-1702b54d-6aa2-4e2c-9e93-41937c50b324",
+      "rule_name": "Synthetic-Rule-5<->Synthetic-Rule-16",
+      "description": "SMT Shadowing Conflict detected between 267b765e-f3ef-4790-9933-8423a5cb6061 and 1702b54d-6aa2-4e2c-9e93-41937c50b324",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "34cf999c-6323-4bf4-b0ca-d0342cffbffc",
+      "rule_name": "Synthetic-Rule-24",
+      "description": "Redundancy: Rule 34cf999c-6323-4bf4-b0ca-d0342cffbffc is fully covered by earlier rule 267b765e-f3ef-4790-9933-8423a5cb6061",
+      "details": {
+        "covered_by": "267b765e-f3ef-4790-9933-8423a5cb6061"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "267b765e-f3ef-4790-9933-8423a5cb6061-c3528f61-1c9b-4639-afee-be8cbbc294cd",
+      "rule_name": "Synthetic-Rule-5<->Synthetic-Rule-30",
+      "description": "SMT Shadowing Conflict detected between 267b765e-f3ef-4790-9933-8423a5cb6061 and c3528f61-1c9b-4639-afee-be8cbbc294cd",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c58ab246-704f-4e4b-821f-d61ea205d30d",
+      "rule_name": "Synthetic-Rule-38",
+      "description": "Redundancy: Rule c58ab246-704f-4e4b-821f-d61ea205d30d is fully covered by earlier rule 267b765e-f3ef-4790-9933-8423a5cb6061",
+      "details": {
+        "covered_by": "267b765e-f3ef-4790-9933-8423a5cb6061"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "764178ae-bfe4-4874-844e-56bf29d0520f",
+      "rule_name": "Synthetic-Rule-49",
+      "description": "Redundancy: Rule 764178ae-bfe4-4874-844e-56bf29d0520f is fully covered by earlier rule 267b765e-f3ef-4790-9933-8423a5cb6061",
+      "details": {
+        "covered_by": "267b765e-f3ef-4790-9933-8423a5cb6061"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "ac7e6621-f0de-4058-8795-17b337536776",
+      "rule_name": "Synthetic-Rule-81",
+      "description": "Redundancy: Rule ac7e6621-f0de-4058-8795-17b337536776 is fully covered by earlier rule ea837e1b-11e3-48e7-b3d5-20de0812c43c",
+      "details": {
+        "covered_by": "ea837e1b-11e3-48e7-b3d5-20de0812c43c"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "dc323500-af34-4288-8eef-8e832efe9d7c-3baed7d1-2e35-4db6-a91e-8153fe0957f6",
+      "rule_name": "Synthetic-Rule-7<->Synthetic-Rule-17",
+      "description": "SMT Shadowing Conflict detected between dc323500-af34-4288-8eef-8e832efe9d7c and 3baed7d1-2e35-4db6-a91e-8153fe0957f6",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "dc323500-af34-4288-8eef-8e832efe9d7c-b12b13c4-a58e-4ca9-904d-e7e2e3dd387f",
+      "rule_name": "Synthetic-Rule-7<->Synthetic-Rule-79",
+      "description": "SMT Shadowing Conflict detected between dc323500-af34-4288-8eef-8e832efe9d7c and b12b13c4-a58e-4ca9-904d-e7e2e3dd387f",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "dc323500-af34-4288-8eef-8e832efe9d7c-5c5784fd-f7b5-4395-a2ab-8af691068272",
+      "rule_name": "Synthetic-Rule-7<->Synthetic-Rule-87",
+      "description": "SMT Shadowing Conflict detected between dc323500-af34-4288-8eef-8e832efe9d7c and 5c5784fd-f7b5-4395-a2ab-8af691068272",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "ea5ecb12-e598-48e3-ae2c-e69e53daa2ba",
+      "rule_name": "Synthetic-Rule-21",
+      "description": "Redundancy: Rule ea5ecb12-e598-48e3-ae2c-e69e53daa2ba is fully covered by earlier rule 6f6dad33-d3ee-4184-a2ab-beea81348f7d",
+      "details": {
+        "covered_by": "6f6dad33-d3ee-4184-a2ab-beea81348f7d"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "6ab12bc0-db2b-49ba-afe4-9fd4c6f1056b",
+      "rule_name": "Synthetic-Rule-95",
+      "description": "Redundancy: Rule 6ab12bc0-db2b-49ba-afe4-9fd4c6f1056b is fully covered by earlier rule 6f6dad33-d3ee-4184-a2ab-beea81348f7d",
+      "details": {
+        "covered_by": "6f6dad33-d3ee-4184-a2ab-beea81348f7d"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c61634a5-99b7-4cf3-adce-442d9c6a75fa",
+      "rule_name": "Synthetic-Rule-36",
+      "description": "Redundancy: Rule c61634a5-99b7-4cf3-adce-442d9c6a75fa is fully covered by earlier rule f353c3c1-0c43-4498-a3b8-24d962ca9bf0",
+      "details": {
+        "covered_by": "f353c3c1-0c43-4498-a3b8-24d962ca9bf0"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "6d8c6091-2076-47e5-8b6f-8fae3a29280f",
+      "rule_name": "Synthetic-Rule-72",
+      "description": "Redundancy: Rule 6d8c6091-2076-47e5-8b6f-8fae3a29280f is fully covered by earlier rule f353c3c1-0c43-4498-a3b8-24d962ca9bf0",
+      "details": {
+        "covered_by": "f353c3c1-0c43-4498-a3b8-24d962ca9bf0"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "d0640cfa-1b25-4d9a-a756-8edf25e7292f",
+      "rule_name": "Synthetic-Rule-84",
+      "description": "Redundancy: Rule d0640cfa-1b25-4d9a-a756-8edf25e7292f is fully covered by earlier rule f353c3c1-0c43-4498-a3b8-24d962ca9bf0",
+      "details": {
+        "covered_by": "f353c3c1-0c43-4498-a3b8-24d962ca9bf0"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "074b7029-5012-4500-b351-5ad8bb2de8e4",
+      "rule_name": "Synthetic-Rule-23",
+      "description": "Redundancy: Rule 074b7029-5012-4500-b351-5ad8bb2de8e4 is fully covered by earlier rule 26e0d887-a6c4-4c54-b430-da029ac59e7e",
+      "details": {
+        "covered_by": "26e0d887-a6c4-4c54-b430-da029ac59e7e"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "dbd1afe7-9840-46da-acde-adfceedb2f49",
+      "rule_name": "Synthetic-Rule-28",
+      "description": "Redundancy: Rule dbd1afe7-9840-46da-acde-adfceedb2f49 is fully covered by earlier rule 26e0d887-a6c4-4c54-b430-da029ac59e7e",
+      "details": {
+        "covered_by": "26e0d887-a6c4-4c54-b430-da029ac59e7e"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a8321981-9f8c-462c-86b9-11e888e39298",
+      "rule_name": "Synthetic-Rule-33",
+      "description": "Redundancy: Rule a8321981-9f8c-462c-86b9-11e888e39298 is fully covered by earlier rule 26e0d887-a6c4-4c54-b430-da029ac59e7e",
+      "details": {
+        "covered_by": "26e0d887-a6c4-4c54-b430-da029ac59e7e"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "26e0d887-a6c4-4c54-b430-da029ac59e7e-5f84a038-f17c-4612-b66c-3a32faf5b4fa",
+      "rule_name": "Synthetic-Rule-10<->Synthetic-Rule-34",
+      "description": "SMT Shadowing Conflict detected between 26e0d887-a6c4-4c54-b430-da029ac59e7e and 5f84a038-f17c-4612-b66c-3a32faf5b4fa",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "1718191a-a9b6-4702-8118-e3b9f4160774",
+      "rule_name": "Synthetic-Rule-57",
+      "description": "Redundancy: Rule 1718191a-a9b6-4702-8118-e3b9f4160774 is fully covered by earlier rule 26e0d887-a6c4-4c54-b430-da029ac59e7e",
+      "details": {
+        "covered_by": "26e0d887-a6c4-4c54-b430-da029ac59e7e"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "eb200361-1a3d-4aef-af4a-283da620ac4f",
+      "rule_name": "Synthetic-Rule-63",
+      "description": "Redundancy: Rule eb200361-1a3d-4aef-af4a-283da620ac4f is fully covered by earlier rule 26e0d887-a6c4-4c54-b430-da029ac59e7e",
+      "details": {
+        "covered_by": "26e0d887-a6c4-4c54-b430-da029ac59e7e"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "abf279e9-cd3b-4a04-8fb2-8b6717a3e82e",
+      "rule_name": "Synthetic-Rule-71",
+      "description": "Redundancy: Rule abf279e9-cd3b-4a04-8fb2-8b6717a3e82e is fully covered by earlier rule 26e0d887-a6c4-4c54-b430-da029ac59e7e",
+      "details": {
+        "covered_by": "26e0d887-a6c4-4c54-b430-da029ac59e7e"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "def96445-d7e3-4ccc-95da-2e14c3249a19",
+      "rule_name": "Synthetic-Rule-96",
+      "description": "Redundancy: Rule def96445-d7e3-4ccc-95da-2e14c3249a19 is fully covered by earlier rule 987f7ed2-1ccd-4f11-8b53-95d76d50e18c",
+      "details": {
+        "covered_by": "987f7ed2-1ccd-4f11-8b53-95d76d50e18c"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c67e1665-bc49-45a6-8d41-1afbf2977c9e",
+      "rule_name": "Synthetic-Rule-97",
+      "description": "Redundancy: Rule c67e1665-bc49-45a6-8d41-1afbf2977c9e is fully covered by earlier rule 987f7ed2-1ccd-4f11-8b53-95d76d50e18c",
+      "details": {
+        "covered_by": "987f7ed2-1ccd-4f11-8b53-95d76d50e18c"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "aba5f68c-d41a-425a-a365-e7069cd046e5",
+      "rule_name": "Synthetic-Rule-37",
+      "description": "Redundancy: Rule aba5f68c-d41a-425a-a365-e7069cd046e5 is fully covered by earlier rule 8979e6e2-b356-4602-b7bd-c2f62591c83b",
+      "details": {
+        "covered_by": "8979e6e2-b356-4602-b7bd-c2f62591c83b"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e550b967-dbea-42af-8384-266ccf3b6c81",
+      "rule_name": "Synthetic-Rule-70",
+      "description": "Redundancy: Rule e550b967-dbea-42af-8384-266ccf3b6c81 is fully covered by earlier rule 8979e6e2-b356-4602-b7bd-c2f62591c83b",
+      "details": {
+        "covered_by": "8979e6e2-b356-4602-b7bd-c2f62591c83b"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "2f7f9e32-6398-4044-a486-03f81bb5e892",
+      "rule_name": "Synthetic-Rule-100",
+      "description": "Redundancy: Rule 2f7f9e32-6398-4044-a486-03f81bb5e892 is fully covered by earlier rule 8979e6e2-b356-4602-b7bd-c2f62591c83b",
+      "details": {
+        "covered_by": "8979e6e2-b356-4602-b7bd-c2f62591c83b"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "f0a350a2-74e8-4066-87fb-22c32b169c00-5b508e94-e687-4875-97e7-4b3929072699",
+      "rule_name": "Synthetic-Rule-13<->Synthetic-Rule-69",
+      "description": "SMT Shadowing Conflict detected between f0a350a2-74e8-4066-87fb-22c32b169c00 and 5b508e94-e687-4875-97e7-4b3929072699",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "ee5416ec-7d57-4a70-8ae7-bc02392454eb",
+      "rule_name": "Synthetic-Rule-98",
+      "description": "Redundancy: Rule ee5416ec-7d57-4a70-8ae7-bc02392454eb is fully covered by earlier rule f0a350a2-74e8-4066-87fb-22c32b169c00",
+      "details": {
+        "covered_by": "f0a350a2-74e8-4066-87fb-22c32b169c00"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "7c0dd15f-3a54-4c70-92f5-3bb329851b24-c505c397-9ac8-4a0b-8154-f189eaa54843",
+      "rule_name": "Synthetic-Rule-14<->Synthetic-Rule-27",
+      "description": "SMT Shadowing Conflict detected between 7c0dd15f-3a54-4c70-92f5-3bb329851b24 and c505c397-9ac8-4a0b-8154-f189eaa54843",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "7c0dd15f-3a54-4c70-92f5-3bb329851b24-84871c2d-1d2b-4b81-b437-56fc0f6a4932",
+      "rule_name": "Synthetic-Rule-14<->Synthetic-Rule-54",
+      "description": "SMT Shadowing Conflict detected between 7c0dd15f-3a54-4c70-92f5-3bb329851b24 and 84871c2d-1d2b-4b81-b437-56fc0f6a4932",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "7c0dd15f-3a54-4c70-92f5-3bb329851b24-022a96ba-fa02-466d-9eb7-222896324e6a",
+      "rule_name": "Synthetic-Rule-14<->Synthetic-Rule-66",
+      "description": "SMT Shadowing Conflict detected between 7c0dd15f-3a54-4c70-92f5-3bb329851b24 and 022a96ba-fa02-466d-9eb7-222896324e6a",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "3236cb0d-ad6c-43f9-a134-d53a3b16b5f7",
+      "rule_name": "Synthetic-Rule-31",
+      "description": "Redundancy: Rule 3236cb0d-ad6c-43f9-a134-d53a3b16b5f7 is fully covered by earlier rule c835f9ee-396f-4f72-8c44-186b21a19f97",
+      "details": {
+        "covered_by": "c835f9ee-396f-4f72-8c44-186b21a19f97"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e834b86d-718f-492a-a563-5e0b6bfb3041",
+      "rule_name": "Synthetic-Rule-78",
+      "description": "Redundancy: Rule e834b86d-718f-492a-a563-5e0b6bfb3041 is fully covered by earlier rule c835f9ee-396f-4f72-8c44-186b21a19f97",
+      "details": {
+        "covered_by": "c835f9ee-396f-4f72-8c44-186b21a19f97"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "1702b54d-6aa2-4e2c-9e93-41937c50b324-34cf999c-6323-4bf4-b0ca-d0342cffbffc",
+      "rule_name": "Synthetic-Rule-16<->Synthetic-Rule-24",
+      "description": "SMT Shadowing Conflict detected between 1702b54d-6aa2-4e2c-9e93-41937c50b324 and 34cf999c-6323-4bf4-b0ca-d0342cffbffc",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c3528f61-1c9b-4639-afee-be8cbbc294cd",
+      "rule_name": "Synthetic-Rule-30",
+      "description": "Redundancy: Rule c3528f61-1c9b-4639-afee-be8cbbc294cd is fully covered by earlier rule 1702b54d-6aa2-4e2c-9e93-41937c50b324",
+      "details": {
+        "covered_by": "1702b54d-6aa2-4e2c-9e93-41937c50b324"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "1702b54d-6aa2-4e2c-9e93-41937c50b324-c58ab246-704f-4e4b-821f-d61ea205d30d",
+      "rule_name": "Synthetic-Rule-16<->Synthetic-Rule-38",
+      "description": "SMT Shadowing Conflict detected between 1702b54d-6aa2-4e2c-9e93-41937c50b324 and c58ab246-704f-4e4b-821f-d61ea205d30d",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "1702b54d-6aa2-4e2c-9e93-41937c50b324-764178ae-bfe4-4874-844e-56bf29d0520f",
+      "rule_name": "Synthetic-Rule-16<->Synthetic-Rule-49",
+      "description": "SMT Shadowing Conflict detected between 1702b54d-6aa2-4e2c-9e93-41937c50b324 and 764178ae-bfe4-4874-844e-56bf29d0520f",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "b12b13c4-a58e-4ca9-904d-e7e2e3dd387f",
+      "rule_name": "Synthetic-Rule-79",
+      "description": "Redundancy: Rule b12b13c4-a58e-4ca9-904d-e7e2e3dd387f is fully covered by earlier rule 3baed7d1-2e35-4db6-a91e-8153fe0957f6",
+      "details": {
+        "covered_by": "3baed7d1-2e35-4db6-a91e-8153fe0957f6"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "5c5784fd-f7b5-4395-a2ab-8af691068272",
+      "rule_name": "Synthetic-Rule-87",
+      "description": "Redundancy: Rule 5c5784fd-f7b5-4395-a2ab-8af691068272 is fully covered by earlier rule 3baed7d1-2e35-4db6-a91e-8153fe0957f6",
+      "details": {
+        "covered_by": "3baed7d1-2e35-4db6-a91e-8153fe0957f6"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "faa359ea-969a-414c-be45-b0edece59c6d",
+      "rule_name": "Synthetic-Rule-73",
+      "description": "Redundancy: Rule faa359ea-969a-414c-be45-b0edece59c6d is fully covered by earlier rule 460dd1c2-a284-40bc-b200-08fb9e3a4f79",
+      "details": {
+        "covered_by": "460dd1c2-a284-40bc-b200-08fb9e3a4f79"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "09b5652b-ee2b-4091-9e13-5dc498d56d02",
+      "rule_name": "Synthetic-Rule-92",
+      "description": "Redundancy: Rule 09b5652b-ee2b-4091-9e13-5dc498d56d02 is fully covered by earlier rule 460dd1c2-a284-40bc-b200-08fb9e3a4f79",
+      "details": {
+        "covered_by": "460dd1c2-a284-40bc-b200-08fb9e3a4f79"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c4a77e65-88d3-409a-82fb-9b9ced3b0796-3eb70272-e5c0-4b78-82c6-db1ad287b892",
+      "rule_name": "Synthetic-Rule-19<->Synthetic-Rule-44",
+      "description": "SMT Shadowing Conflict detected between c4a77e65-88d3-409a-82fb-9b9ced3b0796 and 3eb70272-e5c0-4b78-82c6-db1ad287b892",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "268c88e3-16d9-4ca3-92dc-599a16280674",
+      "rule_name": "Synthetic-Rule-90",
+      "description": "Redundancy: Rule 268c88e3-16d9-4ca3-92dc-599a16280674 is fully covered by earlier rule c4a77e65-88d3-409a-82fb-9b9ced3b0796",
+      "details": {
+        "covered_by": "c4a77e65-88d3-409a-82fb-9b9ced3b0796"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "ef14a329-965e-4195-b787-2f86e4722894-9779d6ad-fa7c-425b-acce-0cb0611c58d2",
+      "rule_name": "Synthetic-Rule-20<->Synthetic-Rule-61",
+      "description": "SMT Shadowing Conflict detected between ef14a329-965e-4195-b787-2f86e4722894 and 9779d6ad-fa7c-425b-acce-0cb0611c58d2",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "6ab12bc0-db2b-49ba-afe4-9fd4c6f1056b",
+      "rule_name": "Synthetic-Rule-95",
+      "description": "Redundancy: Rule 6ab12bc0-db2b-49ba-afe4-9fd4c6f1056b is fully covered by earlier rule ea5ecb12-e598-48e3-ae2c-e69e53daa2ba",
+      "details": {
+        "covered_by": "ea5ecb12-e598-48e3-ae2c-e69e53daa2ba"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c4479856-a420-490e-a350-56c70b9e896e",
+      "rule_name": "Synthetic-Rule-32",
+      "description": "Redundancy: Rule c4479856-a420-490e-a350-56c70b9e896e is fully covered by earlier rule 378e8395-b5f1-4d7e-96ea-ff989a5e620a",
+      "details": {
+        "covered_by": "378e8395-b5f1-4d7e-96ea-ff989a5e620a"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "378e8395-b5f1-4d7e-96ea-ff989a5e620a-9643adf6-60c5-4585-8b2f-b195b6c4ab8f",
+      "rule_name": "Synthetic-Rule-22<->Synthetic-Rule-51",
+      "description": "SMT Shadowing Conflict detected between 378e8395-b5f1-4d7e-96ea-ff989a5e620a and 9643adf6-60c5-4585-8b2f-b195b6c4ab8f",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "4f8cc734-3c8a-4b92-a1ee-f65c4ed6d6f9",
+      "rule_name": "Synthetic-Rule-55",
+      "description": "Redundancy: Rule 4f8cc734-3c8a-4b92-a1ee-f65c4ed6d6f9 is fully covered by earlier rule 378e8395-b5f1-4d7e-96ea-ff989a5e620a",
+      "details": {
+        "covered_by": "378e8395-b5f1-4d7e-96ea-ff989a5e620a"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a117bfc4-83da-473c-9146-ca9210bbf84c",
+      "rule_name": "Synthetic-Rule-62",
+      "description": "Redundancy: Rule a117bfc4-83da-473c-9146-ca9210bbf84c is fully covered by earlier rule 378e8395-b5f1-4d7e-96ea-ff989a5e620a",
+      "details": {
+        "covered_by": "378e8395-b5f1-4d7e-96ea-ff989a5e620a"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "dbd1afe7-9840-46da-acde-adfceedb2f49",
+      "rule_name": "Synthetic-Rule-28",
+      "description": "Redundancy: Rule dbd1afe7-9840-46da-acde-adfceedb2f49 is fully covered by earlier rule 074b7029-5012-4500-b351-5ad8bb2de8e4",
+      "details": {
+        "covered_by": "074b7029-5012-4500-b351-5ad8bb2de8e4"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a8321981-9f8c-462c-86b9-11e888e39298",
+      "rule_name": "Synthetic-Rule-33",
+      "description": "Redundancy: Rule a8321981-9f8c-462c-86b9-11e888e39298 is fully covered by earlier rule 074b7029-5012-4500-b351-5ad8bb2de8e4",
+      "details": {
+        "covered_by": "074b7029-5012-4500-b351-5ad8bb2de8e4"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "074b7029-5012-4500-b351-5ad8bb2de8e4-5f84a038-f17c-4612-b66c-3a32faf5b4fa",
+      "rule_name": "Synthetic-Rule-23<->Synthetic-Rule-34",
+      "description": "SMT Shadowing Conflict detected between 074b7029-5012-4500-b351-5ad8bb2de8e4 and 5f84a038-f17c-4612-b66c-3a32faf5b4fa",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "1718191a-a9b6-4702-8118-e3b9f4160774",
+      "rule_name": "Synthetic-Rule-57",
+      "description": "Redundancy: Rule 1718191a-a9b6-4702-8118-e3b9f4160774 is fully covered by earlier rule 074b7029-5012-4500-b351-5ad8bb2de8e4",
+      "details": {
+        "covered_by": "074b7029-5012-4500-b351-5ad8bb2de8e4"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "eb200361-1a3d-4aef-af4a-283da620ac4f",
+      "rule_name": "Synthetic-Rule-63",
+      "description": "Redundancy: Rule eb200361-1a3d-4aef-af4a-283da620ac4f is fully covered by earlier rule 074b7029-5012-4500-b351-5ad8bb2de8e4",
+      "details": {
+        "covered_by": "074b7029-5012-4500-b351-5ad8bb2de8e4"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "abf279e9-cd3b-4a04-8fb2-8b6717a3e82e",
+      "rule_name": "Synthetic-Rule-71",
+      "description": "Redundancy: Rule abf279e9-cd3b-4a04-8fb2-8b6717a3e82e is fully covered by earlier rule 074b7029-5012-4500-b351-5ad8bb2de8e4",
+      "details": {
+        "covered_by": "074b7029-5012-4500-b351-5ad8bb2de8e4"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "34cf999c-6323-4bf4-b0ca-d0342cffbffc-c3528f61-1c9b-4639-afee-be8cbbc294cd",
+      "rule_name": "Synthetic-Rule-24<->Synthetic-Rule-30",
+      "description": "SMT Shadowing Conflict detected between 34cf999c-6323-4bf4-b0ca-d0342cffbffc and c3528f61-1c9b-4639-afee-be8cbbc294cd",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c58ab246-704f-4e4b-821f-d61ea205d30d",
+      "rule_name": "Synthetic-Rule-38",
+      "description": "Redundancy: Rule c58ab246-704f-4e4b-821f-d61ea205d30d is fully covered by earlier rule 34cf999c-6323-4bf4-b0ca-d0342cffbffc",
+      "details": {
+        "covered_by": "34cf999c-6323-4bf4-b0ca-d0342cffbffc"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "764178ae-bfe4-4874-844e-56bf29d0520f",
+      "rule_name": "Synthetic-Rule-49",
+      "description": "Redundancy: Rule 764178ae-bfe4-4874-844e-56bf29d0520f is fully covered by earlier rule 34cf999c-6323-4bf4-b0ca-d0342cffbffc",
+      "details": {
+        "covered_by": "34cf999c-6323-4bf4-b0ca-d0342cffbffc"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "17c4063d-27db-4505-b4b8-c48adffbeb55",
+      "rule_name": "Synthetic-Rule-59",
+      "description": "Redundancy: Rule 17c4063d-27db-4505-b4b8-c48adffbeb55 is fully covered by earlier rule 6048a792-acc3-4f9e-8a24-8c2d419f4e1c",
+      "details": {
+        "covered_by": "6048a792-acc3-4f9e-8a24-8c2d419f4e1c"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "eb1e4528-0033-4afb-99e3-a9ca5be57068-07bdd93c-31f1-41c2-bd65-2c3155209a79",
+      "rule_name": "Synthetic-Rule-26<->Synthetic-Rule-86",
+      "description": "SMT Shadowing Conflict detected between eb1e4528-0033-4afb-99e3-a9ca5be57068 and 07bdd93c-31f1-41c2-bd65-2c3155209a79",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "84871c2d-1d2b-4b81-b437-56fc0f6a4932",
+      "rule_name": "Synthetic-Rule-54",
+      "description": "Redundancy: Rule 84871c2d-1d2b-4b81-b437-56fc0f6a4932 is fully covered by earlier rule c505c397-9ac8-4a0b-8154-f189eaa54843",
+      "details": {
+        "covered_by": "c505c397-9ac8-4a0b-8154-f189eaa54843"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "022a96ba-fa02-466d-9eb7-222896324e6a",
+      "rule_name": "Synthetic-Rule-66",
+      "description": "Redundancy: Rule 022a96ba-fa02-466d-9eb7-222896324e6a is fully covered by earlier rule c505c397-9ac8-4a0b-8154-f189eaa54843",
+      "details": {
+        "covered_by": "c505c397-9ac8-4a0b-8154-f189eaa54843"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a8321981-9f8c-462c-86b9-11e888e39298",
+      "rule_name": "Synthetic-Rule-33",
+      "description": "Redundancy: Rule a8321981-9f8c-462c-86b9-11e888e39298 is fully covered by earlier rule dbd1afe7-9840-46da-acde-adfceedb2f49",
+      "details": {
+        "covered_by": "dbd1afe7-9840-46da-acde-adfceedb2f49"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "dbd1afe7-9840-46da-acde-adfceedb2f49-5f84a038-f17c-4612-b66c-3a32faf5b4fa",
+      "rule_name": "Synthetic-Rule-28<->Synthetic-Rule-34",
+      "description": "SMT Shadowing Conflict detected between dbd1afe7-9840-46da-acde-adfceedb2f49 and 5f84a038-f17c-4612-b66c-3a32faf5b4fa",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "1718191a-a9b6-4702-8118-e3b9f4160774",
+      "rule_name": "Synthetic-Rule-57",
+      "description": "Redundancy: Rule 1718191a-a9b6-4702-8118-e3b9f4160774 is fully covered by earlier rule dbd1afe7-9840-46da-acde-adfceedb2f49",
+      "details": {
+        "covered_by": "dbd1afe7-9840-46da-acde-adfceedb2f49"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "eb200361-1a3d-4aef-af4a-283da620ac4f",
+      "rule_name": "Synthetic-Rule-63",
+      "description": "Redundancy: Rule eb200361-1a3d-4aef-af4a-283da620ac4f is fully covered by earlier rule dbd1afe7-9840-46da-acde-adfceedb2f49",
+      "details": {
+        "covered_by": "dbd1afe7-9840-46da-acde-adfceedb2f49"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "abf279e9-cd3b-4a04-8fb2-8b6717a3e82e",
+      "rule_name": "Synthetic-Rule-71",
+      "description": "Redundancy: Rule abf279e9-cd3b-4a04-8fb2-8b6717a3e82e is fully covered by earlier rule dbd1afe7-9840-46da-acde-adfceedb2f49",
+      "details": {
+        "covered_by": "dbd1afe7-9840-46da-acde-adfceedb2f49"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "045d8f2c-00b8-4650-8a2c-2973a7408ca0-c305bee1-4ef8-498b-8b76-0f6c2fad1d50",
+      "rule_name": "Synthetic-Rule-29<->Synthetic-Rule-76",
+      "description": "SMT Shadowing Conflict detected between 045d8f2c-00b8-4650-8a2c-2973a7408ca0 and c305bee1-4ef8-498b-8b76-0f6c2fad1d50",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e8e71dc7-906c-4adb-bc0d-45c6834a6798",
+      "rule_name": "Synthetic-Rule-80",
+      "description": "Redundancy: Rule e8e71dc7-906c-4adb-bc0d-45c6834a6798 is fully covered by earlier rule 045d8f2c-00b8-4650-8a2c-2973a7408ca0",
+      "details": {
+        "covered_by": "045d8f2c-00b8-4650-8a2c-2973a7408ca0"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c3528f61-1c9b-4639-afee-be8cbbc294cd-c58ab246-704f-4e4b-821f-d61ea205d30d",
+      "rule_name": "Synthetic-Rule-30<->Synthetic-Rule-38",
+      "description": "SMT Shadowing Conflict detected between c3528f61-1c9b-4639-afee-be8cbbc294cd and c58ab246-704f-4e4b-821f-d61ea205d30d",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c3528f61-1c9b-4639-afee-be8cbbc294cd-764178ae-bfe4-4874-844e-56bf29d0520f",
+      "rule_name": "Synthetic-Rule-30<->Synthetic-Rule-49",
+      "description": "SMT Shadowing Conflict detected between c3528f61-1c9b-4639-afee-be8cbbc294cd and 764178ae-bfe4-4874-844e-56bf29d0520f",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e834b86d-718f-492a-a563-5e0b6bfb3041",
+      "rule_name": "Synthetic-Rule-78",
+      "description": "Redundancy: Rule e834b86d-718f-492a-a563-5e0b6bfb3041 is fully covered by earlier rule 3236cb0d-ad6c-43f9-a134-d53a3b16b5f7",
+      "details": {
+        "covered_by": "3236cb0d-ad6c-43f9-a134-d53a3b16b5f7"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c4479856-a420-490e-a350-56c70b9e896e-9643adf6-60c5-4585-8b2f-b195b6c4ab8f",
+      "rule_name": "Synthetic-Rule-32<->Synthetic-Rule-51",
+      "description": "SMT Shadowing Conflict detected between c4479856-a420-490e-a350-56c70b9e896e and 9643adf6-60c5-4585-8b2f-b195b6c4ab8f",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "4f8cc734-3c8a-4b92-a1ee-f65c4ed6d6f9",
+      "rule_name": "Synthetic-Rule-55",
+      "description": "Redundancy: Rule 4f8cc734-3c8a-4b92-a1ee-f65c4ed6d6f9 is fully covered by earlier rule c4479856-a420-490e-a350-56c70b9e896e",
+      "details": {
+        "covered_by": "c4479856-a420-490e-a350-56c70b9e896e"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a117bfc4-83da-473c-9146-ca9210bbf84c",
+      "rule_name": "Synthetic-Rule-62",
+      "description": "Redundancy: Rule a117bfc4-83da-473c-9146-ca9210bbf84c is fully covered by earlier rule c4479856-a420-490e-a350-56c70b9e896e",
+      "details": {
+        "covered_by": "c4479856-a420-490e-a350-56c70b9e896e"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "a8321981-9f8c-462c-86b9-11e888e39298-5f84a038-f17c-4612-b66c-3a32faf5b4fa",
+      "rule_name": "Synthetic-Rule-33<->Synthetic-Rule-34",
+      "description": "SMT Shadowing Conflict detected between a8321981-9f8c-462c-86b9-11e888e39298 and 5f84a038-f17c-4612-b66c-3a32faf5b4fa",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "1718191a-a9b6-4702-8118-e3b9f4160774",
+      "rule_name": "Synthetic-Rule-57",
+      "description": "Redundancy: Rule 1718191a-a9b6-4702-8118-e3b9f4160774 is fully covered by earlier rule a8321981-9f8c-462c-86b9-11e888e39298",
+      "details": {
+        "covered_by": "a8321981-9f8c-462c-86b9-11e888e39298"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "eb200361-1a3d-4aef-af4a-283da620ac4f",
+      "rule_name": "Synthetic-Rule-63",
+      "description": "Redundancy: Rule eb200361-1a3d-4aef-af4a-283da620ac4f is fully covered by earlier rule a8321981-9f8c-462c-86b9-11e888e39298",
+      "details": {
+        "covered_by": "a8321981-9f8c-462c-86b9-11e888e39298"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "abf279e9-cd3b-4a04-8fb2-8b6717a3e82e",
+      "rule_name": "Synthetic-Rule-71",
+      "description": "Redundancy: Rule abf279e9-cd3b-4a04-8fb2-8b6717a3e82e is fully covered by earlier rule a8321981-9f8c-462c-86b9-11e888e39298",
+      "details": {
+        "covered_by": "a8321981-9f8c-462c-86b9-11e888e39298"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "5f84a038-f17c-4612-b66c-3a32faf5b4fa-1718191a-a9b6-4702-8118-e3b9f4160774",
+      "rule_name": "Synthetic-Rule-34<->Synthetic-Rule-57",
+      "description": "SMT Shadowing Conflict detected between 5f84a038-f17c-4612-b66c-3a32faf5b4fa and 1718191a-a9b6-4702-8118-e3b9f4160774",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "5f84a038-f17c-4612-b66c-3a32faf5b4fa-eb200361-1a3d-4aef-af4a-283da620ac4f",
+      "rule_name": "Synthetic-Rule-34<->Synthetic-Rule-63",
+      "description": "SMT Shadowing Conflict detected between 5f84a038-f17c-4612-b66c-3a32faf5b4fa and eb200361-1a3d-4aef-af4a-283da620ac4f",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "5f84a038-f17c-4612-b66c-3a32faf5b4fa-abf279e9-cd3b-4a04-8fb2-8b6717a3e82e",
+      "rule_name": "Synthetic-Rule-34<->Synthetic-Rule-71",
+      "description": "SMT Shadowing Conflict detected between 5f84a038-f17c-4612-b66c-3a32faf5b4fa and abf279e9-cd3b-4a04-8fb2-8b6717a3e82e",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "f42027e0-3430-48fb-bacc-ebe667a1eaad",
+      "rule_name": "Synthetic-Rule-46",
+      "description": "Redundancy: Rule f42027e0-3430-48fb-bacc-ebe667a1eaad is fully covered by earlier rule 202549d1-d4bb-4c8d-93be-c3e186246ab2",
+      "details": {
+        "covered_by": "202549d1-d4bb-4c8d-93be-c3e186246ab2"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "6d8c6091-2076-47e5-8b6f-8fae3a29280f",
+      "rule_name": "Synthetic-Rule-72",
+      "description": "Redundancy: Rule 6d8c6091-2076-47e5-8b6f-8fae3a29280f is fully covered by earlier rule c61634a5-99b7-4cf3-adce-442d9c6a75fa",
+      "details": {
+        "covered_by": "c61634a5-99b7-4cf3-adce-442d9c6a75fa"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "d0640cfa-1b25-4d9a-a756-8edf25e7292f",
+      "rule_name": "Synthetic-Rule-84",
+      "description": "Redundancy: Rule d0640cfa-1b25-4d9a-a756-8edf25e7292f is fully covered by earlier rule c61634a5-99b7-4cf3-adce-442d9c6a75fa",
+      "details": {
+        "covered_by": "c61634a5-99b7-4cf3-adce-442d9c6a75fa"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e550b967-dbea-42af-8384-266ccf3b6c81",
+      "rule_name": "Synthetic-Rule-70",
+      "description": "Redundancy: Rule e550b967-dbea-42af-8384-266ccf3b6c81 is fully covered by earlier rule aba5f68c-d41a-425a-a365-e7069cd046e5",
+      "details": {
+        "covered_by": "aba5f68c-d41a-425a-a365-e7069cd046e5"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "2f7f9e32-6398-4044-a486-03f81bb5e892",
+      "rule_name": "Synthetic-Rule-100",
+      "description": "Redundancy: Rule 2f7f9e32-6398-4044-a486-03f81bb5e892 is fully covered by earlier rule aba5f68c-d41a-425a-a365-e7069cd046e5",
+      "details": {
+        "covered_by": "aba5f68c-d41a-425a-a365-e7069cd046e5"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "764178ae-bfe4-4874-844e-56bf29d0520f",
+      "rule_name": "Synthetic-Rule-49",
+      "description": "Redundancy: Rule 764178ae-bfe4-4874-844e-56bf29d0520f is fully covered by earlier rule c58ab246-704f-4e4b-821f-d61ea205d30d",
+      "details": {
+        "covered_by": "c58ab246-704f-4e4b-821f-d61ea205d30d"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "d8eec311-894c-4a40-b1b4-7f8dc678e69a",
+      "rule_name": "Synthetic-Rule-50",
+      "description": "Redundancy: Rule d8eec311-894c-4a40-b1b4-7f8dc678e69a is fully covered by earlier rule 720bbdb7-01af-438b-b856-95515853c5d3",
+      "details": {
+        "covered_by": "720bbdb7-01af-438b-b856-95515853c5d3"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "9d58c477-fafc-4083-a6b0-9b9b93629a96-25d1e59a-3482-4906-a55a-6da8ed51a627",
+      "rule_name": "Synthetic-Rule-40<->Synthetic-Rule-56",
+      "description": "SMT Shadowing Conflict detected between 9d58c477-fafc-4083-a6b0-9b9b93629a96 and 25d1e59a-3482-4906-a55a-6da8ed51a627",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "43b90ac4-70d3-4824-bfdf-11df3646fb39",
+      "rule_name": "Synthetic-Rule-74",
+      "description": "Redundancy: Rule 43b90ac4-70d3-4824-bfdf-11df3646fb39 is fully covered by earlier rule 9d58c477-fafc-4083-a6b0-9b9b93629a96",
+      "details": {
+        "covered_by": "9d58c477-fafc-4083-a6b0-9b9b93629a96"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "7e8f7cac-49d8-40a2-8e9b-fbdd3b40c1ff",
+      "rule_name": "Synthetic-Rule-75",
+      "description": "Redundancy: Rule 7e8f7cac-49d8-40a2-8e9b-fbdd3b40c1ff is fully covered by earlier rule 9d58c477-fafc-4083-a6b0-9b9b93629a96",
+      "details": {
+        "covered_by": "9d58c477-fafc-4083-a6b0-9b9b93629a96"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "6a22ae11-4ab2-4f76-bded-c70c148ca235",
+      "rule_name": "Synthetic-Rule-88",
+      "description": "Redundancy: Rule 6a22ae11-4ab2-4f76-bded-c70c148ca235 is fully covered by earlier rule 9d58c477-fafc-4083-a6b0-9b9b93629a96",
+      "details": {
+        "covered_by": "9d58c477-fafc-4083-a6b0-9b9b93629a96"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "efaafcee-d3e7-450c-bfec-81a019ae087f-35dce328-d62d-45f1-aeeb-3c626df1ae1f",
+      "rule_name": "Synthetic-Rule-41<->Synthetic-Rule-52",
+      "description": "SMT Shadowing Conflict detected between efaafcee-d3e7-450c-bfec-81a019ae087f and 35dce328-d62d-45f1-aeeb-3c626df1ae1f",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "70db0479-76b7-43e5-83e9-8bfde3c8908b",
+      "rule_name": "Synthetic-Rule-83",
+      "description": "Redundancy: Rule 70db0479-76b7-43e5-83e9-8bfde3c8908b is fully covered by earlier rule efaafcee-d3e7-450c-bfec-81a019ae087f",
+      "details": {
+        "covered_by": "efaafcee-d3e7-450c-bfec-81a019ae087f"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "40bd211d-ee38-43e5-991b-c58d9fc794ab",
+      "rule_name": "Synthetic-Rule-99",
+      "description": "Redundancy: Rule 40bd211d-ee38-43e5-991b-c58d9fc794ab is fully covered by earlier rule 9e94d5cc-094b-4ace-8e9b-36e5ae87ea10",
+      "details": {
+        "covered_by": "9e94d5cc-094b-4ace-8e9b-36e5ae87ea10"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "3eb70272-e5c0-4b78-82c6-db1ad287b892-268c88e3-16d9-4ca3-92dc-599a16280674",
+      "rule_name": "Synthetic-Rule-44<->Synthetic-Rule-90",
+      "description": "SMT Shadowing Conflict detected between 3eb70272-e5c0-4b78-82c6-db1ad287b892 and 268c88e3-16d9-4ca3-92dc-599a16280674",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "020a45ac-198e-40f3-8a91-cdb5aec7ed6e",
+      "rule_name": "Synthetic-Rule-48",
+      "description": "Redundancy: Rule 020a45ac-198e-40f3-8a91-cdb5aec7ed6e is fully covered by earlier rule dc71a193-a383-47df-9f9a-51fb872575f0",
+      "details": {
+        "covered_by": "dc71a193-a383-47df-9f9a-51fb872575f0"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "4695927d-f65a-41b0-8bd0-492a91013cdc",
+      "rule_name": "Synthetic-Rule-58",
+      "description": "Redundancy: Rule 4695927d-f65a-41b0-8bd0-492a91013cdc is fully covered by earlier rule dc71a193-a383-47df-9f9a-51fb872575f0",
+      "details": {
+        "covered_by": "dc71a193-a383-47df-9f9a-51fb872575f0"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "fb5135b6-bce0-4995-85b4-595468110f42",
+      "rule_name": "Synthetic-Rule-65",
+      "description": "Redundancy: Rule fb5135b6-bce0-4995-85b4-595468110f42 is fully covered by earlier rule dc71a193-a383-47df-9f9a-51fb872575f0",
+      "details": {
+        "covered_by": "dc71a193-a383-47df-9f9a-51fb872575f0"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "dc71a193-a383-47df-9f9a-51fb872575f0-94db9b3d-37fa-4530-b91b-3bc218a9ba19",
+      "rule_name": "Synthetic-Rule-45<->Synthetic-Rule-67",
+      "description": "SMT Shadowing Conflict detected between dc71a193-a383-47df-9f9a-51fb872575f0 and 94db9b3d-37fa-4530-b91b-3bc218a9ba19",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "dc71a193-a383-47df-9f9a-51fb872575f0-fcd7be02-dcd9-4c8d-b01a-226a46c7bd44",
+      "rule_name": "Synthetic-Rule-45<->Synthetic-Rule-91",
+      "description": "SMT Shadowing Conflict detected between dc71a193-a383-47df-9f9a-51fb872575f0 and fcd7be02-dcd9-4c8d-b01a-226a46c7bd44",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e0d365f8-2481-4671-8f34-a47cfe08c79f",
+      "rule_name": "Synthetic-Rule-68",
+      "description": "Redundancy: Rule e0d365f8-2481-4671-8f34-a47cfe08c79f is fully covered by earlier rule adb020ee-e177-4bf8-b7c5-d10a90ff0e65",
+      "details": {
+        "covered_by": "adb020ee-e177-4bf8-b7c5-d10a90ff0e65"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "4695927d-f65a-41b0-8bd0-492a91013cdc",
+      "rule_name": "Synthetic-Rule-58",
+      "description": "Redundancy: Rule 4695927d-f65a-41b0-8bd0-492a91013cdc is fully covered by earlier rule 020a45ac-198e-40f3-8a91-cdb5aec7ed6e",
+      "details": {
+        "covered_by": "020a45ac-198e-40f3-8a91-cdb5aec7ed6e"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "fb5135b6-bce0-4995-85b4-595468110f42",
+      "rule_name": "Synthetic-Rule-65",
+      "description": "Redundancy: Rule fb5135b6-bce0-4995-85b4-595468110f42 is fully covered by earlier rule 020a45ac-198e-40f3-8a91-cdb5aec7ed6e",
+      "details": {
+        "covered_by": "020a45ac-198e-40f3-8a91-cdb5aec7ed6e"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "020a45ac-198e-40f3-8a91-cdb5aec7ed6e-94db9b3d-37fa-4530-b91b-3bc218a9ba19",
+      "rule_name": "Synthetic-Rule-48<->Synthetic-Rule-67",
+      "description": "SMT Shadowing Conflict detected between 020a45ac-198e-40f3-8a91-cdb5aec7ed6e and 94db9b3d-37fa-4530-b91b-3bc218a9ba19",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "020a45ac-198e-40f3-8a91-cdb5aec7ed6e-fcd7be02-dcd9-4c8d-b01a-226a46c7bd44",
+      "rule_name": "Synthetic-Rule-48<->Synthetic-Rule-91",
+      "description": "SMT Shadowing Conflict detected between 020a45ac-198e-40f3-8a91-cdb5aec7ed6e and fcd7be02-dcd9-4c8d-b01a-226a46c7bd44",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "9643adf6-60c5-4585-8b2f-b195b6c4ab8f-4f8cc734-3c8a-4b92-a1ee-f65c4ed6d6f9",
+      "rule_name": "Synthetic-Rule-51<->Synthetic-Rule-55",
+      "description": "SMT Shadowing Conflict detected between 9643adf6-60c5-4585-8b2f-b195b6c4ab8f and 4f8cc734-3c8a-4b92-a1ee-f65c4ed6d6f9",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "9643adf6-60c5-4585-8b2f-b195b6c4ab8f-a117bfc4-83da-473c-9146-ca9210bbf84c",
+      "rule_name": "Synthetic-Rule-51<->Synthetic-Rule-62",
+      "description": "SMT Shadowing Conflict detected between 9643adf6-60c5-4585-8b2f-b195b6c4ab8f and a117bfc4-83da-473c-9146-ca9210bbf84c",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "35dce328-d62d-45f1-aeeb-3c626df1ae1f-70db0479-76b7-43e5-83e9-8bfde3c8908b",
+      "rule_name": "Synthetic-Rule-52<->Synthetic-Rule-83",
+      "description": "SMT Shadowing Conflict detected between 35dce328-d62d-45f1-aeeb-3c626df1ae1f and 70db0479-76b7-43e5-83e9-8bfde3c8908b",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "022a96ba-fa02-466d-9eb7-222896324e6a",
+      "rule_name": "Synthetic-Rule-66",
+      "description": "Redundancy: Rule 022a96ba-fa02-466d-9eb7-222896324e6a is fully covered by earlier rule 84871c2d-1d2b-4b81-b437-56fc0f6a4932",
+      "details": {
+        "covered_by": "84871c2d-1d2b-4b81-b437-56fc0f6a4932"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a117bfc4-83da-473c-9146-ca9210bbf84c",
+      "rule_name": "Synthetic-Rule-62",
+      "description": "Redundancy: Rule a117bfc4-83da-473c-9146-ca9210bbf84c is fully covered by earlier rule 4f8cc734-3c8a-4b92-a1ee-f65c4ed6d6f9",
+      "details": {
+        "covered_by": "4f8cc734-3c8a-4b92-a1ee-f65c4ed6d6f9"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "25d1e59a-3482-4906-a55a-6da8ed51a627-43b90ac4-70d3-4824-bfdf-11df3646fb39",
+      "rule_name": "Synthetic-Rule-56<->Synthetic-Rule-74",
+      "description": "SMT Shadowing Conflict detected between 25d1e59a-3482-4906-a55a-6da8ed51a627 and 43b90ac4-70d3-4824-bfdf-11df3646fb39",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "25d1e59a-3482-4906-a55a-6da8ed51a627-7e8f7cac-49d8-40a2-8e9b-fbdd3b40c1ff",
+      "rule_name": "Synthetic-Rule-56<->Synthetic-Rule-75",
+      "description": "SMT Shadowing Conflict detected between 25d1e59a-3482-4906-a55a-6da8ed51a627 and 7e8f7cac-49d8-40a2-8e9b-fbdd3b40c1ff",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "25d1e59a-3482-4906-a55a-6da8ed51a627-6a22ae11-4ab2-4f76-bded-c70c148ca235",
+      "rule_name": "Synthetic-Rule-56<->Synthetic-Rule-88",
+      "description": "SMT Shadowing Conflict detected between 25d1e59a-3482-4906-a55a-6da8ed51a627 and 6a22ae11-4ab2-4f76-bded-c70c148ca235",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "eb200361-1a3d-4aef-af4a-283da620ac4f",
+      "rule_name": "Synthetic-Rule-63",
+      "description": "Redundancy: Rule eb200361-1a3d-4aef-af4a-283da620ac4f is fully covered by earlier rule 1718191a-a9b6-4702-8118-e3b9f4160774",
+      "details": {
+        "covered_by": "1718191a-a9b6-4702-8118-e3b9f4160774"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "abf279e9-cd3b-4a04-8fb2-8b6717a3e82e",
+      "rule_name": "Synthetic-Rule-71",
+      "description": "Redundancy: Rule abf279e9-cd3b-4a04-8fb2-8b6717a3e82e is fully covered by earlier rule 1718191a-a9b6-4702-8118-e3b9f4160774",
+      "details": {
+        "covered_by": "1718191a-a9b6-4702-8118-e3b9f4160774"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "fb5135b6-bce0-4995-85b4-595468110f42",
+      "rule_name": "Synthetic-Rule-65",
+      "description": "Redundancy: Rule fb5135b6-bce0-4995-85b4-595468110f42 is fully covered by earlier rule 4695927d-f65a-41b0-8bd0-492a91013cdc",
+      "details": {
+        "covered_by": "4695927d-f65a-41b0-8bd0-492a91013cdc"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "4695927d-f65a-41b0-8bd0-492a91013cdc-94db9b3d-37fa-4530-b91b-3bc218a9ba19",
+      "rule_name": "Synthetic-Rule-58<->Synthetic-Rule-67",
+      "description": "SMT Shadowing Conflict detected between 4695927d-f65a-41b0-8bd0-492a91013cdc and 94db9b3d-37fa-4530-b91b-3bc218a9ba19",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "4695927d-f65a-41b0-8bd0-492a91013cdc-fcd7be02-dcd9-4c8d-b01a-226a46c7bd44",
+      "rule_name": "Synthetic-Rule-58<->Synthetic-Rule-91",
+      "description": "SMT Shadowing Conflict detected between 4695927d-f65a-41b0-8bd0-492a91013cdc and fcd7be02-dcd9-4c8d-b01a-226a46c7bd44",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "6c20d2f3-b05a-4eac-90e8-9ab1ee8b1d27",
+      "rule_name": "Synthetic-Rule-77",
+      "description": "Redundancy: Rule 6c20d2f3-b05a-4eac-90e8-9ab1ee8b1d27 is fully covered by earlier rule 49cfffd3-7e0b-45a4-b00b-9c5a400b5b90",
+      "details": {
+        "covered_by": "49cfffd3-7e0b-45a4-b00b-9c5a400b5b90"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "abf279e9-cd3b-4a04-8fb2-8b6717a3e82e",
+      "rule_name": "Synthetic-Rule-71",
+      "description": "Redundancy: Rule abf279e9-cd3b-4a04-8fb2-8b6717a3e82e is fully covered by earlier rule eb200361-1a3d-4aef-af4a-283da620ac4f",
+      "details": {
+        "covered_by": "eb200361-1a3d-4aef-af4a-283da620ac4f"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "fb5135b6-bce0-4995-85b4-595468110f42-94db9b3d-37fa-4530-b91b-3bc218a9ba19",
+      "rule_name": "Synthetic-Rule-65<->Synthetic-Rule-67",
+      "description": "SMT Shadowing Conflict detected between fb5135b6-bce0-4995-85b4-595468110f42 and 94db9b3d-37fa-4530-b91b-3bc218a9ba19",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "fb5135b6-bce0-4995-85b4-595468110f42-fcd7be02-dcd9-4c8d-b01a-226a46c7bd44",
+      "rule_name": "Synthetic-Rule-65<->Synthetic-Rule-91",
+      "description": "SMT Shadowing Conflict detected between fb5135b6-bce0-4995-85b4-595468110f42 and fcd7be02-dcd9-4c8d-b01a-226a46c7bd44",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "fcd7be02-dcd9-4c8d-b01a-226a46c7bd44",
+      "rule_name": "Synthetic-Rule-91",
+      "description": "Redundancy: Rule fcd7be02-dcd9-4c8d-b01a-226a46c7bd44 is fully covered by earlier rule 94db9b3d-37fa-4530-b91b-3bc218a9ba19",
+      "details": {
+        "covered_by": "94db9b3d-37fa-4530-b91b-3bc218a9ba19"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "5b508e94-e687-4875-97e7-4b3929072699-ee5416ec-7d57-4a70-8ae7-bc02392454eb",
+      "rule_name": "Synthetic-Rule-69<->Synthetic-Rule-98",
+      "description": "SMT Shadowing Conflict detected between 5b508e94-e687-4875-97e7-4b3929072699 and ee5416ec-7d57-4a70-8ae7-bc02392454eb",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "2f7f9e32-6398-4044-a486-03f81bb5e892",
+      "rule_name": "Synthetic-Rule-100",
+      "description": "Redundancy: Rule 2f7f9e32-6398-4044-a486-03f81bb5e892 is fully covered by earlier rule e550b967-dbea-42af-8384-266ccf3b6c81",
+      "details": {
+        "covered_by": "e550b967-dbea-42af-8384-266ccf3b6c81"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "d0640cfa-1b25-4d9a-a756-8edf25e7292f",
+      "rule_name": "Synthetic-Rule-84",
+      "description": "Redundancy: Rule d0640cfa-1b25-4d9a-a756-8edf25e7292f is fully covered by earlier rule 6d8c6091-2076-47e5-8b6f-8fae3a29280f",
+      "details": {
+        "covered_by": "6d8c6091-2076-47e5-8b6f-8fae3a29280f"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "09b5652b-ee2b-4091-9e13-5dc498d56d02",
+      "rule_name": "Synthetic-Rule-92",
+      "description": "Redundancy: Rule 09b5652b-ee2b-4091-9e13-5dc498d56d02 is fully covered by earlier rule faa359ea-969a-414c-be45-b0edece59c6d",
+      "details": {
+        "covered_by": "faa359ea-969a-414c-be45-b0edece59c6d"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "7e8f7cac-49d8-40a2-8e9b-fbdd3b40c1ff",
+      "rule_name": "Synthetic-Rule-75",
+      "description": "Redundancy: Rule 7e8f7cac-49d8-40a2-8e9b-fbdd3b40c1ff is fully covered by earlier rule 43b90ac4-70d3-4824-bfdf-11df3646fb39",
+      "details": {
+        "covered_by": "43b90ac4-70d3-4824-bfdf-11df3646fb39"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "6a22ae11-4ab2-4f76-bded-c70c148ca235",
+      "rule_name": "Synthetic-Rule-88",
+      "description": "Redundancy: Rule 6a22ae11-4ab2-4f76-bded-c70c148ca235 is fully covered by earlier rule 43b90ac4-70d3-4824-bfdf-11df3646fb39",
+      "details": {
+        "covered_by": "43b90ac4-70d3-4824-bfdf-11df3646fb39"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "6a22ae11-4ab2-4f76-bded-c70c148ca235",
+      "rule_name": "Synthetic-Rule-88",
+      "description": "Redundancy: Rule 6a22ae11-4ab2-4f76-bded-c70c148ca235 is fully covered by earlier rule 7e8f7cac-49d8-40a2-8e9b-fbdd3b40c1ff",
+      "details": {
+        "covered_by": "7e8f7cac-49d8-40a2-8e9b-fbdd3b40c1ff"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c305bee1-4ef8-498b-8b76-0f6c2fad1d50-e8e71dc7-906c-4adb-bc0d-45c6834a6798",
+      "rule_name": "Synthetic-Rule-76<->Synthetic-Rule-80",
+      "description": "SMT Shadowing Conflict detected between c305bee1-4ef8-498b-8b76-0f6c2fad1d50 and e8e71dc7-906c-4adb-bc0d-45c6834a6798",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "5c5784fd-f7b5-4395-a2ab-8af691068272",
+      "rule_name": "Synthetic-Rule-87",
+      "description": "Redundancy: Rule 5c5784fd-f7b5-4395-a2ab-8af691068272 is fully covered by earlier rule b12b13c4-a58e-4ca9-904d-e7e2e3dd387f",
+      "details": {
+        "covered_by": "b12b13c4-a58e-4ca9-904d-e7e2e3dd387f"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c67e1665-bc49-45a6-8d41-1afbf2977c9e",
+      "rule_name": "Synthetic-Rule-97",
+      "description": "Redundancy: Rule c67e1665-bc49-45a6-8d41-1afbf2977c9e is fully covered by earlier rule def96445-d7e3-4ccc-95da-2e14c3249a19",
+      "details": {
+        "covered_by": "def96445-d7e3-4ccc-95da-2e14c3249a19"
+      }
+    }
+  ],
+  "intent_analysis": [
+    {
+      "severity": "high",
+      "rule_id": "11111111-1111-1111-1111-111111111111",
+      "rule_name": "Synthetic-Rule-1-Standard-Web",
+      "description": "This rule allows any external source to access the web-browsing service on the specific IP address 10.0.50.10 over TCP port 443, which is typically used for HTTPS traffic.",
+      "details": {
+        "intent": {
+          "rule_id": "11111111-1111-1111-1111-111111111111",
+          "summary": "This rule allows any external source to access the web-browsing service on the specific IP address 10.0.50.10 over TCP port 443, which is typically used for HTTPS traffic.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source addresses to known, trusted IPs or ranges instead of 'any'. Enable logging to monitor access attempts and consider implementing additional security measures such as web application firewalls (WAF) or intrusion detection systems (IDS) to protect the DMZ."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "22222222-2222-2222-2222-222222222222",
+      "rule_name": "Synthetic-Rule-2-Outbound-Traffic",
+      "description": "This rule allows outbound web browsing traffic from the internal network (192.168.1.0/24) to any external destination over HTTP (port 80) and HTTPS (port 443).",
+      "details": {
+        "intent": {
+          "rule_id": "22222222-2222-2222-2222-222222222222",
+          "summary": "This rule allows outbound web browsing traffic from the internal network (192.168.1.0/24) to any external destination over HTTP (port 80) and HTTPS (port 443).",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Enable logging for this rule to monitor outbound traffic. Consider restricting the destination addresses to only trusted external services to reduce exposure. Implement micro-segmentation to isolate sensitive internal resources from general web browsing traffic."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "33333333-3333-3333-3333-333333333333",
+      "rule_name": "Synthetic-Rule-3-Internal-Streaming",
+      "description": "This rule allows traffic from a specific internal IP address (192.168.1.50) to a specific DMZ IP address (10.0.50.20) over TCP port 8096, which is typically used for streaming applications.",
+      "details": {
+        "intent": {
+          "rule_id": "33333333-3333-3333-3333-333333333333",
+          "summary": "This rule allows traffic from a specific internal IP address (192.168.1.50) to a specific DMZ IP address (10.0.50.20) over TCP port 8096, which is typically used for streaming applications.",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Restrict the source IP to only necessary applications and consider limiting the destination IP to specific services rather than allowing 'any'. Enable logging for monitoring and auditing purposes."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "44444444-4444-4444-4444-444444444444",
+      "rule_name": "Synthetic-Rule-4-Shadowed-Deny",
+      "description": "This rule denies web-browsing traffic from the internal IP address 192.168.1.100 to any external destination over TCP port 80.",
+      "details": {
+        "intent": {
+          "rule_id": "44444444-4444-4444-4444-444444444444",
+          "summary": "This rule denies web-browsing traffic from the internal IP address 192.168.1.100 to any external destination over TCP port 80.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Consider enabling logging for this rule to monitor denied traffic attempts. Additionally, evaluate the necessity of blocking web-browsing for this specific internal address and assess if micro-segmentation could be applied to limit access based on user roles or device types."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "267b765e-f3ef-4790-9933-8423a5cb6061",
+      "rule_name": "Synthetic-Rule-5",
+      "description": "This rule allows a specific internal IP address (192.168.234.211) to initiate RDP (Remote Desktop Protocol) connections to a range of external IP addresses (56.211.142.0/24) over TCP port 3389.",
+      "details": {
+        "intent": {
+          "rule_id": "267b765e-f3ef-4790-9933-8423a5cb6061",
+          "summary": "This rule allows a specific internal IP address (192.168.234.211) to initiate RDP (Remote Desktop Protocol) connections to a range of external IP addresses (56.211.142.0/24) over TCP port 3389.",
+          "mitre": [
+            "T1076",
+            "T1071.001"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP to only those that absolutely require RDP access, implement time-based access controls, and consider using a VPN or bastion host for RDP connections to enhance security."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "ea837e1b-11e3-48e7-b3d5-20de0812c43c",
+      "rule_name": "Synthetic-Rule-6",
+      "description": "This rule allows DNS queries from a specific internal IP address (192.168.128.141) to a range of external IP addresses (17.127.20.0/24) over UDP port 53.",
+      "details": {
+        "intent": {
+          "rule_id": "ea837e1b-11e3-48e7-b3d5-20de0812c43c",
+          "summary": "This rule allows DNS queries from a specific internal IP address (192.168.128.141) to a range of external IP addresses (17.127.20.0/24) over UDP port 53.",
+          "mitre": [
+            "T1071.001",
+            "T1049"
+          ]
+        },
+        "risk_score": 60,
+        "suggested_action": "Consider restricting the destination addresses to only those necessary for DNS resolution, enable logging for monitoring, and implement micro-segmentation to limit exposure of the internal IP to only trusted DNS servers."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "dc323500-af34-4288-8eef-8e832efe9d7c",
+      "rule_name": "Synthetic-Rule-7",
+      "description": "This rule denies RDP (Remote Desktop Protocol) traffic from the external zone to a specific internal IP address (192.168.108.73).",
+      "details": {
+        "intent": {
+          "rule_id": "dc323500-af34-4288-8eef-8e832efe9d7c",
+          "summary": "This rule denies RDP (Remote Desktop Protocol) traffic from the external zone to a specific internal IP address (192.168.108.73).",
+          "mitre": [
+            "T1076"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Enable logging for this rule to monitor any attempts to access the internal system. Consider implementing micro-segmentation to further isolate the internal resources and restrict access based on user roles."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "6f6dad33-d3ee-4184-a2ab-beea81348f7d",
+      "rule_name": "Synthetic-Rule-8",
+      "description": "This rule allows web-browsing traffic from the external zone (specifically from the IP range 33.184.144.0/24) to a specific server in the DMZ (10.0.50.16) over TCP port 80.",
+      "details": {
+        "intent": {
+          "rule_id": "6f6dad33-d3ee-4184-a2ab-beea81348f7d",
+          "summary": "This rule allows web-browsing traffic from the external zone (specifically from the IP range 33.184.144.0/24) to a specific server in the DMZ (10.0.50.16) over TCP port 80.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 70,
+        "suggested_action": "Implement logging for this rule to monitor traffic and consider restricting the source IP range further. Additionally, apply micro-segmentation to isolate the DMZ server and limit access to only necessary services."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "f353c3c1-0c43-4498-a3b8-24d962ca9bf0",
+      "rule_name": "Synthetic-Rule-9",
+      "description": "This rule allows traffic from the external zone (specifically from the IP range 58.197.107.0/24) to access a specific internal IP address (192.168.22.188) over the SMB application using TCP port 445.",
+      "details": {
+        "intent": {
+          "rule_id": "f353c3c1-0c43-4498-a3b8-24d962ca9bf0",
+          "summary": "This rule allows traffic from the external zone (specifically from the IP range 58.197.107.0/24) to access a specific internal IP address (192.168.22.188) over the SMB application using TCP port 445.",
+          "mitre": [
+            "T1071.001",
+            "T1047",
+            "T1075"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "Restrict access to the SMB service by limiting the source IP range to only trusted addresses. Enable logging for monitoring and consider implementing micro-segmentation to isolate the internal resource from direct external access."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "26e0d887-a6c4-4c54-b430-da029ac59e7e",
+      "rule_name": "Synthetic-Rule-10",
+      "description": "This rule allows traffic from a specific IP range in the DMZ (10.0.50.16/28) to access a single internal IP address (192.168.160.165) over the SMB application using TCP port 445.",
+      "details": {
+        "intent": {
+          "rule_id": "26e0d887-a6c4-4c54-b430-da029ac59e7e",
+          "summary": "This rule allows traffic from a specific IP range in the DMZ (10.0.50.16/28) to access a single internal IP address (192.168.160.165) over the SMB application using TCP port 445.",
+          "mitre": [
+            "T1071.001",
+            "T1047"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Limit the source IP range to only necessary hosts and consider implementing micro-segmentation to isolate the SMB service. Enable logging for monitoring and auditing purposes."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "987f7ed2-1ccd-4f11-8b53-95d76d50e18c",
+      "rule_name": "Synthetic-Rule-11",
+      "description": "This rule allows web-browsing traffic over HTTPS (TCP port 443) from an external source IP range (125.123.192.0/24) to a specific server in the DMZ (10.0.50.204).",
+      "details": {
+        "intent": {
+          "rule_id": "987f7ed2-1ccd-4f11-8b53-95d76d50e18c",
+          "summary": "This rule allows web-browsing traffic over HTTPS (TCP port 443) from an external source IP range (125.123.192.0/24) to a specific server in the DMZ (10.0.50.204).",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 70,
+        "suggested_action": "Implement logging for this rule to monitor traffic and detect potential misuse. Consider restricting the source IP range further or implementing additional authentication mechanisms to enhance security. Evaluate the necessity of allowing external access to the DMZ and consider applying micro-segmentation to isolate sensitive services."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "8979e6e2-b356-4602-b7bd-c2f62591c83b",
+      "rule_name": "Synthetic-Rule-12",
+      "description": "This rule allows web browsing traffic from a specific internal IP address (192.168.248.48) to a specific server in the DMZ (10.0.50.203) over HTTP (TCP port 80).",
+      "details": {
+        "intent": {
+          "rule_id": "8979e6e2-b356-4602-b7bd-c2f62591c83b",
+          "summary": "This rule allows web browsing traffic from a specific internal IP address (192.168.248.48) to a specific server in the DMZ (10.0.50.203) over HTTP (TCP port 80).",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Implement logging for this rule to monitor traffic. Consider restricting the source IP to only necessary users and using HTTPS (TCP port 443) instead of HTTP to enhance security. Additionally, apply micro-segmentation to limit access to the DMZ server based on user roles."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "f0a350a2-74e8-4066-87fb-22c32b169c00",
+      "rule_name": "Synthetic-Rule-13",
+      "description": "This rule allows a specific internal IP address (192.168.192.144) to access a web service (TCP port 443) hosted on a specific server in the DMZ (10.0.50.31).",
+      "details": {
+        "intent": {
+          "rule_id": "f0a350a2-74e8-4066-87fb-22c32b169c00",
+          "summary": "This rule allows a specific internal IP address (192.168.192.144) to access a web service (TCP port 443) hosted on a specific server in the DMZ (10.0.50.31).",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 60,
+        "suggested_action": "Enable logging for this rule to monitor traffic and consider restricting access to only necessary users or services. Implement micro-segmentation to limit exposure of the DMZ service to only trusted sources."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "7c0dd15f-3a54-4c70-92f5-3bb329851b24",
+      "rule_name": "Synthetic-Rule-14",
+      "description": "This rule denies SSH traffic from a specific source IP address (10.0.50.130) in the DMZ to a range of internal IP addresses (192.168.61.128/28).",
+      "details": {
+        "intent": {
+          "rule_id": "7c0dd15f-3a54-4c70-92f5-3bb329851b24",
+          "summary": "This rule denies SSH traffic from a specific source IP address (10.0.50.130) in the DMZ to a range of internal IP addresses (192.168.61.128/28).",
+          "mitre": [
+            "T1071.001",
+            "T1043"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Consider enabling logging for this rule to monitor any attempts to access the internal network via SSH. Additionally, review the necessity of this rule and assess if more granular controls can be applied, such as limiting access to specific users or implementing a VPN for SSH access."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c835f9ee-396f-4f72-8c44-186b21a19f97",
+      "rule_name": "Synthetic-Rule-15",
+      "description": "This rule allows web browsing traffic from a specific internal IP range to a defined external IP range over HTTPS (TCP port 443).",
+      "details": {
+        "intent": {
+          "rule_id": "c835f9ee-396f-4f72-8c44-186b21a19f97",
+          "summary": "This rule allows web browsing traffic from a specific internal IP range to a defined external IP range over HTTPS (TCP port 443).",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 60,
+        "suggested_action": "Enable logging for this rule to monitor traffic and potential misuse. Consider restricting the destination addresses further if possible, and implement micro-segmentation to limit access to only necessary services."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "1702b54d-6aa2-4e2c-9e93-41937c50b324",
+      "rule_name": "Synthetic-Rule-16",
+      "description": "This rule denies RDP (Remote Desktop Protocol) traffic from a specific internal IP address (192.168.159.207) to a range of external IP addresses (139.39.156.0/24).",
+      "details": {
+        "intent": {
+          "rule_id": "1702b54d-6aa2-4e2c-9e93-41937c50b324",
+          "summary": "This rule denies RDP (Remote Desktop Protocol) traffic from a specific internal IP address (192.168.159.207) to a range of external IP addresses (139.39.156.0/24).",
+          "mitre": [
+            "T1076"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Consider enabling logging for this rule to monitor any attempts to access RDP externally. Additionally, review the necessity of the deny action; if RDP access is required for specific users, implement micro-segmentation to allow access only to those users while keeping the rest denied."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "3baed7d1-2e35-4db6-a91e-8153fe0957f6",
+      "rule_name": "Synthetic-Rule-17",
+      "description": "This rule allows RDP (Remote Desktop Protocol) traffic from an external source IP range (141.80.46.0/24) to a specific internal IP address (192.168.43.173).",
+      "details": {
+        "intent": {
+          "rule_id": "3baed7d1-2e35-4db6-a91e-8153fe0957f6",
+          "summary": "This rule allows RDP (Remote Desktop Protocol) traffic from an external source IP range (141.80.46.0/24) to a specific internal IP address (192.168.43.173).",
+          "mitre": [
+            "T1076",
+            "T1071.001"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "Restrict the source IP range to only trusted IPs, enable logging for monitoring, and consider implementing a VPN or bastion host for RDP access to enhance security."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "460dd1c2-a284-40bc-b200-08fb9e3a4f79",
+      "rule_name": "Synthetic-Rule-18",
+      "description": "This rule allows any TCP traffic from a specific internal address (10.0.50.206) in the DMZ to any address within the external network range (167.137.139.0/24).",
+      "details": {
+        "intent": {
+          "rule_id": "460dd1c2-a284-40bc-b200-08fb9e3a4f79",
+          "summary": "This rule allows any TCP traffic from a specific internal address (10.0.50.206) in the DMZ to any address within the external network range (167.137.139.0/24).",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP to only necessary applications and services. Implement logging for monitoring and auditing purposes. Consider applying micro-segmentation to limit exposure and enforce stricter access controls."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c4a77e65-88d3-409a-82fb-9b9ced3b0796",
+      "rule_name": "Synthetic-Rule-19",
+      "description": "This rule allows DNS traffic over UDP from the external zone (specifically from the IP range 54.13.131.0/24) to a specific range of IPs in the DMZ (10.0.50.128/28).",
+      "details": {
+        "intent": {
+          "rule_id": "c4a77e65-88d3-409a-82fb-9b9ced3b0796",
+          "summary": "This rule allows DNS traffic over UDP from the external zone (specifically from the IP range 54.13.131.0/24) to a specific range of IPs in the DMZ (10.0.50.128/28).",
+          "mitre": [
+            "T1071.001",
+            "T1049"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Implement logging for this rule to monitor DNS queries and responses. Consider restricting the source IP range further if possible, and apply micro-segmentation to limit access to the DMZ only to necessary services and IPs."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "ef14a329-965e-4195-b787-2f86e4722894",
+      "rule_name": "Synthetic-Rule-20",
+      "description": "This rule denies any TCP traffic from the source IP address 10.0.50.19 in the DMZ zone to the destination IP address 192.168.232.254 in the internal zone.",
+      "details": {
+        "intent": {
+          "rule_id": "ef14a329-965e-4195-b787-2f86e4722894",
+          "summary": "This rule denies any TCP traffic from the source IP address 10.0.50.19 in the DMZ zone to the destination IP address 192.168.232.254 in the internal zone.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Consider enabling logging for this rule to monitor denied traffic. Additionally, evaluate whether the source and destination IPs need to communicate at all, and if so, specify the allowed applications and services to reduce the attack surface."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "ea5ecb12-e598-48e3-ae2c-e69e53daa2ba",
+      "rule_name": "Synthetic-Rule-21",
+      "description": "This rule allows web browsing traffic from the external network (specifically from the IP range 8.80.147.0/24) to a specific server in the DMZ (10.0.50.135) over TCP port 80.",
+      "details": {
+        "intent": {
+          "rule_id": "ea5ecb12-e598-48e3-ae2c-e69e53daa2ba",
+          "summary": "This rule allows web browsing traffic from the external network (specifically from the IP range 8.80.147.0/24) to a specific server in the DMZ (10.0.50.135) over TCP port 80.",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Implement logging for this rule to monitor traffic and potential abuse. Consider restricting the source IP range to only trusted addresses and using HTTPS (port 443) instead of HTTP (port 80) to encrypt traffic. Additionally, apply micro-segmentation to isolate the DMZ server further and limit access to only necessary services."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "378e8395-b5f1-4d7e-96ea-ff989a5e620a",
+      "rule_name": "Synthetic-Rule-22",
+      "description": "This rule allows web browsing traffic from a specific internal IP address (10.0.50.13) in the DMZ to a range of external IP addresses (149.52.74.0/24) over HTTPS (TCP port 443).",
+      "details": {
+        "intent": {
+          "rule_id": "378e8395-b5f1-4d7e-96ea-ff989a5e620a",
+          "summary": "This rule allows web browsing traffic from a specific internal IP address (10.0.50.13) in the DMZ to a range of external IP addresses (149.52.74.0/24) over HTTPS (TCP port 443).",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Enable logging for this rule to monitor traffic and potential misuse. Consider restricting the destination addresses to only those necessary for business purposes and implementing micro-segmentation to limit access from the DMZ to only trusted external services."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "074b7029-5012-4500-b351-5ad8bb2de8e4",
+      "rule_name": "Synthetic-Rule-23",
+      "description": "This rule allows traffic from a specific source IP address (10.0.50.15) in the DMZ zone to a specific destination IP address (192.168.239.165) in the internal zone over the SMB application using TCP port 445.",
+      "details": {
+        "intent": {
+          "rule_id": "074b7029-5012-4500-b351-5ad8bb2de8e4",
+          "summary": "This rule allows traffic from a specific source IP address (10.0.50.15) in the DMZ zone to a specific destination IP address (192.168.239.165) in the internal zone over the SMB application using TCP port 445.",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP to only those necessary for the application, implement logging for monitoring, and consider using micro-segmentation to limit access to the SMB service only to specific users or services that require it."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "34cf999c-6323-4bf4-b0ca-d0342cffbffc",
+      "rule_name": "Synthetic-Rule-24",
+      "description": "This rule allows RDP (Remote Desktop Protocol) traffic from a specific internal IP address (192.168.212.244) to a range of external IP addresses (165.200.250.0/24) over TCP port 3389.",
+      "details": {
+        "intent": {
+          "rule_id": "34cf999c-6323-4bf4-b0ca-d0342cffbffc",
+          "summary": "This rule allows RDP (Remote Desktop Protocol) traffic from a specific internal IP address (192.168.212.244) to a range of external IP addresses (165.200.250.0/24) over TCP port 3389.",
+          "mitre": [
+            "T1076",
+            "T1071.001"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the destination addresses to only those that require RDP access, enable logging for monitoring, and consider implementing multi-factor authentication for RDP sessions."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "6048a792-acc3-4f9e-8a24-8c2d419f4e1c",
+      "rule_name": "Synthetic-Rule-25",
+      "description": "This rule allows web browsing traffic over HTTPS (TCP port 443) from a specific source IP range in the DMZ to a single internal IP address.",
+      "details": {
+        "intent": {
+          "rule_id": "6048a792-acc3-4f9e-8a24-8c2d419f4e1c",
+          "summary": "This rule allows web browsing traffic over HTTPS (TCP port 443) from a specific source IP range in the DMZ to a single internal IP address.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Implement logging for this rule to monitor traffic and consider restricting the source IP range to only necessary addresses. Additionally, apply micro-segmentation to limit access to the internal resource based on user roles or device trust levels."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "eb1e4528-0033-4afb-99e3-a9ca5be57068",
+      "rule_name": "Synthetic-Rule-26",
+      "description": "This rule denies DNS traffic originating from the source IP 10.0.50.195 in the DMZ zone to the destination IP range 131.133.128.0/24 on UDP port 53.",
+      "details": {
+        "intent": {
+          "rule_id": "eb1e4528-0033-4afb-99e3-a9ca5be57068",
+          "summary": "This rule denies DNS traffic originating from the source IP 10.0.50.195 in the DMZ zone to the destination IP range 131.133.128.0/24 on UDP port 53.",
+          "mitre": [
+            "T1071.001"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Consider enabling logging for this rule to monitor denied traffic. Additionally, evaluate whether the source IP should have any DNS access to external addresses, and if necessary, implement micro-segmentation to limit access based on specific application needs."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c505c397-9ac8-4a0b-8154-f189eaa54843",
+      "rule_name": "Synthetic-Rule-27",
+      "description": "This rule allows SSH traffic from a specific host in the DMZ (10.0.50.183) to a specific host in the internal network (192.168.29.11).",
+      "details": {
+        "intent": {
+          "rule_id": "c505c397-9ac8-4a0b-8154-f189eaa54843",
+          "summary": "This rule allows SSH traffic from a specific host in the DMZ (10.0.50.183) to a specific host in the internal network (192.168.29.11).",
+          "mitre": [
+            "T1071.001",
+            "T1043"
+          ]
+        },
+        "risk_score": 70,
+        "suggested_action": "Implement logging for this rule to monitor access attempts. Consider restricting the source IP to only necessary hosts and applying micro-segmentation to limit access to the internal host based on user roles."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "dbd1afe7-9840-46da-acde-adfceedb2f49",
+      "rule_name": "Synthetic-Rule-28",
+      "description": "This rule allows traffic from a specific source IP address in the DMZ zone to a specific destination IP address in the internal zone over the SMB application using TCP port 445.",
+      "details": {
+        "intent": {
+          "rule_id": "dbd1afe7-9840-46da-acde-adfceedb2f49",
+          "summary": "This rule allows traffic from a specific source IP address in the DMZ zone to a specific destination IP address in the internal zone over the SMB application using TCP port 445.",
+          "mitre": [
+            "T1071.001",
+            "T1210",
+            "T1046"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP to only necessary hosts, enable logging for monitoring, and consider implementing micro-segmentation to limit access to the SMB service."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "045d8f2c-00b8-4650-8a2c-2973a7408ca0",
+      "rule_name": "Synthetic-Rule-29",
+      "description": "This rule allows any TCP traffic from the external zone (specifically from the IP range 137.59.190.0/24) to a specific server in the DMZ (10.0.50.67).",
+      "details": {
+        "intent": {
+          "rule_id": "045d8f2c-00b8-4650-8a2c-2973a7408ca0",
+          "summary": "This rule allows any TCP traffic from the external zone (specifically from the IP range 137.59.190.0/24) to a specific server in the DMZ (10.0.50.67).",
+          "mitre": [
+            "T1071.001",
+            "T1041",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP range to only trusted addresses, limit the allowed applications and services to only those necessary, and enable logging for monitoring purposes."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "c3528f61-1c9b-4639-afee-be8cbbc294cd",
+      "rule_name": "Synthetic-Rule-30",
+      "description": "This rule denies RDP (Remote Desktop Protocol) traffic from the internal IP address 192.168.121.3 to the external address range 208.4.14.0/24.",
+      "details": {
+        "intent": {
+          "rule_id": "c3528f61-1c9b-4639-afee-be8cbbc294cd",
+          "summary": "This rule denies RDP (Remote Desktop Protocol) traffic from the internal IP address 192.168.121.3 to the external address range 208.4.14.0/24.",
+          "mitre": [
+            "T1076",
+            "T1071.001"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Enable logging for this rule to monitor any attempts to use RDP from the specified internal address. Consider implementing micro-segmentation to further isolate sensitive internal resources and restrict RDP access only to necessary users or systems."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "3236cb0d-ad6c-43f9-a134-d53a3b16b5f7",
+      "rule_name": "Synthetic-Rule-31",
+      "description": "This rule allows a specific internal IP address (192.168.244.196) to access a range of external IP addresses (9.138.38.0/24) over HTTPS (TCP port 443) for web browsing.",
+      "details": {
+        "intent": {
+          "rule_id": "3236cb0d-ad6c-43f9-a134-d53a3b16b5f7",
+          "summary": "This rule allows a specific internal IP address (192.168.244.196) to access a range of external IP addresses (9.138.38.0/24) over HTTPS (TCP port 443) for web browsing.",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 60,
+        "suggested_action": "Implement logging for this rule to monitor traffic and consider restricting the destination addresses to only those necessary for business operations. Additionally, apply micro-segmentation to limit access to sensitive resources and enforce least privilege access."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c4479856-a420-490e-a350-56c70b9e896e",
+      "rule_name": "Synthetic-Rule-32",
+      "description": "This rule allows web browsing (HTTPS traffic) from a specific internal address (10.0.50.128) in the DMZ to a range of external addresses (204.192.104.0/24).",
+      "details": {
+        "intent": {
+          "rule_id": "c4479856-a420-490e-a350-56c70b9e896e",
+          "summary": "This rule allows web browsing (HTTPS traffic) from a specific internal address (10.0.50.128) in the DMZ to a range of external addresses (204.192.104.0/24).",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Consider restricting the source address to only necessary services or users, enable logging for monitoring, and implement micro-segmentation to limit exposure of the DMZ to external networks."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "a8321981-9f8c-462c-86b9-11e888e39298",
+      "rule_name": "Synthetic-Rule-33",
+      "description": "This rule allows traffic from a specific source IP address in the DMZ to a specific internal IP address over the SMB protocol using TCP port 445.",
+      "details": {
+        "intent": {
+          "rule_id": "a8321981-9f8c-462c-86b9-11e888e39298",
+          "summary": "This rule allows traffic from a specific source IP address in the DMZ to a specific internal IP address over the SMB protocol using TCP port 445.",
+          "mitre": [
+            "T1071.001",
+            "T1210",
+            "T1021.001"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Implement logging for this rule to monitor access attempts. Consider restricting the source IP range further or using a more granular application filter. Apply micro-segmentation to isolate the internal resource from the DMZ."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "5f84a038-f17c-4612-b66c-3a32faf5b4fa",
+      "rule_name": "Synthetic-Rule-34",
+      "description": "This rule denies any traffic from the source address 10.0.50.140 in the DMZ zone to the destination address 192.168.197.129 in the internal zone over the SMB application using TCP port 445.",
+      "details": {
+        "intent": {
+          "rule_id": "5f84a038-f17c-4612-b66c-3a32faf5b4fa",
+          "summary": "This rule denies any traffic from the source address 10.0.50.140 in the DMZ zone to the destination address 192.168.197.129 in the internal zone over the SMB application using TCP port 445.",
+          "mitre": [
+            "T1071.001",
+            "T1047"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Enable logging for this rule to monitor denied traffic attempts and consider implementing micro-segmentation to further isolate the DMZ from the internal network."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "202549d1-d4bb-4c8d-93be-c3e186246ab2",
+      "rule_name": "Synthetic-Rule-35",
+      "description": "This rule allows web-browsing traffic from a specific internal address (10.0.50.203) in the DMZ to a range of external addresses (219.66.176.0/24) over TCP port 80.",
+      "details": {
+        "intent": {
+          "rule_id": "202549d1-d4bb-4c8d-93be-c3e186246ab2",
+          "summary": "This rule allows web-browsing traffic from a specific internal address (10.0.50.203) in the DMZ to a range of external addresses (219.66.176.0/24) over TCP port 80.",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Implement logging for this rule to monitor traffic and consider restricting the source address to only necessary services. Additionally, apply micro-segmentation to limit access from the DMZ to only required external services."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c61634a5-99b7-4cf3-adce-442d9c6a75fa",
+      "rule_name": "Synthetic-Rule-36",
+      "description": "This rule allows traffic from the external zone (specifically from the IP range 4.226.156.0/24) to access a specific internal address (192.168.251.240) over the SMB application using TCP port 445.",
+      "details": {
+        "intent": {
+          "rule_id": "c61634a5-99b7-4cf3-adce-442d9c6a75fa",
+          "summary": "This rule allows traffic from the external zone (specifically from the IP range 4.226.156.0/24) to access a specific internal address (192.168.251.240) over the SMB application using TCP port 445.",
+          "mitre": [
+            "T1071.001",
+            "T1190",
+            "T1210"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "Restrict the source IP range to only trusted external addresses, enable logging for monitoring, and consider using a VPN or secure tunnel for external access to internal resources. Additionally, implement micro-segmentation to limit access to the internal address based on user roles and needs."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "aba5f68c-d41a-425a-a365-e7069cd046e5",
+      "rule_name": "Synthetic-Rule-37",
+      "description": "This rule allows web browsing traffic from a specific internal IP address (192.168.119.12) to a specific destination IP address in the DMZ (10.0.50.254) over TCP port 80.",
+      "details": {
+        "intent": {
+          "rule_id": "aba5f68c-d41a-425a-a365-e7069cd046e5",
+          "summary": "This rule allows web browsing traffic from a specific internal IP address (192.168.119.12) to a specific destination IP address in the DMZ (10.0.50.254) over TCP port 80.",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Consider restricting the source IP to only necessary users or services, enable logging for monitoring, and implement micro-segmentation to limit access to the DMZ based on user roles."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c58ab246-704f-4e4b-821f-d61ea205d30d",
+      "rule_name": "Synthetic-Rule-38",
+      "description": "This rule allows a specific internal IP address (192.168.214.165) to access a range of external IP addresses (97.194.116.0/24) over the RDP application using TCP port 3389.",
+      "details": {
+        "intent": {
+          "rule_id": "c58ab246-704f-4e4b-821f-d61ea205d30d",
+          "summary": "This rule allows a specific internal IP address (192.168.214.165) to access a range of external IP addresses (97.194.116.0/24) over the RDP application using TCP port 3389.",
+          "mitre": [
+            "T1076",
+            "T1071.001"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP to only those that require RDP access, enable logging for monitoring, and consider implementing a VPN or bastion host for RDP connections to enhance security."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "720bbdb7-01af-438b-b856-95515853c5d3",
+      "rule_name": "Synthetic-Rule-39",
+      "description": "This rule allows any TCP traffic from the internal network (192.168.217.0/28) to a specific host in the DMZ (10.0.50.29).",
+      "details": {
+        "intent": {
+          "rule_id": "720bbdb7-01af-438b-b856-95515853c5d3",
+          "summary": "This rule allows any TCP traffic from the internal network (192.168.217.0/28) to a specific host in the DMZ (10.0.50.29).",
+          "mitre": [
+            "T1071.001",
+            "T1071.002",
+            "T1041"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the allowed applications and services to only those necessary for the specific use case. Enable logging to monitor traffic and consider implementing micro-segmentation to limit access to the DMZ host based on user roles or specific application needs."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "9d58c477-fafc-4083-a6b0-9b9b93629a96",
+      "rule_name": "Synthetic-Rule-40",
+      "description": "This rule allows web browsing traffic from a specific internal subnet (192.168.228.80/28) to an external IP range (176.19.37.0/24) over TCP port 80.",
+      "details": {
+        "intent": {
+          "rule_id": "9d58c477-fafc-4083-a6b0-9b9b93629a96",
+          "summary": "This rule allows web browsing traffic from a specific internal subnet (192.168.228.80/28) to an external IP range (176.19.37.0/24) over TCP port 80.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Consider restricting the destination addresses to only necessary IPs within the 176.19.37.0/24 range, enable logging for monitoring, and implement micro-segmentation to limit access based on user roles."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "efaafcee-d3e7-450c-bfec-81a019ae087f",
+      "rule_name": "Synthetic-Rule-41",
+      "description": "This rule denies RDP (Remote Desktop Protocol) traffic from a specific source IP address in the DMZ to a specific destination IP address in the internal network.",
+      "details": {
+        "intent": {
+          "rule_id": "efaafcee-d3e7-450c-bfec-81a019ae087f",
+          "summary": "This rule denies RDP (Remote Desktop Protocol) traffic from a specific source IP address in the DMZ to a specific destination IP address in the internal network.",
+          "mitre": [
+            "T1076"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Consider enabling logging for this rule to monitor any attempts to access the internal network via RDP. Additionally, review the necessity of the DMZ to internal access and implement micro-segmentation to further isolate sensitive resources."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "90c97d3f-752f-455c-9b37-197d80ca2540",
+      "rule_name": "Synthetic-Rule-42",
+      "description": "This rule denies all TCP traffic from the internal IP address 192.168.176.75 to any IP address in the external range 198.221.200.0/24.",
+      "details": {
+        "intent": {
+          "rule_id": "90c97d3f-752f-455c-9b37-197d80ca2540",
+          "summary": "This rule denies all TCP traffic from the internal IP address 192.168.176.75 to any IP address in the external range 198.221.200.0/24.",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Consider enabling logging for this rule to monitor any denied traffic attempts. Additionally, review the necessity of denying all applications and services; if specific applications or services are known to be safe, allow them instead to reduce operational impact."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "9e94d5cc-094b-4ace-8e9b-36e5ae87ea10",
+      "rule_name": "Synthetic-Rule-43",
+      "description": "This rule allows SSH traffic from a specific internal IP address (192.168.126.248) to a range of external IP addresses (42.138.14.0/24).",
+      "details": {
+        "intent": {
+          "rule_id": "9e94d5cc-094b-4ace-8e9b-36e5ae87ea10",
+          "summary": "This rule allows SSH traffic from a specific internal IP address (192.168.126.248) to a range of external IP addresses (42.138.14.0/24).",
+          "mitre": [
+            "T1071.001",
+            "T1043"
+          ]
+        },
+        "risk_score": 70,
+        "suggested_action": "Implement logging for this rule to monitor access attempts. Consider restricting the destination IP range further if possible, and evaluate the necessity of allowing SSH from this specific internal address to external networks. Additionally, apply micro-segmentation to limit access based on user roles and needs."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "3eb70272-e5c0-4b78-82c6-db1ad287b892",
+      "rule_name": "Synthetic-Rule-44",
+      "description": "This rule denies DNS traffic from the external zone (source IP range 175.249.19.0/24) to a specific IP address in the DMZ (10.0.50.180).",
+      "details": {
+        "intent": {
+          "rule_id": "3eb70272-e5c0-4b78-82c6-db1ad287b892",
+          "summary": "This rule denies DNS traffic from the external zone (source IP range 175.249.19.0/24) to a specific IP address in the DMZ (10.0.50.180).",
+          "mitre": [
+            "T1071.001",
+            "T1049"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Consider enabling logging for this rule to monitor denied attempts. Additionally, evaluate if DNS traffic from the external zone is necessary; if not, consider a broader deny rule for external DNS traffic to enhance security."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "dc71a193-a383-47df-9f9a-51fb872575f0",
+      "rule_name": "Synthetic-Rule-45",
+      "description": "This rule allows SSH traffic from the external network (source zone) to a specific server in the DMZ (destination zone) with the IP address 10.0.50.177.",
+      "details": {
+        "intent": {
+          "rule_id": "dc71a193-a383-47df-9f9a-51fb872575f0",
+          "summary": "This rule allows SSH traffic from the external network (source zone) to a specific server in the DMZ (destination zone) with the IP address 10.0.50.177.",
+          "mitre": [
+            "T1071.001",
+            "T1049"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Implement logging for this rule to monitor access attempts. Consider restricting the source IP range to only trusted addresses and applying time-based access controls. Additionally, evaluate the necessity of SSH access from the external network and consider using a VPN or bastion host for secure access."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "f42027e0-3430-48fb-bacc-ebe667a1eaad",
+      "rule_name": "Synthetic-Rule-46",
+      "description": "This rule allows web-browsing traffic from a specific source IP address in the DMZ to a range of external IP addresses on TCP port 80.",
+      "details": {
+        "intent": {
+          "rule_id": "f42027e0-3430-48fb-bacc-ebe667a1eaad",
+          "summary": "This rule allows web-browsing traffic from a specific source IP address in the DMZ to a range of external IP addresses on TCP port 80.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Implement logging for this rule to monitor traffic and consider restricting the source IP to only those necessary for business operations. Additionally, apply micro-segmentation to limit access to the external destination based on user roles and needs."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "adb020ee-e177-4bf8-b7c5-d10a90ff0e65",
+      "rule_name": "Synthetic-Rule-47",
+      "description": "This rule allows SSH traffic from the external network (216.165.229.0/24) to a specific internal host (192.168.102.55).",
+      "details": {
+        "intent": {
+          "rule_id": "adb020ee-e177-4bf8-b7c5-d10a90ff0e65",
+          "summary": "This rule allows SSH traffic from the external network (216.165.229.0/24) to a specific internal host (192.168.102.55).",
+          "mitre": [
+            "T1071.001",
+            "T1043"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP range to only trusted addresses, enable logging for monitoring, and consider implementing multi-factor authentication for SSH access."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "020a45ac-198e-40f3-8a91-cdb5aec7ed6e",
+      "rule_name": "Synthetic-Rule-48",
+      "description": "This rule allows SSH traffic from the external network (specifically from the IP range 39.107.82.0/24) to a specific server in the DMZ (10.0.50.84).",
+      "details": {
+        "intent": {
+          "rule_id": "020a45ac-198e-40f3-8a91-cdb5aec7ed6e",
+          "summary": "This rule allows SSH traffic from the external network (specifically from the IP range 39.107.82.0/24) to a specific server in the DMZ (10.0.50.84).",
+          "mitre": [
+            "T1071.001",
+            "T1203",
+            "T1040"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP range to only trusted addresses, enable logging for monitoring, and consider implementing multi-factor authentication for SSH access."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "764178ae-bfe4-4874-844e-56bf29d0520f",
+      "rule_name": "Synthetic-Rule-49",
+      "description": "This rule allows a specific internal IP address (192.168.149.10) to establish RDP (Remote Desktop Protocol) connections to a range of external IP addresses (105.133.19.0/24) over TCP port 3389.",
+      "details": {
+        "intent": {
+          "rule_id": "764178ae-bfe4-4874-844e-56bf29d0520f",
+          "summary": "This rule allows a specific internal IP address (192.168.149.10) to establish RDP (Remote Desktop Protocol) connections to a range of external IP addresses (105.133.19.0/24) over TCP port 3389.",
+          "mitre": [
+            "T1076",
+            "T1071.001"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the destination addresses to only those necessary for business operations, enable logging for monitoring, and consider implementing multi-factor authentication for RDP access. Additionally, apply micro-segmentation to limit access to the RDP service based on user roles."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "d8eec311-894c-4a40-b1b4-7f8dc678e69a",
+      "rule_name": "Synthetic-Rule-50",
+      "description": "This rule allows any TCP traffic from the internal network (192.168.55.0/28) to a specific address in the DMZ (10.0.50.80/28).",
+      "details": {
+        "intent": {
+          "rule_id": "d8eec311-894c-4a40-b1b4-7f8dc678e69a",
+          "summary": "This rule allows any TCP traffic from the internal network (192.168.55.0/28) to a specific address in the DMZ (10.0.50.80/28).",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 70,
+        "suggested_action": "Limit the allowed applications and services to only those necessary for the intended communication. Implement logging to monitor traffic and consider applying micro-segmentation to further isolate the DMZ from the internal network."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "9643adf6-60c5-4585-8b2f-b195b6c4ab8f",
+      "rule_name": "Synthetic-Rule-51",
+      "description": "This rule denies web-browsing traffic from a specific internal address (10.0.50.2) in the DMZ to a range of external addresses (191.11.109.0/24) over TCP port 443.",
+      "details": {
+        "intent": {
+          "rule_id": "9643adf6-60c5-4585-8b2f-b195b6c4ab8f",
+          "summary": "This rule denies web-browsing traffic from a specific internal address (10.0.50.2) in the DMZ to a range of external addresses (191.11.109.0/24) over TCP port 443.",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Consider enabling logging for this rule to monitor denied traffic. Additionally, review the necessity of blocking this specific address and assess if micro-segmentation can be applied to limit exposure further."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "35dce328-d62d-45f1-aeeb-3c626df1ae1f",
+      "rule_name": "Synthetic-Rule-52",
+      "description": "This rule allows RDP (Remote Desktop Protocol) traffic from a specific source IP address in the DMZ to a specific destination IP address in the internal network.",
+      "details": {
+        "intent": {
+          "rule_id": "35dce328-d62d-45f1-aeeb-3c626df1ae1f",
+          "summary": "This rule allows RDP (Remote Desktop Protocol) traffic from a specific source IP address in the DMZ to a specific destination IP address in the internal network.",
+          "mitre": [
+            "T1076",
+            "T1021.001"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP to only trusted hosts and consider implementing a VPN for RDP access. Enable logging for monitoring and auditing purposes."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "f661abb4-cb47-4efc-a55c-3035bf5d8325",
+      "rule_name": "Synthetic-Rule-53",
+      "description": "This rule allows traffic from a specific internal IP address (192.168.80.151) to a specific DMZ IP address (10.0.50.238) over the SMB application using TCP port 445.",
+      "details": {
+        "intent": {
+          "rule_id": "f661abb4-cb47-4efc-a55c-3035bf5d8325",
+          "summary": "This rule allows traffic from a specific internal IP address (192.168.80.151) to a specific DMZ IP address (10.0.50.238) over the SMB application using TCP port 445.",
+          "mitre": [
+            "T1071.001",
+            "T1047",
+            "T1210"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Limit the source IP to only those that absolutely need access to the SMB service, enable logging for monitoring, and consider implementing micro-segmentation to isolate the DMZ from the internal network."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "84871c2d-1d2b-4b81-b437-56fc0f6a4932",
+      "rule_name": "Synthetic-Rule-54",
+      "description": "This rule allows SSH traffic from a specific host in the DMZ (10.0.50.205) to a specific host in the internal network (192.168.101.154).",
+      "details": {
+        "intent": {
+          "rule_id": "84871c2d-1d2b-4b81-b437-56fc0f6a4932",
+          "summary": "This rule allows SSH traffic from a specific host in the DMZ (10.0.50.205) to a specific host in the internal network (192.168.101.154).",
+          "mitre": [
+            "T1071.001",
+            "T1049"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Enable logging for this rule to monitor access attempts. Consider restricting the source IP further or implementing additional authentication mechanisms for SSH access. Apply micro-segmentation to limit access to only necessary services."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "4f8cc734-3c8a-4b92-a1ee-f65c4ed6d6f9",
+      "rule_name": "Synthetic-Rule-55",
+      "description": "This rule allows web browsing traffic from a specific source IP range in the DMZ to a range of external IP addresses over HTTPS (TCP port 443).",
+      "details": {
+        "intent": {
+          "rule_id": "4f8cc734-3c8a-4b92-a1ee-f65c4ed6d6f9",
+          "summary": "This rule allows web browsing traffic from a specific source IP range in the DMZ to a range of external IP addresses over HTTPS (TCP port 443).",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Implement logging for this rule to monitor traffic and consider restricting the source IP range further or applying micro-segmentation to limit access to only necessary services."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "25d1e59a-3482-4906-a55a-6da8ed51a627",
+      "rule_name": "Synthetic-Rule-56",
+      "description": "This rule denies web-browsing traffic from a specific internal IP address (192.168.108.12) to a range of external IP addresses (171.160.91.0/24) over TCP port 80.",
+      "details": {
+        "intent": {
+          "rule_id": "25d1e59a-3482-4906-a55a-6da8ed51a627",
+          "summary": "This rule denies web-browsing traffic from a specific internal IP address (192.168.108.12) to a range of external IP addresses (171.160.91.0/24) over TCP port 80.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Consider enabling logging for this rule to monitor denied traffic. Additionally, assess whether the denial is necessary for the specific internal IP, and if possible, implement micro-segmentation to limit exposure to only necessary services."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "1718191a-a9b6-4702-8118-e3b9f4160774",
+      "rule_name": "Synthetic-Rule-57",
+      "description": "This rule allows traffic from a specific source IP address in the DMZ to a specific internal IP address over the SMB protocol using TCP port 445.",
+      "details": {
+        "intent": {
+          "rule_id": "1718191a-a9b6-4702-8118-e3b9f4160774",
+          "summary": "This rule allows traffic from a specific source IP address in the DMZ to a specific internal IP address over the SMB protocol using TCP port 445.",
+          "mitre": [
+            "T1071.001",
+            "T1210",
+            "T1190"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP range further if possible, enable logging for monitoring, and consider implementing micro-segmentation to limit access to the SMB service only to necessary hosts."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "4695927d-f65a-41b0-8bd0-492a91013cdc",
+      "rule_name": "Synthetic-Rule-58",
+      "description": "This rule allows SSH traffic from the external network (source IP range 189.192.111.0/24) to a specific IP address in the DMZ (10.0.50.80/28).",
+      "details": {
+        "intent": {
+          "rule_id": "4695927d-f65a-41b0-8bd0-492a91013cdc",
+          "summary": "This rule allows SSH traffic from the external network (source IP range 189.192.111.0/24) to a specific IP address in the DMZ (10.0.50.80/28).",
+          "mitre": [
+            "T1071.001",
+            "T1049"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP range to only trusted addresses, enable logging for monitoring, and consider implementing multi-factor authentication for SSH access. Additionally, apply micro-segmentation to limit access to the DMZ resources."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "17c4063d-27db-4505-b4b8-c48adffbeb55",
+      "rule_name": "Synthetic-Rule-59",
+      "description": "This rule allows web browsing traffic (HTTPS) from a specific source IP address in the DMZ to a specific destination IP address in the internal network.",
+      "details": {
+        "intent": {
+          "rule_id": "17c4063d-27db-4505-b4b8-c48adffbeb55",
+          "summary": "This rule allows web browsing traffic (HTTPS) from a specific source IP address in the DMZ to a specific destination IP address in the internal network.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Implement logging for this rule to monitor traffic and consider restricting the source IP to only necessary services or users. Additionally, evaluate the need for direct access from the DMZ to the internal network and consider using a reverse proxy or application gateway to enhance security."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "49cfffd3-7e0b-45a4-b00b-9c5a400b5b90",
+      "rule_name": "Synthetic-Rule-60",
+      "description": "This rule allows web browsing traffic over HTTPS (TCP port 443) from the external network (source IP range 139.184.71.0/24) to a specific internal server (192.168.222.100).",
+      "details": {
+        "intent": {
+          "rule_id": "49cfffd3-7e0b-45a4-b00b-9c5a400b5b90",
+          "summary": "This rule allows web browsing traffic over HTTPS (TCP port 443) from the external network (source IP range 139.184.71.0/24) to a specific internal server (192.168.222.100).",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Implement logging for this rule to monitor traffic and detect potential misuse. Consider restricting the source IP range further if possible, and apply micro-segmentation to isolate the internal server from other internal resources."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "9779d6ad-fa7c-425b-acce-0cb0611c58d2",
+      "rule_name": "Synthetic-Rule-61",
+      "description": "This firewall rule allows any TCP traffic from the source IP range 10.0.50.96/28 in the DMZ zone to the specific destination IP 192.168.89.37 in the internal zone.",
+      "details": {
+        "intent": {
+          "rule_id": "9779d6ad-fa7c-425b-acce-0cb0611c58d2",
+          "summary": "This firewall rule allows any TCP traffic from the source IP range 10.0.50.96/28 in the DMZ zone to the specific destination IP 192.168.89.37 in the internal zone.",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the allowed applications and services to only those necessary for the intended communication. Enable logging to monitor traffic and consider implementing micro-segmentation to further isolate the DMZ from the internal network."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a117bfc4-83da-473c-9146-ca9210bbf84c",
+      "rule_name": "Synthetic-Rule-62",
+      "description": "This rule allows web-browsing traffic from a specific internal address (10.0.50.115) in the DMZ to a range of external addresses (77.216.116.0/24) over HTTPS (TCP port 443).",
+      "details": {
+        "intent": {
+          "rule_id": "a117bfc4-83da-473c-9146-ca9210bbf84c",
+          "summary": "This rule allows web-browsing traffic from a specific internal address (10.0.50.115) in the DMZ to a range of external addresses (77.216.116.0/24) over HTTPS (TCP port 443).",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Enable logging for this rule to monitor traffic and potential misuse. Consider restricting the source address to only necessary services and implementing micro-segmentation to limit exposure of the DMZ to external networks."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "eb200361-1a3d-4aef-af4a-283da620ac4f",
+      "rule_name": "Synthetic-Rule-63",
+      "description": "This rule allows traffic from a specific source IP address in the DMZ to a range of internal IP addresses over the SMB application using TCP port 445.",
+      "details": {
+        "intent": {
+          "rule_id": "eb200361-1a3d-4aef-af4a-283da620ac4f",
+          "summary": "This rule allows traffic from a specific source IP address in the DMZ to a range of internal IP addresses over the SMB application using TCP port 445.",
+          "mitre": [
+            "T1071.001",
+            "T1190",
+            "T1210"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP to only necessary hosts, enable logging for monitoring, and consider implementing micro-segmentation to limit access to the SMB service only to trusted applications and users."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c66df794-4e36-45cd-b4d8-ede99ff12939",
+      "rule_name": "Synthetic-Rule-64",
+      "description": "This rule allows traffic from the internal network (specifically from the IP range 192.168.82.192/28) to the external network (specifically to the IP range 86.177.85.0/24) using the SMB application over TCP port 445.",
+      "details": {
+        "intent": {
+          "rule_id": "c66df794-4e36-45cd-b4d8-ede99ff12939",
+          "summary": "This rule allows traffic from the internal network (specifically from the IP range 192.168.82.192/28) to the external network (specifically to the IP range 86.177.85.0/24) using the SMB application over TCP port 445.",
+          "mitre": [
+            "T1071.001",
+            "T1047",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "Restrict the source IP range to only necessary hosts, enable logging for monitoring, and consider blocking SMB traffic to external networks altogether unless absolutely required. Implement micro-segmentation to isolate sensitive systems and limit exposure."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "fb5135b6-bce0-4995-85b4-595468110f42",
+      "rule_name": "Synthetic-Rule-65",
+      "description": "This rule allows SSH traffic from the external network (154.213.59.0/24) to a specific host in the DMZ (10.0.50.224) on TCP port 22.",
+      "details": {
+        "intent": {
+          "rule_id": "fb5135b6-bce0-4995-85b4-595468110f42",
+          "summary": "This rule allows SSH traffic from the external network (154.213.59.0/24) to a specific host in the DMZ (10.0.50.224) on TCP port 22.",
+          "mitre": [
+            "T1071.001",
+            "T1203",
+            "T1190"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP range to only trusted IPs, enable logging for monitoring, and consider implementing multi-factor authentication for SSH access. Additionally, apply micro-segmentation to isolate the DMZ host further."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "022a96ba-fa02-466d-9eb7-222896324e6a",
+      "rule_name": "Synthetic-Rule-66",
+      "description": "This rule allows SSH traffic from a specific DMZ IP address range (10.0.50.144/28) to a specific internal IP address range (192.168.202.0/28).",
+      "details": {
+        "intent": {
+          "rule_id": "022a96ba-fa02-466d-9eb7-222896324e6a",
+          "summary": "This rule allows SSH traffic from a specific DMZ IP address range (10.0.50.144/28) to a specific internal IP address range (192.168.202.0/28).",
+          "mitre": [
+            "T1071.001",
+            "T1203",
+            "T1040"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Enable logging for this rule to monitor access attempts. Consider restricting the source IP range further or implementing additional authentication mechanisms for SSH access. Apply micro-segmentation to limit access to only necessary services and users."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "94db9b3d-37fa-4530-b91b-3bc218a9ba19",
+      "rule_name": "Synthetic-Rule-67",
+      "description": "This rule denies SSH traffic from the external zone to a specific IP range in the DMZ.",
+      "details": {
+        "intent": {
+          "rule_id": "94db9b3d-37fa-4530-b91b-3bc218a9ba19",
+          "summary": "This rule denies SSH traffic from the external zone to a specific IP range in the DMZ.",
+          "mitre": [
+            "T1071.001",
+            "T1043"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Enable logging for this rule to monitor denied attempts and consider implementing micro-segmentation to further isolate the DMZ from external sources."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "e0d365f8-2481-4671-8f34-a47cfe08c79f",
+      "rule_name": "Synthetic-Rule-68",
+      "description": "This rule allows SSH traffic from the external zone (specifically from the IP range 54.52.74.0/24) to a specific internal address (192.168.83.25).",
+      "details": {
+        "intent": {
+          "rule_id": "e0d365f8-2481-4671-8f34-a47cfe08c79f",
+          "summary": "This rule allows SSH traffic from the external zone (specifically from the IP range 54.52.74.0/24) to a specific internal address (192.168.83.25).",
+          "mitre": [
+            "T1071.001",
+            "T1043"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Implement strict access controls by limiting the source IP range further, enable logging for monitoring, and consider using a VPN for external SSH access to enhance security."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "5b508e94-e687-4875-97e7-4b3929072699",
+      "rule_name": "Synthetic-Rule-69",
+      "description": "This rule denies web-browsing traffic from a specific internal IP address (192.168.168.234) to a specific DMZ IP address (10.0.50.83) over TCP port 443.",
+      "details": {
+        "intent": {
+          "rule_id": "5b508e94-e687-4875-97e7-4b3929072699",
+          "summary": "This rule denies web-browsing traffic from a specific internal IP address (192.168.168.234) to a specific DMZ IP address (10.0.50.83) over TCP port 443.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Consider enabling logging for this rule to monitor denied traffic attempts. Additionally, evaluate whether the denial is necessary for security or if exceptions should be made for specific applications or users. Implement micro-segmentation to further isolate sensitive resources in the DMZ."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e550b967-dbea-42af-8384-266ccf3b6c81",
+      "rule_name": "Synthetic-Rule-70",
+      "description": "This rule allows web-browsing traffic from a specific internal IP address (192.168.183.218) to a specific server in the DMZ (10.0.50.47) over TCP port 80.",
+      "details": {
+        "intent": {
+          "rule_id": "e550b967-dbea-42af-8384-266ccf3b6c81",
+          "summary": "This rule allows web-browsing traffic from a specific internal IP address (192.168.183.218) to a specific server in the DMZ (10.0.50.47) over TCP port 80.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 60,
+        "suggested_action": "Implement logging for this rule to monitor traffic patterns and potential misuse. Consider restricting the source IP to only those necessary and evaluate if HTTPS (port 443) should be used instead of HTTP (port 80) to enhance security. Additionally, apply micro-segmentation to limit access to the DMZ server based on user roles."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "abf279e9-cd3b-4a04-8fb2-8b6717a3e82e",
+      "rule_name": "Synthetic-Rule-71",
+      "description": "This rule allows traffic from a specific source IP address in the DMZ to a specific destination IP address in the internal network over the SMB application using TCP port 445.",
+      "details": {
+        "intent": {
+          "rule_id": "abf279e9-cd3b-4a04-8fb2-8b6717a3e82e",
+          "summary": "This rule allows traffic from a specific source IP address in the DMZ to a specific destination IP address in the internal network over the SMB application using TCP port 445.",
+          "mitre": [
+            "T1071.001",
+            "T1210",
+            "T1190"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP to only necessary hosts, enable logging for monitoring, and consider implementing micro-segmentation to limit access to the internal network."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "6d8c6091-2076-47e5-8b6f-8fae3a29280f",
+      "rule_name": "Synthetic-Rule-72",
+      "description": "This rule allows traffic from the external zone (specifically from the IP range 56.149.166.0/24) to access the internal IP address 192.168.99.126 on TCP port 445, which is used for SMB (Server Message Block) protocol.",
+      "details": {
+        "intent": {
+          "rule_id": "6d8c6091-2076-47e5-8b6f-8fae3a29280f",
+          "summary": "This rule allows traffic from the external zone (specifically from the IP range 56.149.166.0/24) to access the internal IP address 192.168.99.126 on TCP port 445, which is used for SMB (Server Message Block) protocol.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003",
+            "T1046"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "Restrict access to the internal IP address by implementing a more granular source IP filtering, consider using VPN or secure tunnels for external access, enable logging for monitoring, and evaluate the necessity of exposing SMB to the external network."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "faa359ea-969a-414c-be45-b0edece59c6d",
+      "rule_name": "Synthetic-Rule-73",
+      "description": "This rule allows any TCP traffic from a specific source IP address in the DMZ to a range of external IP addresses.",
+      "details": {
+        "intent": {
+          "rule_id": "faa359ea-969a-414c-be45-b0edece59c6d",
+          "summary": "This rule allows any TCP traffic from a specific source IP address in the DMZ to a range of external IP addresses.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003",
+            "T1041"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the allowed applications and services to only those necessary for business functions. Implement logging for monitoring and auditing purposes. Consider applying micro-segmentation to limit exposure and isolate the DMZ from external networks."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "43b90ac4-70d3-4824-bfdf-11df3646fb39",
+      "rule_name": "Synthetic-Rule-74",
+      "description": "This rule allows a specific internal IP address (192.168.121.22) to access a range of external IP addresses (205.19.252.0/24) over HTTP (port 80) for web browsing purposes.",
+      "details": {
+        "intent": {
+          "rule_id": "43b90ac4-70d3-4824-bfdf-11df3646fb39",
+          "summary": "This rule allows a specific internal IP address (192.168.121.22) to access a range of external IP addresses (205.19.252.0/24) over HTTP (port 80) for web browsing purposes.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Consider restricting the destination addresses to only those necessary for business operations and implement logging for monitoring. Additionally, apply micro-segmentation to limit access to sensitive resources and enforce least privilege principles."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "7e8f7cac-49d8-40a2-8e9b-fbdd3b40c1ff",
+      "rule_name": "Synthetic-Rule-75",
+      "description": "This rule allows a specific internal IP address (192.168.225.42) to access a range of external IP addresses (51.193.72.0/24) over HTTP (port 80) for web browsing.",
+      "details": {
+        "intent": {
+          "rule_id": "7e8f7cac-49d8-40a2-8e9b-fbdd3b40c1ff",
+          "summary": "This rule allows a specific internal IP address (192.168.225.42) to access a range of external IP addresses (51.193.72.0/24) over HTTP (port 80) for web browsing.",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Implement logging for this rule to monitor traffic. Consider restricting the destination addresses further to only necessary external services and applying micro-segmentation to limit exposure of the internal IP."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "c305bee1-4ef8-498b-8b76-0f6c2fad1d50",
+      "rule_name": "Synthetic-Rule-76",
+      "description": "This rule denies all TCP traffic from the external zone (source IP range 197.254.127.0/24) to a specific host in the DMZ (10.0.50.118).",
+      "details": {
+        "intent": {
+          "rule_id": "c305bee1-4ef8-498b-8b76-0f6c2fad1d50",
+          "summary": "This rule denies all TCP traffic from the external zone (source IP range 197.254.127.0/24) to a specific host in the DMZ (10.0.50.118).",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Consider enabling logging for this rule to monitor any attempts to access the DMZ from the specified external IP range. Additionally, review the necessity of blocking all applications and services; if specific applications are known to be malicious, consider refining the rule to block only those instead of all TCP traffic."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "6c20d2f3-b05a-4eac-90e8-9ab1ee8b1d27",
+      "rule_name": "Synthetic-Rule-77",
+      "description": "This rule allows web browsing traffic over HTTPS (TCP port 443) from an external network (125.43.169.0/24) to a specific internal IP address (192.168.217.130).",
+      "details": {
+        "intent": {
+          "rule_id": "6c20d2f3-b05a-4eac-90e8-9ab1ee8b1d27",
+          "summary": "This rule allows web browsing traffic over HTTPS (TCP port 443) from an external network (125.43.169.0/24) to a specific internal IP address (192.168.217.130).",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Limit the source IP range to only trusted external addresses, enable logging for monitoring, and consider implementing micro-segmentation to isolate the internal service from unnecessary exposure."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e834b86d-718f-492a-a563-5e0b6bfb3041",
+      "rule_name": "Synthetic-Rule-78",
+      "description": "This rule allows the internal IP address 192.168.46.93 to access any IP address in the external range 169.212.190.0/24 over HTTPS (TCP port 443) for web browsing.",
+      "details": {
+        "intent": {
+          "rule_id": "e834b86d-718f-492a-a563-5e0b6bfb3041",
+          "summary": "This rule allows the internal IP address 192.168.46.93 to access any IP address in the external range 169.212.190.0/24 over HTTPS (TCP port 443) for web browsing.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Implement logging for this rule to monitor traffic and consider restricting the destination addresses to only those necessary for business operations. Additionally, apply micro-segmentation to limit access based on user roles and needs."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "b12b13c4-a58e-4ca9-904d-e7e2e3dd387f",
+      "rule_name": "Synthetic-Rule-79",
+      "description": "This rule allows RDP (Remote Desktop Protocol) traffic from an external source IP range (138.144.118.0/24) to a specific internal IP address (192.168.18.96).",
+      "details": {
+        "intent": {
+          "rule_id": "b12b13c4-a58e-4ca9-904d-e7e2e3dd387f",
+          "summary": "This rule allows RDP (Remote Desktop Protocol) traffic from an external source IP range (138.144.118.0/24) to a specific internal IP address (192.168.18.96).",
+          "mitre": [
+            "T1076",
+            "T1071.001",
+            "T1203"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "Restrict the source IP range to only trusted addresses, enable logging for monitoring, and consider implementing a VPN or bastion host for RDP access to enhance security."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "e8e71dc7-906c-4adb-bc0d-45c6834a6798",
+      "rule_name": "Synthetic-Rule-80",
+      "description": "This rule allows any TCP traffic from the external zone (specifically from the IP range 197.136.86.0/24) to a specific host in the DMZ (10.0.50.128).",
+      "details": {
+        "intent": {
+          "rule_id": "e8e71dc7-906c-4adb-bc0d-45c6834a6798",
+          "summary": "This rule allows any TCP traffic from the external zone (specifically from the IP range 197.136.86.0/24) to a specific host in the DMZ (10.0.50.128).",
+          "mitre": [
+            "T1071.001",
+            "T1041",
+            "T1203"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP range to only trusted addresses, specify allowed applications and services instead of 'any', enable logging for monitoring, and consider implementing micro-segmentation to further isolate the DMZ."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "ac7e6621-f0de-4058-8795-17b337536776",
+      "rule_name": "Synthetic-Rule-81",
+      "description": "This rule allows DNS queries from a specific internal IP address (192.168.3.151) to a range of external IP addresses (44.65.157.0/24) over UDP port 53.",
+      "details": {
+        "intent": {
+          "rule_id": "ac7e6621-f0de-4058-8795-17b337536776",
+          "summary": "This rule allows DNS queries from a specific internal IP address (192.168.3.151) to a range of external IP addresses (44.65.157.0/24) over UDP port 53.",
+          "mitre": [
+            "T1071.001",
+            "T1049"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Restrict the source IP to only those that require DNS resolution and consider implementing DNS filtering to prevent potential data exfiltration or command and control communications."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "efa5d611-0b8e-405e-a2b0-1addc5737e61",
+      "rule_name": "Synthetic-Rule-82",
+      "description": "This rule allows any TCP traffic from the external zone (specifically from the IP range 188.92.5.0/24) to a specific internal IP address (192.168.186.245).",
+      "details": {
+        "intent": {
+          "rule_id": "efa5d611-0b8e-405e-a2b0-1addc5737e61",
+          "summary": "This rule allows any TCP traffic from the external zone (specifically from the IP range 188.92.5.0/24) to a specific internal IP address (192.168.186.245).",
+          "mitre": [
+            "T1071.001",
+            "T1071.003",
+            "T1041"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "Restrict the source IP range to only trusted addresses, limit the allowed applications and services to only those necessary, enable logging for monitoring, and consider implementing micro-segmentation to further isolate the internal resources."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "70db0479-76b7-43e5-83e9-8bfde3c8908b",
+      "rule_name": "Synthetic-Rule-83",
+      "description": "This rule denies RDP (Remote Desktop Protocol) traffic from the source IP address 10.0.50.116 in the DMZ zone to the destination IP address 192.168.20.167 in the internal zone.",
+      "details": {
+        "intent": {
+          "rule_id": "70db0479-76b7-43e5-83e9-8bfde3c8908b",
+          "summary": "This rule denies RDP (Remote Desktop Protocol) traffic from the source IP address 10.0.50.116 in the DMZ zone to the destination IP address 192.168.20.167 in the internal zone.",
+          "mitre": [
+            "T1076"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Consider enabling logging for this rule to monitor denied attempts. Additionally, review the necessity of RDP access from the DMZ to the internal network and implement micro-segmentation to further isolate sensitive internal resources."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "d0640cfa-1b25-4d9a-a756-8edf25e7292f",
+      "rule_name": "Synthetic-Rule-84",
+      "description": "This rule allows traffic from the external network (specifically from the IP range 30.8.45.0/24) to access a specific internal address (192.168.20.240) over the SMB application using TCP port 445.",
+      "details": {
+        "intent": {
+          "rule_id": "d0640cfa-1b25-4d9a-a756-8edf25e7292f",
+          "summary": "This rule allows traffic from the external network (specifically from the IP range 30.8.45.0/24) to access a specific internal address (192.168.20.240) over the SMB application using TCP port 445.",
+          "mitre": [
+            "T1071.001",
+            "T1210",
+            "T1190"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "Restrict access to the internal address by limiting the source IP range to only trusted external addresses. Enable logging for monitoring and consider implementing micro-segmentation to isolate the SMB service from other internal resources."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "a0c0493c-56bb-4ec3-89bb-384c1f68da3f",
+      "rule_name": "Synthetic-Rule-85",
+      "description": "This rule allows traffic from the external zone (specifically from the IP range 62.88.21.0/24) to access a specific server in the DMZ (10.0.50.70) using the SMB application over TCP port 445.",
+      "details": {
+        "intent": {
+          "rule_id": "a0c0493c-56bb-4ec3-89bb-384c1f68da3f",
+          "summary": "This rule allows traffic from the external zone (specifically from the IP range 62.88.21.0/24) to access a specific server in the DMZ (10.0.50.70) using the SMB application over TCP port 445.",
+          "mitre": [
+            "T1071.001",
+            "T1047",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "Restrict the source IP range to only trusted addresses, enable logging for monitoring, and consider implementing micro-segmentation to limit access to the SMB service only to necessary services or users."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "07bdd93c-31f1-41c2-bd65-2c3155209a79",
+      "rule_name": "Synthetic-Rule-86",
+      "description": "This rule allows DNS queries from a specific internal IP address (10.0.50.146) in the DMZ to a range of external IP addresses (188.176.149.0/24) over UDP on port 53.",
+      "details": {
+        "intent": {
+          "rule_id": "07bdd93c-31f1-41c2-bd65-2c3155209a79",
+          "summary": "This rule allows DNS queries from a specific internal IP address (10.0.50.146) in the DMZ to a range of external IP addresses (188.176.149.0/24) over UDP on port 53.",
+          "mitre": [
+            "T1071.001",
+            "T1049"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Restrict the destination addresses to only those necessary for DNS resolution and enable logging to monitor DNS queries. Consider implementing DNS filtering to prevent potential data exfiltration or command and control communication."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "5c5784fd-f7b5-4395-a2ab-8af691068272",
+      "rule_name": "Synthetic-Rule-87",
+      "description": "This rule allows RDP (Remote Desktop Protocol) traffic from the external network (specifically from the IP range 105.70.179.0/24) to a specific internal address (192.168.150.18).",
+      "details": {
+        "intent": {
+          "rule_id": "5c5784fd-f7b5-4395-a2ab-8af691068272",
+          "summary": "This rule allows RDP (Remote Desktop Protocol) traffic from the external network (specifically from the IP range 105.70.179.0/24) to a specific internal address (192.168.150.18).",
+          "mitre": [
+            "T1076",
+            "T1071.001"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "Restrict access to the RDP service by implementing IP whitelisting for trusted sources only, enable logging for monitoring, and consider using a VPN or bastion host for remote access to enhance security."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "6a22ae11-4ab2-4f76-bded-c70c148ca235",
+      "rule_name": "Synthetic-Rule-88",
+      "description": "This rule allows web browsing traffic from a specific internal IP address (192.168.235.196) to a range of external IP addresses (36.110.68.0/24) over TCP port 80.",
+      "details": {
+        "intent": {
+          "rule_id": "6a22ae11-4ab2-4f76-bded-c70c148ca235",
+          "summary": "This rule allows web browsing traffic from a specific internal IP address (192.168.235.196) to a range of external IP addresses (36.110.68.0/24) over TCP port 80.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Consider restricting the destination addresses to only those necessary for business operations, enable logging for monitoring, and implement micro-segmentation to limit exposure of the internal IP."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "e30175d9-737d-47f5-809a-55960724411c",
+      "rule_name": "Synthetic-Rule-89",
+      "description": "This rule allows web-browsing traffic from an external source IP range (202.107.248.0/24) to a specific internal IP address (192.168.108.156) over TCP port 80.",
+      "details": {
+        "intent": {
+          "rule_id": "e30175d9-737d-47f5-809a-55960724411c",
+          "summary": "This rule allows web-browsing traffic from an external source IP range (202.107.248.0/24) to a specific internal IP address (192.168.108.156) over TCP port 80.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP range to only trusted external addresses, enable logging for monitoring, and consider implementing a web application firewall (WAF) to inspect and filter web traffic."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "268c88e3-16d9-4ca3-92dc-599a16280674",
+      "rule_name": "Synthetic-Rule-90",
+      "description": "This rule allows DNS traffic over UDP from the external network (source IP range 79.105.38.0/24) to a specific server in the DMZ (10.0.50.43).",
+      "details": {
+        "intent": {
+          "rule_id": "268c88e3-16d9-4ca3-92dc-599a16280674",
+          "summary": "This rule allows DNS traffic over UDP from the external network (source IP range 79.105.38.0/24) to a specific server in the DMZ (10.0.50.43).",
+          "mitre": [
+            "T1071.001",
+            "T1049"
+          ]
+        },
+        "risk_score": 70,
+        "suggested_action": "Implement logging for this rule to monitor DNS queries and responses. Consider restricting the source IP range to only trusted DNS servers and applying rate limiting to prevent abuse. Additionally, evaluate the necessity of allowing DNS traffic from the external network and consider using DNS over HTTPS (DoH) for enhanced security."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "fcd7be02-dcd9-4c8d-b01a-226a46c7bd44",
+      "rule_name": "Synthetic-Rule-91",
+      "description": "This rule denies SSH traffic from the external zone (IP range 135.30.184.0/24) to a specific server in the DMZ (10.0.50.60).",
+      "details": {
+        "intent": {
+          "rule_id": "fcd7be02-dcd9-4c8d-b01a-226a46c7bd44",
+          "summary": "This rule denies SSH traffic from the external zone (IP range 135.30.184.0/24) to a specific server in the DMZ (10.0.50.60).",
+          "mitre": [
+            "T1071.001",
+            "T1203"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Enable logging for this rule to monitor denied attempts and consider implementing a more granular rule that allows SSH from trusted sources only."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "09b5652b-ee2b-4091-9e13-5dc498d56d02",
+      "rule_name": "Synthetic-Rule-92",
+      "description": "This rule allows any TCP traffic from the source IP address 10.0.50.21 in the DMZ zone to any IP address within the destination range 201.127.170.0/24 in the external zone.",
+      "details": {
+        "intent": {
+          "rule_id": "09b5652b-ee2b-4091-9e13-5dc498d56d02",
+          "summary": "This rule allows any TCP traffic from the source IP address 10.0.50.21 in the DMZ zone to any IP address within the destination range 201.127.170.0/24 in the external zone.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003",
+            "T1041"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Restrict the source IP to only necessary services and applications instead of allowing 'any'. Implement logging for this rule to monitor traffic and consider applying micro-segmentation to limit exposure."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "8c3fc8ed-3aaf-4e6c-99fb-402eafe20d09",
+      "rule_name": "Synthetic-Rule-93",
+      "description": "This rule allows a specific internal IP address (192.168.135.120) to access a specific server in the DMZ (10.0.50.100) using the RDP protocol over TCP port 3389.",
+      "details": {
+        "intent": {
+          "rule_id": "8c3fc8ed-3aaf-4e6c-99fb-402eafe20d09",
+          "summary": "This rule allows a specific internal IP address (192.168.135.120) to access a specific server in the DMZ (10.0.50.100) using the RDP protocol over TCP port 3389.",
+          "mitre": [
+            "T1076",
+            "T1071.001"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Implement logging for this rule to monitor access attempts. Consider restricting the source IP to only trusted hosts or using a VPN for RDP access. Additionally, apply micro-segmentation to limit access to the DMZ server based on user roles and needs."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "39786789-9a49-4353-ac33-4650203df1df",
+      "rule_name": "Synthetic-Rule-94",
+      "description": "This rule allows DNS traffic from a specific source IP range in the DMZ to a single internal IP address.",
+      "details": {
+        "intent": {
+          "rule_id": "39786789-9a49-4353-ac33-4650203df1df",
+          "summary": "This rule allows DNS traffic from a specific source IP range in the DMZ to a single internal IP address.",
+          "mitre": [
+            "T1071.001",
+            "T1049"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Implement logging for this rule to monitor DNS queries and consider restricting the source IP range further or applying micro-segmentation to limit access to the internal IP."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "6ab12bc0-db2b-49ba-afe4-9fd4c6f1056b",
+      "rule_name": "Synthetic-Rule-95",
+      "description": "This rule allows web-browsing traffic from the external network (IP range 56.103.240.0/24) to a specific server in the DMZ (10.0.50.3) over TCP port 80.",
+      "details": {
+        "intent": {
+          "rule_id": "6ab12bc0-db2b-49ba-afe4-9fd4c6f1056b",
+          "summary": "This rule allows web-browsing traffic from the external network (IP range 56.103.240.0/24) to a specific server in the DMZ (10.0.50.3) over TCP port 80.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Implement logging for this rule to monitor traffic and consider restricting the source IP range to only known, trusted addresses. Additionally, evaluate the necessity of allowing HTTP traffic; if possible, enforce HTTPS to secure data in transit."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "def96445-d7e3-4ccc-95da-2e14c3249a19",
+      "rule_name": "Synthetic-Rule-96",
+      "description": "This rule allows web-browsing traffic over HTTPS (TCP port 443) from an external source IP range (102.178.151.0/24) to a specific destination address in the DMZ (10.0.50.160/28).",
+      "details": {
+        "intent": {
+          "rule_id": "def96445-d7e3-4ccc-95da-2e14c3249a19",
+          "summary": "This rule allows web-browsing traffic over HTTPS (TCP port 443) from an external source IP range (102.178.151.0/24) to a specific destination address in the DMZ (10.0.50.160/28).",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Implement logging for this rule to monitor traffic and potential misuse. Consider restricting the source IP range further if possible, and evaluate whether the DMZ should allow direct external access. Apply micro-segmentation to isolate sensitive services in the DMZ."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c67e1665-bc49-45a6-8d41-1afbf2977c9e",
+      "rule_name": "Synthetic-Rule-97",
+      "description": "This rule allows web browsing traffic over HTTPS (TCP port 443) from an external source IP range (192.175.148.0/24) to a specific server in the DMZ (10.0.50.179).",
+      "details": {
+        "intent": {
+          "rule_id": "c67e1665-bc49-45a6-8d41-1afbf2977c9e",
+          "summary": "This rule allows web browsing traffic over HTTPS (TCP port 443) from an external source IP range (192.175.148.0/24) to a specific server in the DMZ (10.0.50.179).",
+          "mitre": [
+            "T1071.001",
+            "T1071.002"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Enable logging for this rule to monitor traffic and potential misuse. Consider restricting the source IP range to only trusted addresses and implementing micro-segmentation to limit access to the DMZ server."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "ee5416ec-7d57-4a70-8ae7-bc02392454eb",
+      "rule_name": "Synthetic-Rule-98",
+      "description": "This rule allows the internal IP address 192.168.217.137 to access the web-browsing application on the DMZ IP address 10.0.50.90 over HTTPS (TCP port 443).",
+      "details": {
+        "intent": {
+          "rule_id": "ee5416ec-7d57-4a70-8ae7-bc02392454eb",
+          "summary": "This rule allows the internal IP address 192.168.217.137 to access the web-browsing application on the DMZ IP address 10.0.50.90 over HTTPS (TCP port 443).",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Enable logging for this rule to monitor traffic and detect potential misuse. Consider restricting the source IP to only necessary addresses and implementing micro-segmentation to limit access to the DMZ resources."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "40bd211d-ee38-43e5-991b-c58d9fc794ab",
+      "rule_name": "Synthetic-Rule-99",
+      "description": "This rule allows SSH traffic from a specific internal IP range (192.168.91.80/28) to an external IP range (168.87.82.0/24).",
+      "details": {
+        "intent": {
+          "rule_id": "40bd211d-ee38-43e5-991b-c58d9fc794ab",
+          "summary": "This rule allows SSH traffic from a specific internal IP range (192.168.91.80/28) to an external IP range (168.87.82.0/24).",
+          "mitre": [
+            "T1071.001",
+            "T1043"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Implement logging for this rule to monitor SSH access attempts. Consider restricting the destination IP range further to only necessary hosts and applying time-based access controls. Additionally, enforce multi-factor authentication for SSH access and consider using a bastion host for external access."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "2f7f9e32-6398-4044-a486-03f81bb5e892",
+      "rule_name": "Synthetic-Rule-100",
+      "description": "This rule allows web browsing traffic from a specific internal IP address (192.168.54.230) to a specific server in the DMZ (10.0.50.215) over TCP port 80.",
+      "details": {
+        "intent": {
+          "rule_id": "2f7f9e32-6398-4044-a486-03f81bb5e892",
+          "summary": "This rule allows web browsing traffic from a specific internal IP address (192.168.54.230) to a specific server in the DMZ (10.0.50.215) over TCP port 80.",
+          "mitre": [
+            "T1071.001",
+            "T1071.003"
+          ]
+        },
+        "risk_score": 65,
+        "suggested_action": "Consider restricting the source IP to only necessary users or devices, enable logging for monitoring, and implement micro-segmentation to limit access to the DMZ server based on user roles."
+      }
+    }
+  ],
+  "hardening_plan": {
+    "top_n": 10,
+    "threshold": 70,
+    "high_risk_count": 52,
+    "plan_items": [
+      {
+        "priority": 1,
+        "rule_id": "f353c3c1-0c43-4498-a3b8-24d962ca9bf0",
+        "rule_name": "Synthetic-Rule-9",
+        "risk_score": 85,
+        "mitre": [
+          "T1071.001",
+          "T1047",
+          "T1075"
+        ],
+        "recommendation": "Restrict access to the SMB service by limiting the source IP range to only trusted addresses. Enable logging for monitoring and consider implementing micro-segmentation to isolate the internal resource from direct external access."
+      },
+      {
+        "priority": 2,
+        "rule_id": "3baed7d1-2e35-4db6-a91e-8153fe0957f6",
+        "rule_name": "Synthetic-Rule-17",
+        "risk_score": 85,
+        "mitre": [
+          "T1076",
+          "T1071.001"
+        ],
+        "recommendation": "Restrict the source IP range to only trusted IPs, enable logging for monitoring, and consider implementing a VPN or bastion host for RDP access to enhance security."
+      },
+      {
+        "priority": 3,
+        "rule_id": "c61634a5-99b7-4cf3-adce-442d9c6a75fa",
+        "rule_name": "Synthetic-Rule-36",
+        "risk_score": 85,
+        "mitre": [
+          "T1071.001",
+          "T1190",
+          "T1210"
+        ],
+        "recommendation": "Restrict the source IP range to only trusted external addresses, enable logging for monitoring, and consider using a VPN or secure tunnel for external access to internal resources. Additionally, implement micro-segmentation to limit access to the internal address based on user roles and needs."
+      },
+      {
+        "priority": 4,
+        "rule_id": "c66df794-4e36-45cd-b4d8-ede99ff12939",
+        "rule_name": "Synthetic-Rule-64",
+        "risk_score": 85,
+        "mitre": [
+          "T1071.001",
+          "T1047",
+          "T1071.003"
+        ],
+        "recommendation": "Restrict the source IP range to only necessary hosts, enable logging for monitoring, and consider blocking SMB traffic to external networks altogether unless absolutely required. Implement micro-segmentation to isolate sensitive systems and limit exposure."
+      },
+      {
+        "priority": 5,
+        "rule_id": "6d8c6091-2076-47e5-8b6f-8fae3a29280f",
+        "rule_name": "Synthetic-Rule-72",
+        "risk_score": 85,
+        "mitre": [
+          "T1071.001",
+          "T1071.003",
+          "T1046"
+        ],
+        "recommendation": "Restrict access to the internal IP address by implementing a more granular source IP filtering, consider using VPN or secure tunnels for external access, enable logging for monitoring, and evaluate the necessity of exposing SMB to the external network."
+      },
+      {
+        "priority": 6,
+        "rule_id": "b12b13c4-a58e-4ca9-904d-e7e2e3dd387f",
+        "rule_name": "Synthetic-Rule-79",
+        "risk_score": 85,
+        "mitre": [
+          "T1076",
+          "T1071.001",
+          "T1203"
+        ],
+        "recommendation": "Restrict the source IP range to only trusted addresses, enable logging for monitoring, and consider implementing a VPN or bastion host for RDP access to enhance security."
+      },
+      {
+        "priority": 7,
+        "rule_id": "efa5d611-0b8e-405e-a2b0-1addc5737e61",
+        "rule_name": "Synthetic-Rule-82",
+        "risk_score": 85,
+        "mitre": [
+          "T1071.001",
+          "T1071.003",
+          "T1041"
+        ],
+        "recommendation": "Restrict the source IP range to only trusted addresses, limit the allowed applications and services to only those necessary, enable logging for monitoring, and consider implementing micro-segmentation to further isolate the internal resources."
+      },
+      {
+        "priority": 8,
+        "rule_id": "d0640cfa-1b25-4d9a-a756-8edf25e7292f",
+        "rule_name": "Synthetic-Rule-84",
+        "risk_score": 85,
+        "mitre": [
+          "T1071.001",
+          "T1210",
+          "T1190"
+        ],
+        "recommendation": "Restrict access to the internal address by limiting the source IP range to only trusted external addresses. Enable logging for monitoring and consider implementing micro-segmentation to isolate the SMB service from other internal resources."
+      },
+      {
+        "priority": 9,
+        "rule_id": "a0c0493c-56bb-4ec3-89bb-384c1f68da3f",
+        "rule_name": "Synthetic-Rule-85",
+        "risk_score": 85,
+        "mitre": [
+          "T1071.001",
+          "T1047",
+          "T1071.003"
+        ],
+        "recommendation": "Restrict the source IP range to only trusted addresses, enable logging for monitoring, and consider implementing micro-segmentation to limit access to the SMB service only to necessary services or users."
+      },
+      {
+        "priority": 10,
+        "rule_id": "5c5784fd-f7b5-4395-a2ab-8af691068272",
+        "rule_name": "Synthetic-Rule-87",
+        "risk_score": 85,
+        "mitre": [
+          "T1076",
+          "T1071.001"
+        ],
+        "recommendation": "Restrict access to the RDP service by implementing IP whitelisting for trusted sources only, enable logging for monitoring, and consider using a VPN or bastion host for remote access to enhance security."
+      }
+    ]
+  }
+}
