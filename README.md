@@ -23,6 +23,7 @@ LLM-assisted, vendor-agnostic firewall rule compliance analysis framework.
    python -m src.main analyze --vendor paloalto --file sample_rules.txt
    python -m src.main recommend --vendor paloalto --file sample_rules.txt --top 5 --threshold 70
   python -m src.main full-scan --vendor paloalto --file sample_rules.txt 
+    python -m src.main full-scan --vendor paloalto --file panos-random-100rules.xml 
    ```
 
 3. Run REST API server:

@@ -7,11 +7,9 @@ from .normalizer import normalize_rules
 from .analysis import analyze_firewall_comprehensive, check_rule_anomalies
 from .intent import analyze_rules_intent, identify_high_risk_rules, generate_policy_hardening_plan
 
-
 @click.group()
 def cli():
     pass
-
 
 def _load_and_normalize(vendor: str, file_path: str):
     if vendor.lower() == "paloalto":
@@ -27,7 +25,6 @@ def _load_and_normalize(vendor: str, file_path: str):
     normalized = normalize_rules(rules)
     return normalized
 
-
 @cli.command()
 @click.option("--vendor", type=click.Choice(["paloalto"], case_sensitive=False), default="paloalto")
 @click.option("--file", "file_path", required=True, type=click.Path(exists=True))
@@ -37,7 +34,6 @@ def parse(vendor, file_path):
     click.echo("Normalized rules:")
     for r in normalized:
         click.echo(r.model_dump_json())
-
 
 @cli.command()
 @click.option("--vendor", type=click.Choice(["paloalto"], case_sensitive=False), default="paloalto")
@@ -69,7 +65,6 @@ def analyze(vendor, file_path):
     for i in intent_issues:
         click.echo(i.model_dump_json(indent=2))
 
-
 @cli.command()
 @click.option("--vendor", type=click.Choice(["paloalto"], case_sensitive=False), default="paloalto")
 @click.option("--file", "file_path", required=True, type=click.Path(exists=True))
@@ -88,16 +83,15 @@ def recommend(vendor, file_path, top_n, threshold):
             click.echo("---")
             click.echo(f"Rule {item['rule_id']} ({item['rule_name']}): risk={item['risk_score']}")
             click.echo(f"Summary: {item['summary']}")
-            click.echo(f"MITRE: {item['mitre']}")
+            click.echo(f"Frameworks: MITRE: {item['mitre']} | NIST: {item['nist']} | CIS: {item['cis']}")
             click.echo(f"Recommendation: {item['recommended_action']}")
 
     click.echo("\nPolicy hardening plan:")
     click.echo(f"Top N: {plan['top_n']}, high risk count: {plan['high_risk_count']}")
     for item in plan['plan_items']:
         click.echo(f"#{item['priority']}: {item['rule_id']} ({item['rule_name']}) risk={item['risk_score']}")
-        click.echo(f"  MITRE: {item['mitre']}")
+        click.echo(f"  Frameworks: MITRE: {item['mitre']} | NIST: {item['nist']} | CIS: {item['cis']}")
         click.echo(f"  Recommendation: {item['recommendation']}")
-
 
 @cli.command()
 @click.option("--vendor", type=click.Choice(["paloalto"], case_sensitive=False), default="paloalto")
@@ -144,7 +138,6 @@ def full_scan(vendor, file_path, top_n, threshold, output_dir):
     
     click.echo("\n--- Report Preview ---")
     click.echo(json.dumps(report_data["metadata"], indent=2))
-
 
 if __name__ == "__main__":
     cli()
