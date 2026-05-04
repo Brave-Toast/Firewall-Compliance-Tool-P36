@@ -1,9 +1,9 @@
 import xml.etree.cElementTree as ET
 from typing import List, Dict, Any
 from ..schema import FirewallRule, Action
+from .base import BaseFirewallParser
 
-
-class PaloAltoParser:
+class PaloAltoParser(BaseFirewallParser):
     """Basic parser for simplified Palo Alto rule text and XML."""
 
     @staticmethod
@@ -54,8 +54,8 @@ class PaloAltoParser:
 
         return FirewallRule(**fields)
 
-    @staticmethod
-    def parse_from_text(text: str) -> List[FirewallRule]:
+    @classmethod
+    def parse_from_text(cls, text: str) -> List[FirewallRule]:
         rules = []
         for i, line in enumerate(text.splitlines()):
             line = line.strip()
@@ -68,8 +68,8 @@ class PaloAltoParser:
                 raise ValueError(f"Error parsing line {i+1}: {e}")
         return rules
 
-    @staticmethod
-    def parse_from_xml(file_path: str) -> List[FirewallRule]:
+    @classmethod
+    def parse_from_xml(cls, file_path: str) -> List[FirewallRule]:
         """Parses Palo Alto rules from an XML configuration file."""
         tree = ET.parse(file_path)
         root = tree.getroot()

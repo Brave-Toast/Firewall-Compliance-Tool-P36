@@ -1,9 +1,9 @@
+import os
 import json
 import ollama
 from typing import List, Dict
 from .schema import FirewallRule, AnalysisIssue, LLMRuleAnalysis, BulkAnalysisResponse
-
-_local_analysis_cache = None
+from .database import SessionLocal, DBLLMCache
 
 def batch_analyze_rules_local(rules: List[FirewallRule]) -> BulkAnalysisResponse:
     print(f"⚙️ Packaging {len(rules)} rules for local bulk analysis...")
@@ -22,12 +22,13 @@ def batch_analyze_rules_local(rules: List[FirewallRule]) -> BulkAnalysisResponse
         "You must return the analysis strictly matching the provided JSON schema."
     )
 
-    print("🧠 Sending payload to local Llama 3.1 model. This may take a moment...")
+    model_name = os.getenv("LLM_MODEL", "llama3.1")
+    print(f"🧠 Sending payload to local {model_name} model. This may take a moment...")
     
     try:
         # Utilize Ollama's structured output feature
         response = ollama.chat(
-            model='llama3.1',
+            model=model_name,
             messages=[
                 {'role': 'system', 'content': system_prompt},
                 {'role': 'user', 'content': json.dumps(rules_context)}
@@ -45,16 +46,34 @@ def batch_analyze_rules_local(rules: List[FirewallRule]) -> BulkAnalysisResponse
         return BulkAnalysisResponse(analyses=[])
 
 def get_all_llm_analyses(rules: List[FirewallRule]) -> Dict[str, LLMRuleAnalysis]:
-    """Helper function to run the batch process with in-memory caching."""
-    global _local_analysis_cache
-    
-    # If we already analyzed this batch during the current run, return the saved results
-    if _local_analysis_cache is not None:
-        return _local_analysis_cache
+    """Helper function to run the batch process with SQLAlchemy caching."""
+    db = SessionLocal()
+    try:
+        results = {}
+        uncached_rules = []
         
-    bulk_results = batch_analyze_rules_local(rules)
-    _local_analysis_cache = {res.rule_id: res for res in bulk_results.analyses}
-    return _local_analysis_cache
+        for rule in rules:
+            db_cache = db.query(DBLLMCache).filter(DBLLMCache.rule_id == rule.id).first()
+            if db_cache and db_cache.analysis_json:
+                results[rule.id] = LLMRuleAnalysis.model_validate(db_cache.analysis_json)
+            else:
+                uncached_rules.append(rule)
+                
+        if uncached_rules:
+            bulk_results = batch_analyze_rules_local(uncached_rules)
+            for res in bulk_results.analyses:
+                results[res.rule_id] = res
+                
+                db_cache = db.query(DBLLMCache).filter(DBLLMCache.rule_id == res.rule_id).first()
+                if not db_cache:
+                    db_cache = DBLLMCache(rule_id=res.rule_id)
+                    db.add(db_cache)
+                db_cache.analysis_json = res.model_dump()
+            db.commit()
+            
+        return results
+    finally:
+        db.close()
 
 def analyze_rules_intent(rules: List[FirewallRule]) -> List[AnalysisIssue]:
     result_map = get_all_llm_analyses(rules)
