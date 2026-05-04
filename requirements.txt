@@ -5,4 +5,4 @@ pydantic
 z3-solver
 fastapi
 uvicorn
-openai
+ollama

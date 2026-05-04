@@ -1,6 +1,7 @@
+import ipaddress
 from typing import List, Dict
 from .schema import FirewallRule, AnalysisIssue
-from z3 import Solver, String, And, Or, Not, sat, unsat
+from z3 import Solver, String, And, Or, Not, sat, unsat, BitVec, BitVecVal, UGE, ULE
 
 def _make_overlap_constraint(symbol, values):
     """Converts rule attributes into Z3 logical expressions."""
@@ -11,6 +12,28 @@ def _make_overlap_constraint(symbol, values):
         return True
     return Or(*[symbol == v for v in normalized])
 
+def _make_ip_constraint(symbol, values):
+    """Converts a list of IP/CIDR strings into Z3 BitVec constraints."""
+    if not values:
+        return True
+    normalized = [v.strip().lower() for v in values if v.strip()]
+    if not normalized or "any" in normalized:
+        return True
+    
+    constraints = []
+    for val in normalized:
+        try:
+            net = ipaddress.ip_network(val, strict=False)
+            start_ip = int(net.network_address)
+            end_ip = int(net.broadcast_address)
+            constraints.append(And(UGE(symbol, BitVecVal(start_ip, 32)), ULE(symbol, BitVecVal(end_ip, 32))))
+        except ValueError:
+            pass
+            
+    if not constraints:
+        return True
+    return Or(*constraints)
+
 def analyze_firewall_comprehensive(rules: List[FirewallRule], forbidden_paths: List[Dict[str, str]] = None) -> List[AnalysisIssue]:
     issues = []
     
@@ -19,6 +42,8 @@ def analyze_firewall_comprehensive(rules: List[FirewallRule], forbidden_paths: L
     dst_z = String("dst_zone")
     app = String("app")
     svc = String("svc")
+    src_ip = BitVec("src_ip", 32)
+    dst_ip = BitVec("dst_ip", 32)
 
     for i in range(len(rules)):
         r1 = rules[i]
@@ -29,6 +54,8 @@ def analyze_firewall_comprehensive(rules: List[FirewallRule], forbidden_paths: L
                 s = Solver()
                 s.add(_make_overlap_constraint(src_z, r1.source_zones))
                 s.add(_make_overlap_constraint(dst_z, r1.destination_zones))
+                s.add(_make_ip_constraint(src_ip, r1.source_addresses))
+                s.add(_make_ip_constraint(dst_ip, r1.destination_addresses))
                 s.add(src_z == path["from"].lower())
                 s.add(dst_z == path["to"].lower())
                 
@@ -48,12 +75,16 @@ def analyze_firewall_comprehensive(rules: List[FirewallRule], forbidden_paths: L
             r1_con = And(
                 _make_overlap_constraint(src_z, r1.source_zones),
                 _make_overlap_constraint(dst_z, r1.destination_zones),
+                _make_ip_constraint(src_ip, r1.source_addresses),
+                _make_ip_constraint(dst_ip, r1.destination_addresses),
                 _make_overlap_constraint(app, [r1.application] if r1.application else []),
                 _make_overlap_constraint(svc, [r1.service] if r1.service else [])
             )
             r2_con = And(
                 _make_overlap_constraint(src_z, r2.source_zones),
                 _make_overlap_constraint(dst_z, r2.destination_zones),
+                _make_ip_constraint(src_ip, r2.source_addresses),
+                _make_ip_constraint(dst_ip, r2.destination_addresses),
                 _make_overlap_constraint(app, [r2.application] if r2.application else []),
                 _make_overlap_constraint(svc, [r2.service] if r2.service else [])
             )
@@ -174,5 +205,73 @@ def check_rule_anomalies(rules: List[FirewallRule]) -> List[AnalysisIssue]:
                         details={"type": "collision", "conflicts_with": rule1.id}
                     ))
                     collision_rules.add(rule2.id)
+    return issues
+
+def simulate_proposed_rule(rules: List[FirewallRule], proposed_rule: FirewallRule) -> List[AnalysisIssue]:
+    """Tests a proposed rule against existing rules using Z3 solver."""
+    issues = []
+    
+    src_z = String("src_zone")
+    dst_z = String("dst_zone")
+    app = String("app")
+    svc = String("svc")
+    src_ip = BitVec("src_ip", 32)
+    dst_ip = BitVec("dst_ip", 32)
+
+    r2 = proposed_rule
+    r2_con = And(
+        _make_overlap_constraint(src_z, r2.source_zones),
+        _make_overlap_constraint(dst_z, r2.destination_zones),
+        _make_ip_constraint(src_ip, r2.source_addresses),
+        _make_ip_constraint(dst_ip, r2.destination_addresses),
+        _make_overlap_constraint(app, [r2.application] if r2.application else []),
+        _make_overlap_constraint(svc, [r2.service] if r2.service else [])
+    )
+
+    for r1 in rules:
+        r1_con = And(
+            _make_overlap_constraint(src_z, r1.source_zones),
+            _make_overlap_constraint(dst_z, r1.destination_zones),
+            _make_ip_constraint(src_ip, r1.source_addresses),
+            _make_ip_constraint(dst_ip, r1.destination_addresses),
+            _make_overlap_constraint(app, [r1.application] if r1.application else []),
+            _make_overlap_constraint(svc, [r1.service] if r1.service else [])
+        )
+
+        s = Solver()
+        s.add(And(r1_con, r2_con))
+        
+        if s.check() == sat:
+            if r1.action == r2.action:
+                s_subset = Solver()
+                s_subset.add(And(r2_con, Not(r1_con)))
+                if s_subset.check() == unsat:
+                    issues.append(AnalysisIssue(
+                        severity="medium",
+                        rule_id=r2.id,
+                        rule_name=r2.name,
+                        description=f"Redundancy: Proposed rule is fully covered by existing rule {r1.id}",
+                        details={"covered_by": r1.id}
+                    ))
+            else:
+                s_r1_only = Solver()
+                s_r1_only.add(And(r1_con, Not(r2_con)))
+                s_r2_only = Solver()
+                s_r2_only.add(And(r2_con, Not(r1_con)))
+                
+                if s_r1_only.check() == sat and s_r2_only.check() == sat:
+                    issue_type = "Correlation Conflict"
+                    sev = "medium"
+                else:
+                    issue_type = "Shadowing Conflict"
+                    sev = "high"
+
+                issues.append(AnalysisIssue(
+                    severity=sev,
+                    rule_id=f"{r1.id}-{r2.id}",
+                    rule_name=f"{r1.name}<->{r2.name}",
+                    description=f"SMT {issue_type} detected between existing rule {r1.id} and proposed rule",
+                    details={"conflict_type": issue_type}
+                ))
 
     return issues
