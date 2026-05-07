@@ -1,4 +1,4 @@
-Fortinet_File=open("/Users/kashan/Desktop/ICT Project A/RuleFile/fortinet.conf","r")
+Fortinet_File=open("src/parsers/fortinet.conf","r")
 Lines=Fortinet_File.readlines()
 Fortinet_File.close()
 
