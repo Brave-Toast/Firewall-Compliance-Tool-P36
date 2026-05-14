@@ -2,6 +2,8 @@ import click
 import os
 import json
 from datetime import datetime
+from xml.etree import ElementTree as ET
+from xml.dom import minidom
 from .parsers import get_parser
 from .normalizer import normalize_rules
 from .analysis import analyze_firewall_comprehensive, check_rule_anomalies
@@ -11,6 +13,31 @@ from .database import SessionLocal, init_db, DBFirewallRule, DBAnalysisIssue
 @click.group()
 def cli():
     pass
+
+def rules_to_xml(rules):
+    root = ET.Element("rules")
+    for rule in rules:
+        rule_elem = ET.SubElement(root, "rule")
+        rule_dict = rule.model_dump()
+        for field, value in rule_dict.items():
+            if isinstance(value, list):
+                list_elem = ET.SubElement(rule_elem, field)
+                for item in value:
+                    ET.SubElement(list_elem, "item").text = str(item)
+            elif isinstance(value, dict):
+                dict_elem = ET.SubElement(rule_elem, field)
+                for k, v in value.items():
+                    ET.SubElement(dict_elem, k).text = str(v)
+            else:
+                ET.SubElement(rule_elem, field).text = str(value)
+    
+    rough_string = ET.tostring(root, encoding='unicode')
+    dom = minidom.parseString(rough_string)
+    pretty_xml = dom.toprettyxml(indent="  ")
+    # Remove extra newlines
+    lines = pretty_xml.split('\n')
+    non_empty_lines = [line for line in lines if line.strip()]
+    return '\n'.join(non_empty_lines)
 
 def _load_and_normalize(vendor: str, file_path: str):
     try:
@@ -64,29 +91,37 @@ def _persist_to_db(rules, anomaly_issues, comprehensive_issues, intent_issues):
             ))
             
         for intent_res in intent_issues:
-            # handle both Intent response types (Dict vs LLMRuleAnalysis) just in case
-            if hasattr(intent_res, "rule_id"):
-                rule_id = intent_res.rule_id
-                intent_summary = intent_res.intent_summary
-                details = {
-                    "mitre_techniques": intent_res.mitre_techniques,
-                    "nist_controls": intent_res.nist_controls,
-                    "cis_controls": intent_res.cis_controls,
-                    "risk_score": intent_res.risk_score,
-                    "recommendation": intent_res.recommendation
-                }
+            # handle Intent response types (Dict vs LLMRuleAnalysis vs AnalysisIssue)
+            if isinstance(intent_res, dict):
+                db.add(DBAnalysisIssue(
+                    severity="info",
+                    rule_id=intent_res.get("rule_id", "unknown"),
+                    rule_name=None,
+                    description=intent_res.get("description", ""),
+                    details=intent_res.get("details", {})
+                ))
+            elif hasattr(intent_res, "intent_summary"):
+                db.add(DBAnalysisIssue(
+                    severity="info",
+                    rule_id=intent_res.rule_id,
+                    rule_name=None,
+                    description=intent_res.intent_summary,
+                    details={
+                        "mitre_techniques": getattr(intent_res, "mitre_techniques", []),
+                        "nist_controls": getattr(intent_res, "nist_controls", []),
+                        "cis_controls": getattr(intent_res, "cis_controls", []),
+                        "risk_score": getattr(intent_res, "risk_score", 0),
+                        "recommendation": getattr(intent_res, "recommendation", "")
+                    }
+                ))
             else:
-                rule_id = intent_res.get("rule_id", "unknown")
-                intent_summary = intent_res.get("description", "")
-                details = intent_res.get("details", {})
-
-            db.add(DBAnalysisIssue(
-                severity="info",
-                rule_id=rule_id,
-                rule_name=None,
-                description=intent_summary,
-                details=details
-            ))
+                db.add(DBAnalysisIssue(
+                    severity=getattr(intent_res, "severity", "info"),
+                    rule_id=getattr(intent_res, "rule_id", "unknown"),
+                    rule_name=getattr(intent_res, "rule_name", None),
+                    description=getattr(intent_res, "description", ""),
+                    details=getattr(intent_res, "details", {})
+                ))
             
         db.commit()
     finally:
@@ -205,10 +240,82 @@ def full_scan(vendor, file_path, top_n, threshold, output_dir):
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(json_output)
         
-    click.echo(f"✅ Success! Structured JSON report saved to: {output_path}")
+    click.echo(f"Success! Structured JSON report saved to: {output_path}")
     
     click.echo("\n--- Report Preview ---")
     click.echo(json.dumps(report_data["metadata"], indent=2))
+
+@cli.command()
+@click.option("--vendor", type=click.Choice(["paloalto"], case_sensitive=False), default="paloalto")
+@click.option("--file", "file_path", required=True, type=click.Path(exists=True))
+@click.option("--top", "top_n", default=10, type=int)
+@click.option("--threshold", default=70, type=int)
+@click.option("--output", "output_dir", default="reports", help="Directory to save the generated report")
+def partial_scan(vendor, file_path, top_n, threshold, output_dir):
+    """Parses, analyzes (first 20 rules only), and generates a structured JSON recommendation report."""
+    normalized = _load_and_normalize(vendor, file_path)
+    
+    # Limit to first 20 rules
+    normalized = normalized[:20]
+    
+    # Run all analysis functions 
+    analysis_issues = analyze_firewall_comprehensive(normalized)
+    anomaly_issues = check_rule_anomalies(normalized)
+    intent_issues = analyze_rules_intent(normalized)
+    plan = generate_policy_hardening_plan(normalized, top_n=top_n, threshold=threshold)
+
+    _persist_to_db(normalized, anomaly_issues, analysis_issues, intent_issues)
+
+    # Compile the results into a structured dictionary
+    report_data = {
+        "metadata": {
+            "timestamp": datetime.now().isoformat(),
+            "target_file": file_path,
+            "vendor": vendor,
+            "total_rules_parsed": len(normalized),
+            "scan_type": "partial_scan"
+        },
+        "comprehensive_analysis_issues": [issue.model_dump() for issue in analysis_issues],
+        "basic_anomaly_issues": [issue.model_dump() for issue in anomaly_issues],
+        "intent_analysis": [issue.model_dump() for issue in intent_issues],
+        "hardening_plan": plan 
+    }
+
+    # Convert the dictionary to a formatted JSON string
+    json_output = json.dumps(report_data, indent=2, default=str)
+
+    # Handle Directory Creation and File Saving
+    os.makedirs(output_dir, exist_ok=True)
+    file_name = f"partial_scan_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    output_path = os.path.join(output_dir, file_name)
+    
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(json_output)
+        
+    click.echo(f"Success! Partial scan JSON report saved to: {output_path}")
+    
+    click.echo("\n--- Report Preview ---")
+    click.echo(json.dumps(report_data["metadata"], indent=2))
+
+@cli.command()
+@click.option("--vendor", type=click.Choice(["paloalto"], case_sensitive=False), default="paloalto")
+@click.option("--file", "file_path", required=True, type=click.Path(exists=True))
+@click.option("--output", "output_dir", default="reports", help="Directory to save the XML export")
+def validate_schema(vendor, file_path, output_dir):
+    """Validate and export firewall rules to XML format conforming to the unified schema."""
+    normalized = _load_and_normalize(vendor, file_path)
+    xml_output = rules_to_xml(normalized)
+    
+    # Handle Directory Creation and File Saving
+    os.makedirs(output_dir, exist_ok=True)
+    file_name = f"schema_validation_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xml"
+    output_path = os.path.join(output_dir, file_name)
+    
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(xml_output)
+        
+    click.echo(f"Success! XML schema validation report saved to: {output_path}")
+    click.echo(f"Validated {len(normalized)} rules conforming to the unified schema.")
 
 if __name__ == "__main__":
     cli()
