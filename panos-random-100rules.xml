@@ -81,7 +81,7 @@
             <security>
               <rules>
 
-                <!-- Rule [PERFECT] -->
+                <!-- Rule 1 -->
                 <entry name="P001-Allow-smb-Internal-to-DMZ" type="universal">
                   <from><member>Internal</member></from>
                   <to><member>DMZ</member></to>

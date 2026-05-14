@@ -8,12 +8,6 @@ from .database import SessionLocal, DBLLMCache
 def batch_analyze_rules_local(rules: List[FirewallRule]) -> BulkAnalysisResponse:
     print(f"⚙️ Packaging {len(rules)} rules for local bulk analysis...")
     
-    # Strip non-essential data to save LLM context window space
-    rules_context = [
-        rule.model_dump(exclude={"metadata", "created_at", "name", "logging"}) 
-        for rule in rules
-    ]
-    
     system_prompt = (
         "You are an expert cybersecurity architect specializing in firewall policy analysis. "
         "Analyze the following JSON list of firewall rules in bulk. "
@@ -25,25 +19,40 @@ def batch_analyze_rules_local(rules: List[FirewallRule]) -> BulkAnalysisResponse
     model_name = os.getenv("LLM_MODEL", "llama3.1")
     print(f"🧠 Sending payload to local {model_name} model. This may take a moment...")
     
-    try:
-        # Utilize Ollama's structured output feature
-        response = ollama.chat(
-            model=model_name,
-            messages=[
-                {'role': 'system', 'content': system_prompt},
-                {'role': 'user', 'content': json.dumps(rules_context)}
-            ],
-            format=BulkAnalysisResponse.model_json_schema(),
-            options={"temperature": 0.1} # Keep creativity low for consistent audits
-        )
+    all_analyses = []
+    chunk_size = 5
+    
+    for i in range(0, len(rules), chunk_size):
+        chunk = rules[i:i + chunk_size]
+        print(f"📦 Processing chunk {i//chunk_size + 1} of {(len(rules) + chunk_size - 1)//chunk_size} ({len(chunk)} rules)...")
         
-        # Parse the JSON string back into Pydantic objects
-        result_json = response['message']['content']
-        return BulkAnalysisResponse.model_validate_json(result_json)
+        # Strip non-essential data to save LLM context window space
+        rules_context = [
+            rule.model_dump(exclude={"metadata", "created_at", "name", "logging"}) 
+            for rule in chunk
+        ]
         
-    except Exception as e:
-        print(f"❌ Local LLM API Error: {e}")
-        return BulkAnalysisResponse(analyses=[])
+        try:
+            # Utilize Ollama's structured output feature
+            response = ollama.chat(
+                model=model_name,
+                messages=[
+                    {'role': 'system', 'content': system_prompt},
+                    {'role': 'user', 'content': json.dumps(rules_context)}
+                ],
+                format=BulkAnalysisResponse.model_json_schema(),
+                options={"temperature": 0.1} # Keep creativity low for consistent audits
+            )
+            
+            # Parse the JSON string back into Pydantic objects
+            result_json = response['message']['content']
+            chunk_result = BulkAnalysisResponse.model_validate_json(result_json)
+            all_analyses.extend(chunk_result.analyses)
+            
+        except Exception as e:
+            print(f"❌ Local LLM API Error for chunk {i//chunk_size + 1}: {e}")
+            
+    return BulkAnalysisResponse(analyses=all_analyses)
 
 def get_all_llm_analyses(rules: List[FirewallRule]) -> Dict[str, LLMRuleAnalysis]:
     """Helper function to run the batch process with SQLAlchemy caching."""

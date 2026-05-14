@@ -1,0 +1,814 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-14T15:40:43.752711",
+    "target_file": "panos-random-100rules.xml",
+    "vendor": "paloalto",
+    "total_rules_parsed": 20,
+    "scan_type": "partial_scan"
+  },
+  "comprehensive_analysis_issues": [
+    {
+      "severity": "medium",
+      "rule_id": "pa-P021-Allow-smb-Internal-to-DMZ-8",
+      "rule_name": "P021-Allow-smb-Internal-to-DMZ",
+      "description": "Redundancy: Rule pa-P021-Allow-smb-Internal-to-DMZ-8 is fully covered by earlier rule pa-P001-Allow-smb-Internal-to-DMZ-1",
+      "details": {
+        "covered_by": "pa-P001-Allow-smb-Internal-to-DMZ-1"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-P001-Allow-smb-Internal-to-DMZ-1-pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+      "rule_name": "P001-Allow-smb-Internal-to-DMZ<->C003-COLLISION-Deny-any-Internal-to-DMZ",
+      "description": "SMT Shadowing Conflict detected between pa-P001-Allow-smb-Internal-to-DMZ-1 and pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "pa-P046-Allow-ssl-External-to-Internal-16",
+      "rule_name": "P046-Allow-ssl-External-to-Internal",
+      "description": "Redundancy: Rule pa-P046-Allow-ssl-External-to-Internal-16 is fully covered by earlier rule pa-R002-REDUNDANT-Shadowed-ssl-External-to-Internal-7",
+      "details": {
+        "covered_by": "pa-R002-REDUNDANT-Shadowed-ssl-External-to-Internal-7"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-P021-Allow-smb-Internal-to-DMZ-8-pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+      "rule_name": "P021-Allow-smb-Internal-to-DMZ<->C003-COLLISION-Deny-any-Internal-to-DMZ",
+      "description": "SMT Shadowing Conflict detected between pa-P021-Allow-smb-Internal-to-DMZ-8 and pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-R008-REDUNDANT-Duplicate-dns-Internal-to-DMZ-10-pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+      "rule_name": "R008-REDUNDANT-Duplicate-dns-Internal-to-DMZ<->C003-COLLISION-Deny-any-Internal-to-DMZ",
+      "description": "SMT Shadowing Conflict detected between pa-R008-REDUNDANT-Duplicate-dns-Internal-to-DMZ-10 and pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-R010-REDUNDANT-Shadowed-ping-Internal-to-DMZ-12-pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+      "rule_name": "R010-REDUNDANT-Shadowed-ping-Internal-to-DMZ<->C003-COLLISION-Deny-any-Internal-to-DMZ",
+      "description": "SMT Shadowing Conflict detected between pa-R010-REDUNDANT-Shadowed-ping-Internal-to-DMZ-12 and pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-R012-REDUNDANT-Shadowed-any-Internal-to-DMZ-13-pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+      "rule_name": "R012-REDUNDANT-Shadowed-any-Internal-to-DMZ<->C003-COLLISION-Deny-any-Internal-to-DMZ",
+      "description": "SMT Shadowing Conflict detected between pa-R012-REDUNDANT-Shadowed-any-Internal-to-DMZ-13 and pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-R012-REDUNDANT-Shadowed-any-Internal-to-DMZ-13-pa-P049-Deny-mssql-Internal-to-DMZ-19",
+      "rule_name": "R012-REDUNDANT-Shadowed-any-Internal-to-DMZ<->P049-Deny-mssql-Internal-to-DMZ",
+      "description": "SMT Shadowing Conflict detected between pa-R012-REDUNDANT-Shadowed-any-Internal-to-DMZ-13 and pa-P049-Deny-mssql-Internal-to-DMZ-19",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "pa-P049-Deny-mssql-Internal-to-DMZ-19",
+      "rule_name": "P049-Deny-mssql-Internal-to-DMZ",
+      "description": "Redundancy: Rule pa-P049-Deny-mssql-Internal-to-DMZ-19 is fully covered by earlier rule pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+      "details": {
+        "covered_by": "pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15"
+      }
+    }
+  ],
+  "basic_anomaly_issues": [
+    {
+      "severity": "medium",
+      "rule_id": "pa-R012-REDUNDANT-Shadowed-any-Internal-to-DMZ-13",
+      "rule_name": "R012-REDUNDANT-Shadowed-any-Internal-to-DMZ",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule P001-Allow-smb-Internal-to-DMZ",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "pa-P001-Allow-smb-Internal-to-DMZ-1"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+      "rule_name": "C003-COLLISION-Deny-any-Internal-to-DMZ",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule P001-Allow-smb-Internal-to-DMZ",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "pa-P001-Allow-smb-Internal-to-DMZ-1"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "pa-P046-Allow-ssl-External-to-Internal-16",
+      "rule_name": "P046-Allow-ssl-External-to-Internal",
+      "description": "[REDUNDANT] Rule adds no value. Identical to earlier rule R002-REDUNDANT-Shadowed-ssl-External-to-Internal",
+      "details": {
+        "type": "redundant",
+        "covered_by": "pa-R002-REDUNDANT-Shadowed-ssl-External-to-Internal-7"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "pa-P046-Allow-ssl-External-to-Internal-16",
+      "rule_name": "P046-Allow-ssl-External-to-Internal",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule R002-REDUNDANT-Shadowed-ssl-External-to-Internal",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "pa-R002-REDUNDANT-Shadowed-ssl-External-to-Internal-7"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+      "rule_name": "C003-COLLISION-Deny-any-Internal-to-DMZ",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule R012-REDUNDANT-Shadowed-any-Internal-to-DMZ",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "pa-R012-REDUNDANT-Shadowed-any-Internal-to-DMZ-13"
+      }
+    }
+  ],
+  "intent_analysis": [
+    {
+      "severity": "medium",
+      "rule_id": "pa-P001-Allow-smb-Internal-to-DMZ-1",
+      "rule_name": "P001-Allow-smb-Internal-to-DMZ",
+      "description": "Allow SMB traffic from internal network to DMZ for database server access.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-P001-Allow-smb-Internal-to-DMZ-1",
+          "summary": "Allow SMB traffic from internal network to DMZ for database server access.",
+          "mitre": [
+            "T1021: Remote Services"
+          ],
+          "nist": [
+            "AC-2(3): Limit system access to authorized personnel and processes.",
+            "AC-17(4): Limit network access to authorized systems and services."
+          ],
+          "cis": [
+            "5.1: Implement a layered security approach to protect against advanced threats."
+          ]
+        },
+        "risk_score": 60,
+        "suggested_action": "Review the SMB service configuration for proper authentication and authorization."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-P002-Allow-smb-External-to-DMZ-2",
+      "rule_name": "P002-Allow-smb-External-to-DMZ",
+      "description": "Allow SMB traffic from external network to DMZ for mail server access.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-P002-Allow-smb-External-to-DMZ-2",
+          "summary": "Allow SMB traffic from external network to DMZ for mail server access.",
+          "mitre": [
+            "T1021: Remote Services"
+          ],
+          "nist": [
+            "AC-2(3): Limit system access to authorized personnel and processes.",
+            "AC-17(4): Limit network access to authorized systems and services."
+          ],
+          "cis": [
+            "5.1: Implement a layered security approach to protect against advanced threats."
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "Review the SMB service configuration for proper authentication and authorization."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "pa-P003-Allow-ntp-DMZ-to-External-3",
+      "rule_name": "P003-Allow-ntp-DMZ-to-External",
+      "description": "Allow NTP traffic from DMZ to external network.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-P003-Allow-ntp-DMZ-to-External-3",
+          "summary": "Allow NTP traffic from DMZ to external network.",
+          "mitre": [
+            "T1021: Remote Services"
+          ],
+          "nist": [
+            "AC-2(3): Limit system access to authorized personnel and processes.",
+            "AC-17(4): Limit network access to authorized systems and services."
+          ],
+          "cis": [
+            "5.1: Implement a layered security approach to protect against advanced threats."
+          ]
+        },
+        "risk_score": 40,
+        "suggested_action": "Review the NTP service configuration for proper authentication and authorization."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "pa-P054-Allow-web-browsing-External-to-DMZ-4",
+      "rule_name": "P054-Allow-web-browsing-External-to-DMZ",
+      "description": "Allow web browsing traffic from external network to DMZ for mail server access.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-P054-Allow-web-browsing-External-to-DMZ-4",
+          "summary": "Allow web browsing traffic from external network to DMZ for mail server access.",
+          "mitre": [
+            "T1021: Remote Services"
+          ],
+          "nist": [
+            "AC-2(3): Limit system access to authorized personnel and processes.",
+            "AC-17(4): Limit network access to authorized systems and services."
+          ],
+          "cis": [
+            "5.1: Implement a layered security approach to protect against advanced threats."
+          ]
+        },
+        "risk_score": 70,
+        "suggested_action": "Review the web browsing service configuration for proper authentication and authorization."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-P041-Allow-ftp-Internal-to-External-5",
+      "rule_name": "P041-Allow-ftp-Internal-to-External",
+      "description": "Allow FTP traffic from internal network to external network for database server access.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-P041-Allow-ftp-Internal-to-External-5",
+          "summary": "Allow FTP traffic from internal network to external network for database server access.",
+          "mitre": [
+            "T1021: Remote Services"
+          ],
+          "nist": [
+            "AC-2(3): Limit system access to authorized personnel and processes.",
+            "AC-17(4): Limit network access to authorized systems and services."
+          ],
+          "cis": [
+            "5.1: Implement a layered security approach to protect against advanced threats."
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "Review the FTP service configuration for proper authentication and authorization."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "pa-R018-REDUNDANT-Shadowed-ssh-External-to-DMZ-6",
+      "rule_name": "R018-REDUNDANT-Shadowed-ssh-External-to-DMZ",
+      "description": "Allow external SSH access to DMZ for maintenance purposes.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-R018-REDUNDANT-Shadowed-ssh-External-to-DMZ-6",
+          "summary": "Allow external SSH access to DMZ for maintenance purposes.",
+          "mitre": [
+            "T1021: Remote Services"
+          ],
+          "nist": [
+            "AC-2(5): Limit system access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes; AC-17(10): Limit network access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes"
+          ],
+          "cis": [
+            "5.1: Implement a formal change management process for all changes to the system, including patches, hotfixes, and configuration changes; 7.2: Establish a process to monitor systems, networks, and applications for indicators of compromise and secure configurations"
+          ]
+        },
+        "risk_score": 60,
+        "suggested_action": "Review and remove redundant rules to improve security posture."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "pa-R002-REDUNDANT-Shadowed-ssl-External-to-Internal-7",
+      "rule_name": "R002-REDUNDANT-Shadowed-ssl-External-to-Internal",
+      "description": "Allow external SSL access to internal systems for business purposes.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-R002-REDUNDANT-Shadowed-ssl-External-to-Internal-7",
+          "summary": "Allow external SSL access to internal systems for business purposes.",
+          "mitre": [
+            "T1021: Remote Services"
+          ],
+          "nist": [
+            "AC-2(5): Limit system access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes; AC-17(10): Limit network access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes"
+          ],
+          "cis": [
+            "5.1: Implement a formal change management process for all changes to the system, including patches, hotfixes, and configuration changes; 7.2: Establish a process to monitor systems, networks, and applications for indicators of compromise and secure configurations"
+          ]
+        },
+        "risk_score": 70,
+        "suggested_action": "Review and remove redundant rules to improve security posture."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-P021-Allow-smb-Internal-to-DMZ-8",
+      "rule_name": "P021-Allow-smb-Internal-to-DMZ",
+      "description": "Allow internal SMB access to DMZ for file sharing purposes.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-P021-Allow-smb-Internal-to-DMZ-8",
+          "summary": "Allow internal SMB access to DMZ for file sharing purposes.",
+          "mitre": [
+            "T1021: Remote Services"
+          ],
+          "nist": [
+            "AC-2(5): Limit system access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes; AC-17(10): Limit network access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes"
+          ],
+          "cis": [
+            "5.1: Implement a formal change management process for all changes to the system, including patches, hotfixes, and configuration changes; 7.2: Establish a process to monitor systems, networks, and applications for indicators of compromise and secure configurations"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "Review SMB access controls to ensure only necessary permissions are granted."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-C004-COLLISION-Deny-smtp-External-to-DMZ-9",
+      "rule_name": "C004-COLLISION-Deny-smtp-External-to-DMZ",
+      "description": "Deny external SMTP access to DMZ for security purposes.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-C004-COLLISION-Deny-smtp-External-to-DMZ-9",
+          "summary": "Deny external SMTP access to DMZ for security purposes.",
+          "mitre": [
+            "T1036: Masquerading"
+          ],
+          "nist": [
+            "AC-2(5): Limit system access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes; AC-17(10): Limit network access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes"
+          ],
+          "cis": [
+            "5.1: Implement a formal change management process for all changes to the system, including patches, hotfixes, and configuration changes; 7.2: Establish a process to monitor systems, networks, and applications for indicators of compromise and secure configurations"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "Review SMTP access controls to ensure only necessary permissions are granted."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "pa-R008-REDUNDANT-Duplicate-dns-Internal-to-DMZ-10",
+      "rule_name": "R008-REDUNDANT-Duplicate-dns-Internal-to-DMZ",
+      "description": "Allow internal DNS access to DMZ for name resolution purposes.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-R008-REDUNDANT-Duplicate-dns-Internal-to-DMZ-10",
+          "summary": "Allow internal DNS access to DMZ for name resolution purposes.",
+          "mitre": [
+            "T1021: Remote Services"
+          ],
+          "nist": [
+            "AC-2(5): Limit system access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes; AC-17(10): Limit network access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes"
+          ],
+          "cis": [
+            "5.1: Implement a formal change management process for all changes to the system, including patches, hotfixes, and configuration changes; 7.2: Establish a process to monitor systems, networks, and applications for indicators of compromise and secure configurations"
+          ]
+        },
+        "risk_score": 50,
+        "suggested_action": "Review and remove redundant rules to improve security posture."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "pa-P005-Allow-ntp-Internal-to-External-11",
+      "rule_name": "P005-Allow-ntp-Internal-to-External",
+      "description": "Allow NTP traffic from internal to external networks.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-P005-Allow-ntp-Internal-to-External-11",
+          "summary": "Allow NTP traffic from internal to external networks.",
+          "mitre": [
+            "T1047: Net User Enumerator/Maps"
+          ],
+          "nist": [
+            "AC-2(1): Limit system access to no more than the minimum necessary for the performance of assigned functions.",
+            "AC-3(1): Use only authorized software.",
+            "CM-6(1): Implement a configuration change control process."
+          ],
+          "cis": [
+            "5.1: Configure firewalls or ACLs to allow remote access only from trusted sources."
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "Review and adjust the rule to limit NTP traffic to specific IP addresses or services."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "pa-R010-REDUNDANT-Shadowed-ping-Internal-to-DMZ-12",
+      "rule_name": "R010-REDUNDANT-Shadowed-ping-Internal-to-DMZ",
+      "description": "Allow ping traffic from internal to DMZ networks.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-R010-REDUNDANT-Shadowed-ping-Internal-to-DMZ-12",
+          "summary": "Allow ping traffic from internal to DMZ networks.",
+          "mitre": [
+            "T1047: Net User Enumerator/Maps"
+          ],
+          "nist": [
+            "AC-2(1): Limit system access to no more than the minimum necessary for the performance of assigned functions.",
+            "CM-6(1): Implement a configuration change control process."
+          ],
+          "cis": [
+            "5.1: Configure firewalls or ACLs to allow remote access only from trusted sources."
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "Review and adjust the rule to limit ping traffic to specific IP addresses or services."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "pa-R012-REDUNDANT-Shadowed-any-Internal-to-DMZ-13",
+      "rule_name": "R012-REDUNDANT-Shadowed-any-Internal-to-DMZ",
+      "description": "Allow any traffic from internal to DMZ networks.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-R012-REDUNDANT-Shadowed-any-Internal-to-DMZ-13",
+          "summary": "Allow any traffic from internal to DMZ networks.",
+          "mitre": [
+            "T1047: Net User Enumerator/Maps"
+          ],
+          "nist": [
+            "AC-2(1): Limit system access to no more than the minimum necessary for the performance of assigned functions.",
+            "CM-6(1): Implement a configuration change control process."
+          ],
+          "cis": [
+            "5.1: Configure firewalls or ACLs to allow remote access only from trusted sources."
+          ]
+        },
+        "risk_score": 40,
+        "suggested_action": "Review and adjust the rule to limit traffic to specific IP addresses, services, or applications."
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "pa-P053-Allow-smtp-DMZ-to-External-14",
+      "rule_name": "P053-Allow-smtp-DMZ-to-External",
+      "description": "Allow SMTP traffic from DMZ to external networks.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-P053-Allow-smtp-DMZ-to-External-14",
+          "summary": "Allow SMTP traffic from DMZ to external networks.",
+          "mitre": [
+            "T1047: Net User Enumerator/Maps"
+          ],
+          "nist": [
+            "AC-2(1): Limit system access to no more than the minimum necessary for the performance of assigned functions.",
+            "CM-6(1): Implement a configuration change control process."
+          ],
+          "cis": [
+            "5.1: Configure firewalls or ACLs to allow remote access only from trusted sources."
+          ]
+        },
+        "risk_score": 50,
+        "suggested_action": "Review and adjust the rule to limit SMTP traffic to specific IP addresses, services, or applications."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+      "rule_name": "C003-COLLISION-Deny-any-Internal-to-DMZ",
+      "description": "Deny any traffic from internal to DMZ networks.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-C003-COLLISION-Deny-any-Internal-to-DMZ-15",
+          "summary": "Deny any traffic from internal to DMZ networks.",
+          "mitre": [
+            "T1047: Net User Enumerator/Maps"
+          ],
+          "nist": [
+            "AC-2(1): Limit system access to no more than the minimum necessary for the performance of assigned functions.",
+            "CM-6(1): Implement a configuration change control process."
+          ],
+          "cis": [
+            "5.1: Configure firewalls or ACLs to allow remote access only from trusted sources."
+          ]
+        },
+        "risk_score": 60,
+        "suggested_action": "Review and adjust the rule to limit traffic to specific IP addresses, services, or applications."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-P046-Allow-ssl-External-to-Internal-16",
+      "rule_name": "P046-Allow-ssl-External-to-Internal",
+      "description": "Allow SSL traffic from external to internal for file server access.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-P046-Allow-ssl-External-to-Internal-16",
+          "summary": "Allow SSL traffic from external to internal for file server access.",
+          "mitre": [
+            "T1571",
+            "T1210"
+          ],
+          "nist": [
+            "AC-2(3)",
+            "AC-17(5)"
+          ],
+          "cis": [
+            "6.4",
+            "7.2"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "Review and adjust the rule to only allow necessary traffic for file server access."
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "pa-P019-Allow-telnet-Internal-to-External-17",
+      "rule_name": "P019-Allow-telnet-Internal-to-External",
+      "description": "Allow Telnet traffic from internal to external for mail server access.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-P019-Allow-telnet-Internal-to-External-17",
+          "summary": "Allow Telnet traffic from internal to external for mail server access.",
+          "mitre": [
+            "T1571",
+            "T1210"
+          ],
+          "nist": [
+            "AC-2(3)",
+            "AC-17(5)"
+          ],
+          "cis": [
+            "6.4",
+            "7.2"
+          ]
+        },
+        "risk_score": 70,
+        "suggested_action": "Review and adjust the rule to only allow necessary traffic for mail server access."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-C014-COLLISION-Deny-ssl-DMZ-to-Internal-18",
+      "rule_name": "C014-COLLISION-Deny-ssl-DMZ-to-Internal",
+      "description": "Deny SSL traffic from DMZ to internal for security reasons.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-C014-COLLISION-Deny-ssl-DMZ-to-Internal-18",
+          "summary": "Deny SSL traffic from DMZ to internal for security reasons.",
+          "mitre": [
+            "T1562",
+            "T1210"
+          ],
+          "nist": [
+            "AC-2(3)",
+            "AC-17(5)"
+          ],
+          "cis": [
+            "6.4",
+            "7.2"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "Review and adjust the rule to ensure it is correctly configured for security reasons."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-P049-Deny-mssql-Internal-to-DMZ-19",
+      "rule_name": "P049-Deny-mssql-Internal-to-DMZ",
+      "description": "Deny MSSQL traffic from internal to DMZ for security reasons.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-P049-Deny-mssql-Internal-to-DMZ-19",
+          "summary": "Deny MSSQL traffic from internal to DMZ for security reasons.",
+          "mitre": [
+            "T1562",
+            "T1210"
+          ],
+          "nist": [
+            "AC-2(3)",
+            "AC-17(5)"
+          ],
+          "cis": [
+            "6.4",
+            "7.2"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "Review and adjust the rule to ensure it is correctly configured for security reasons."
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "pa-P022-Allow-telnet-DMZ-to-Internal-20",
+      "rule_name": "P022-Allow-telnet-DMZ-to-Internal",
+      "description": "Allow Telnet traffic from DMZ to internal for mail server access.",
+      "details": {
+        "intent": {
+          "rule_id": "pa-P022-Allow-telnet-DMZ-to-Internal-20",
+          "summary": "Allow Telnet traffic from DMZ to internal for mail server access.",
+          "mitre": [
+            "T1571",
+            "T1210"
+          ],
+          "nist": [
+            "AC-2(3)",
+            "AC-17(5)"
+          ],
+          "cis": [
+            "6.4",
+            "7.2"
+          ]
+        },
+        "risk_score": 75,
+        "suggested_action": "Review and adjust the rule to only allow necessary traffic for mail server access."
+      }
+    }
+  ],
+  "hardening_plan": {
+    "top_n": 10,
+    "threshold": 70,
+    "high_risk_count": 11,
+    "plan_items": [
+      {
+        "priority": 1,
+        "rule_id": "pa-P049-Deny-mssql-Internal-to-DMZ-19",
+        "rule_name": "P049-Deny-mssql-Internal-to-DMZ",
+        "risk_score": 95,
+        "mitre": [
+          "T1562",
+          "T1210"
+        ],
+        "nist": [
+          "AC-2(3)",
+          "AC-17(5)"
+        ],
+        "cis": [
+          "6.4",
+          "7.2"
+        ],
+        "recommendation": "Review and adjust the rule to ensure it is correctly configured for security reasons."
+      },
+      {
+        "priority": 2,
+        "rule_id": "pa-P041-Allow-ftp-Internal-to-External-5",
+        "rule_name": "P041-Allow-ftp-Internal-to-External",
+        "risk_score": 90,
+        "mitre": [
+          "T1021: Remote Services"
+        ],
+        "nist": [
+          "AC-2(3): Limit system access to authorized personnel and processes.",
+          "AC-17(4): Limit network access to authorized systems and services."
+        ],
+        "cis": [
+          "5.1: Implement a layered security approach to protect against advanced threats."
+        ],
+        "recommendation": "Review the FTP service configuration for proper authentication and authorization."
+      },
+      {
+        "priority": 3,
+        "rule_id": "pa-C004-COLLISION-Deny-smtp-External-to-DMZ-9",
+        "rule_name": "C004-COLLISION-Deny-smtp-External-to-DMZ",
+        "risk_score": 90,
+        "mitre": [
+          "T1036: Masquerading"
+        ],
+        "nist": [
+          "AC-2(5): Limit system access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes; AC-17(10): Limit network access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes"
+        ],
+        "cis": [
+          "5.1: Implement a formal change management process for all changes to the system, including patches, hotfixes, and configuration changes; 7.2: Establish a process to monitor systems, networks, and applications for indicators of compromise and secure configurations"
+        ],
+        "recommendation": "Review SMTP access controls to ensure only necessary permissions are granted."
+      },
+      {
+        "priority": 4,
+        "rule_id": "pa-C014-COLLISION-Deny-ssl-DMZ-to-Internal-18",
+        "rule_name": "C014-COLLISION-Deny-ssl-DMZ-to-Internal",
+        "risk_score": 90,
+        "mitre": [
+          "T1562",
+          "T1210"
+        ],
+        "nist": [
+          "AC-2(3)",
+          "AC-17(5)"
+        ],
+        "cis": [
+          "6.4",
+          "7.2"
+        ],
+        "recommendation": "Review and adjust the rule to ensure it is correctly configured for security reasons."
+      },
+      {
+        "priority": 5,
+        "rule_id": "pa-P002-Allow-smb-External-to-DMZ-2",
+        "rule_name": "P002-Allow-smb-External-to-DMZ",
+        "risk_score": 80,
+        "mitre": [
+          "T1021: Remote Services"
+        ],
+        "nist": [
+          "AC-2(3): Limit system access to authorized personnel and processes.",
+          "AC-17(4): Limit network access to authorized systems and services."
+        ],
+        "cis": [
+          "5.1: Implement a layered security approach to protect against advanced threats."
+        ],
+        "recommendation": "Review the SMB service configuration for proper authentication and authorization."
+      },
+      {
+        "priority": 6,
+        "rule_id": "pa-P021-Allow-smb-Internal-to-DMZ-8",
+        "rule_name": "P021-Allow-smb-Internal-to-DMZ",
+        "risk_score": 80,
+        "mitre": [
+          "T1021: Remote Services"
+        ],
+        "nist": [
+          "AC-2(5): Limit system access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes; AC-17(10): Limit network access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes"
+        ],
+        "cis": [
+          "5.1: Implement a formal change management process for all changes to the system, including patches, hotfixes, and configuration changes; 7.2: Establish a process to monitor systems, networks, and applications for indicators of compromise and secure configurations"
+        ],
+        "recommendation": "Review SMB access controls to ensure only necessary permissions are granted."
+      },
+      {
+        "priority": 7,
+        "rule_id": "pa-P046-Allow-ssl-External-to-Internal-16",
+        "rule_name": "P046-Allow-ssl-External-to-Internal",
+        "risk_score": 80,
+        "mitre": [
+          "T1571",
+          "T1210"
+        ],
+        "nist": [
+          "AC-2(3)",
+          "AC-17(5)"
+        ],
+        "cis": [
+          "6.4",
+          "7.2"
+        ],
+        "recommendation": "Review and adjust the rule to only allow necessary traffic for file server access."
+      },
+      {
+        "priority": 8,
+        "rule_id": "pa-P022-Allow-telnet-DMZ-to-Internal-20",
+        "rule_name": "P022-Allow-telnet-DMZ-to-Internal",
+        "risk_score": 75,
+        "mitre": [
+          "T1571",
+          "T1210"
+        ],
+        "nist": [
+          "AC-2(3)",
+          "AC-17(5)"
+        ],
+        "cis": [
+          "6.4",
+          "7.2"
+        ],
+        "recommendation": "Review and adjust the rule to only allow necessary traffic for mail server access."
+      },
+      {
+        "priority": 9,
+        "rule_id": "pa-P054-Allow-web-browsing-External-to-DMZ-4",
+        "rule_name": "P054-Allow-web-browsing-External-to-DMZ",
+        "risk_score": 70,
+        "mitre": [
+          "T1021: Remote Services"
+        ],
+        "nist": [
+          "AC-2(3): Limit system access to authorized personnel and processes.",
+          "AC-17(4): Limit network access to authorized systems and services."
+        ],
+        "cis": [
+          "5.1: Implement a layered security approach to protect against advanced threats."
+        ],
+        "recommendation": "Review the web browsing service configuration for proper authentication and authorization."
+      },
+      {
+        "priority": 10,
+        "rule_id": "pa-R002-REDUNDANT-Shadowed-ssl-External-to-Internal-7",
+        "rule_name": "R002-REDUNDANT-Shadowed-ssl-External-to-Internal",
+        "risk_score": 70,
+        "mitre": [
+          "T1021: Remote Services"
+        ],
+        "nist": [
+          "AC-2(5): Limit system access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes; AC-17(10): Limit network access to authorized personnel, processes acting on behalf of authorized personnel, and systems (or components) that support such processes"
+        ],
+        "cis": [
+          "5.1: Implement a formal change management process for all changes to the system, including patches, hotfixes, and configuration changes; 7.2: Establish a process to monitor systems, networks, and applications for indicators of compromise and secure configurations"
+        ],
+        "recommendation": "Review and remove redundant rules to improve security posture."
+      }
+    ]
+  }
+}
