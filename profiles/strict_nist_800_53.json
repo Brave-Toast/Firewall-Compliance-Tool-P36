@@ -1,0 +1,31 @@
+{
+    "profile_name": "strict_nist_800_53",
+    "description": "Deterministic mapping for strict NIST 800-53 compliance",
+    "mappings": [
+        {
+            "condition": {
+                "action": "allow",
+                "application": "any",
+                "service": "any"
+            },
+            "control_id": "AC-4",
+            "framework": "NIST"
+        },
+        {
+            "condition": {
+                "action": "allow",
+                "application": ["telnet", "ftp"],
+                "source_zones": ["untrust", "external"]
+            },
+            "control_id": "SC-8",
+            "framework": "NIST"
+        }
+    ],
+    "forbidden_paths": [
+        {
+            "from": "untrust",
+            "to": "trust",
+            "reason": "Direct untrust to trust access is forbidden by NIST AC-4"
+        }
+    ]
+}

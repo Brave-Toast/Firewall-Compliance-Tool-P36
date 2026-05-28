@@ -1,0 +1,31 @@
+{
+    "profile_name": "iso_27001",
+    "description": "Deterministic mapping for ISO 27001 compliance",
+    "mappings": [
+        {
+            "condition": {
+                "action": "allow",
+                "application": "any",
+                "service": "any"
+            },
+            "control_id": "A.13.1.1",
+            "framework": "ISO"
+        },
+        {
+            "condition": {
+                "action": "allow",
+                "application": ["telnet", "ftp"],
+                "source_zones": ["untrust", "external"]
+            },
+            "control_id": "A.14.1.2",
+            "framework": "ISO"
+        }
+    ],
+    "forbidden_paths": [
+        {
+            "from": "untrust",
+            "to": "trust",
+            "reason": "Direct untrust to trust access violates network segregation (A.13.1.3)"
+        }
+    ]
+}

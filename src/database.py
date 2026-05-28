@@ -1,12 +1,17 @@
-from sqlalchemy import create_engine, Column, String, Boolean, JSON, DateTime
+from sqlalchemy import create_engine, Column, String, Boolean, JSON, DateTime, ForeignKey
 from sqlalchemy.orm import sessionmaker, declarative_base
 import datetime
 import uuid
+import os
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///./firewall.db"
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./firewall.db")
+
+connect_args = {}
+if DATABASE_URL.startswith("sqlite"):
+    connect_args["check_same_thread"] = False
 
 engine = create_engine(
-    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
+    DATABASE_URL, connect_args=connect_args
 )
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
@@ -56,6 +61,15 @@ class DBLLMCache(Base):
 
     rule_id = Column(String, primary_key=True, index=True)
     analysis_json = Column(JSON)
+    created_at = Column(DateTime, default=datetime.datetime.utcnow)
+
+class DBComplianceMapping(Base):
+    __tablename__ = "compliance_mappings"
+
+    id = Column(String, primary_key=True, index=True, default=lambda: str(uuid.uuid4()))
+    issue_id = Column(String, ForeignKey("analysis_issues.id"), index=True)
+    framework_name = Column(String, index=True)
+    control_id = Column(String, index=True)
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
 
 def init_db():

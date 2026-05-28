@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: firewall_db
+    environment:
+      POSTGRES_USER: firewall_user
+      POSTGRES_PASSWORD: firewall_password
+      POSTGRES_DB: firewall_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: firewall_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+
+  ngfw_suricata:
+    image: jasonish/suricata:latest
+    container_name: ngfw_suricata
+    command: -q 0
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+      - SYS_NICE
+      - NET_RAW
+    user: "0:0"
+    sysctls:
+      - net.ipv4.ip_forward=1
+    networks:
+      external_net:
+        ipv4_address: 10.0.1.5
+      dmz_net:
+        ipv4_address: 10.0.50.5
+
+  web_server:
+    image: nginx:alpine
+    container_name: web_server
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+    networks:
+      dmz_net:
+        ipv4_address: 10.0.50.10
+
+  client:
+    image: alpine:latest
+    container_name: ext_client
+    command: sleep infinity
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+    networks:
+      external_net:
+        ipv4_address: 10.0.1.10
+
+networks:
+  external_net:
+    ipam:
+      config:
+        - subnet: 10.0.1.0/24
+  dmz_net:
+    ipam:
+      config:
+        - subnet: 10.0.50.0/24
+
+volumes:
+  pgdata:
+  redisdata:
+

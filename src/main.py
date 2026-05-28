@@ -1,6 +1,7 @@
 import click
 import os
 import json
+import urllib.request
 from datetime import datetime
 from xml.etree import ElementTree as ET
 from xml.dom import minidom
@@ -9,6 +10,9 @@ from .normalizer import normalize_rules
 from .analysis import analyze_firewall_comprehensive, check_rule_anomalies
 from .intent import analyze_rules_intent, identify_high_risk_rules, generate_policy_hardening_plan
 from .database import SessionLocal, init_db, DBFirewallRule, DBAnalysisIssue
+from .schema import FirewallRule, Action
+from .translator import translate_ruleset_to_suricata
+
 
 @click.group()
 def cli():
@@ -316,6 +320,195 @@ def validate_schema(vendor, file_path, output_dir):
         
     click.echo(f"Success! XML schema validation report saved to: {output_path}")
     click.echo(f"Validated {len(normalized)} rules conforming to the unified schema.")
+
+@cli.command()
+@click.option("--firewall-url", default="http://127.0.0.1:8001/api/v1/rules", help="The REST API endpoint of the firewall")
+def intake(firewall_url):
+    """Pull rules from the firewall's REST API, normalize them, and persist to local database."""
+    click.echo(f"Connecting to firewall REST API at: {firewall_url} ...")
+    try:
+        with urllib.request.urlopen(firewall_url, timeout=5) as response:
+            resp_data = json.loads(response.read().decode('utf-8'))
+    except Exception as e:
+        raise click.ClickException(f"Failed to connect to firewall REST API at {firewall_url}: {e}")
+        
+    vendor = resp_data.get("vendor", "paloalto")
+    rules_list = resp_data.get("rules", [])
+    
+    try:
+        parser = get_parser(vendor)
+    except ValueError as e:
+        raise click.ClickException(str(e))
+        
+    text = "\n".join(rules_list)
+    parsed_rules = parser.parse_from_text(text)
+    normalized_rules = normalize_rules(parsed_rules)
+    
+    init_db()
+    db = SessionLocal()
+    try:
+        # Save/update rules in DB
+        seen_ids = set()
+        for r in normalized_rules:
+            if r.id in seen_ids:
+                continue
+            seen_ids.add(r.id)
+            
+            db_rule = db.query(DBFirewallRule).filter(DBFirewallRule.id == r.id).first()
+            if not db_rule:
+                db_rule = DBFirewallRule(id=r.id)
+                db.add(db_rule)
+            
+            db_rule.vendor = r.vendor
+            db_rule.name = r.name
+            db_rule.source_zones = r.source_zones
+            db_rule.destination_zones = r.destination_zones
+            db_rule.source_addresses = r.source_addresses
+            db_rule.destination_addresses = r.destination_addresses
+            db_rule.application = r.application
+            db_rule.service = r.service
+            db_rule.action = r.action.value if hasattr(r.action, 'value') else r.action
+            db_rule.enabled = r.enabled
+            db_rule.logging = r.logging
+            db_rule.rule_metadata = r.metadata
+            db_rule.created_at = r.created_at
+            
+        db.commit()
+        click.echo(f"Success! Pulled, normalized, and saved {len(normalized_rules)} rules from firewall REST API into local database.")
+    except Exception as e:
+        raise click.ClickException(f"Failed to save rules to database: {e}")
+    finally:
+        db.close()
+
+@cli.command()
+@click.option("--firewall-url", default="http://127.0.0.1:8001/api/v1/rules", help="The REST API endpoint of the firewall")
+def deploy(firewall_url):
+    """Retrieve rules from local DB, run SMT compliance optimization to prune redundant/shadowed rules, translate, and push to firewall."""
+    click.echo("Retrieving rules from database...")
+    init_db()
+    db = SessionLocal()
+    try:
+        db_rules = db.query(DBFirewallRule).all()
+        if not db_rules:
+            raise click.ClickException("No rules found in local compliance database. Please run rule intake first.")
+            
+        # Map DB models to Pydantic FirewallRule models
+        rules = []
+        for r in db_rules:
+            try:
+                act = Action(r.action)
+            except ValueError:
+                act = Action.deny
+                
+            rules.append(FirewallRule(
+                id=r.id,
+                vendor=r.vendor,
+                name=r.name,
+                source_zones=r.source_zones or [],
+                destination_zones=r.destination_zones or [],
+                source_addresses=r.source_addresses or [],
+                destination_addresses=r.destination_addresses or [],
+                application=r.application,
+                service=r.service,
+                action=act,
+                enabled=r.enabled,
+                logging=r.logging,
+                metadata=r.rule_metadata or {},
+                created_at=r.created_at
+            ))
+            
+        # Run Z3 compliance optimization
+        comprehensive_issues = analyze_firewall_comprehensive(rules)
+        anomaly_issues = check_rule_anomalies(rules)
+        
+        # Compile list of shadowed and redundant rule IDs
+        pruned_ids = set()
+        for issue in comprehensive_issues + anomaly_issues:
+            is_pruned = False
+            desc = issue.description.lower()
+            if "redundant" in desc or "redundancy" in desc or "[redundant]" in desc:
+                is_pruned = True
+            elif "shadowed" in desc or "shadowing" in desc or "[shadow]" in desc:
+                is_pruned = True
+                
+            if is_pruned:
+                pruned_ids.add(issue.rule_id)
+                
+        # Filter rules to build the optimized ruleset (only enabled and non-pruned rules)
+        optimized_rules = []
+        for rule in rules:
+            if not rule.enabled:
+                continue
+            if rule.id in pruned_ids:
+                click.echo(f"-> Optimization: Pruning redundant/shadowed rule '{rule.name}' ({rule.id})")
+                continue
+            optimized_rules.append(rule)
+            
+        click.echo(f"Original Rules: {len(rules)} | Optimized Rules: {len(optimized_rules)} | Pruned: {len(pruned_ids)}")
+        
+        # Translate to Suricata format
+        suricata_rules = translate_ruleset_to_suricata(optimized_rules)
+        
+        # Push to firewall REST API
+        click.echo(f"Pushing optimized ruleset to firewall at {firewall_url} ...")
+        req_data = json.dumps({"rules": suricata_rules}).encode('utf-8')
+        req = urllib.request.Request(
+            firewall_url,
+            data=req_data,
+            headers={'Content-Type': 'application/json'}
+        )
+        with urllib.request.urlopen(req, timeout=5) as response:
+            resp_data = json.loads(response.read().decode('utf-8'))
+            
+        click.echo(f"Firewall REST API Response:")
+        click.echo(json.dumps(resp_data, indent=2))
+        if resp_data.get("status") == "success":
+            click.echo("Success! Optimized ruleset deployed successfully.")
+        else:
+            click.echo("Warning: Rules pushed but might not be active (see response above).")
+            
+    except Exception as e:
+        raise click.ClickException(f"Deployment failed: {e}")
+    finally:
+        db.close()
+
+@cli.command()
+@click.option("--vendor", type=click.Choice(["paloalto"], case_sensitive=False), default="paloalto")
+@click.option("--file", "file_path", required=True, type=click.Path(exists=True))
+@click.option("--output", "output_path", required=True)
+def compile(vendor, file_path, output_path):
+    """Parse, normalize, SMT-optimize, and compile a ruleset directly to Suricata rules."""
+    click.echo(f"Compiling ruleset {file_path} ...")
+    normalized = _load_and_normalize(vendor, file_path)
+    
+    # Run Z3 compliance optimization
+    comprehensive_issues = analyze_firewall_comprehensive(normalized)
+    anomaly_issues = check_rule_anomalies(normalized)
+    
+    pruned_ids = set()
+    for issue in comprehensive_issues + anomaly_issues:
+        is_pruned = False
+        desc = issue.description.lower()
+        if "redundant" in desc or "redundancy" in desc or "[redundant]" in desc:
+            is_pruned = True
+        elif "shadowed" in desc or "shadowing" in desc or "[shadow]" in desc:
+            is_pruned = True
+        if is_pruned:
+            pruned_ids.add(issue.rule_id)
+            
+    optimized = [r for r in normalized if r.enabled and r.id not in pruned_ids]
+    suricata_rules = translate_ruleset_to_suricata(optimized)
+    
+    # Create parent directories if they don't exist
+    out_dir = os.path.dirname(output_path)
+    if out_dir:
+        os.makedirs(out_dir, exist_ok=True)
+        
+    with open(output_path, "w", encoding="utf-8") as f:
+        for rule in suricata_rules:
+            f.write(rule + "\n")
+            
+    click.echo(f"Success! Compiled {len(optimized)} optimized Suricata rules (pruned {len(pruned_ids)} redundant/shadowed rules) to {output_path}")
 
 if __name__ == "__main__":
     cli()

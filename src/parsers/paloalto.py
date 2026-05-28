@@ -56,6 +56,9 @@ class PaloAltoParser(BaseFirewallParser):
 
     @classmethod
     def parse_from_text(cls, text: str) -> List[FirewallRule]:
+        if text.strip().startswith("<"):
+            return cls.parse_from_xml_string(text)
+            
         rules = []
         for i, line in enumerate(text.splitlines()):
             line = line.strip()
@@ -71,8 +74,13 @@ class PaloAltoParser(BaseFirewallParser):
     @classmethod
     def parse_from_xml(cls, file_path: str) -> List[FirewallRule]:
         """Parses Palo Alto rules from an XML configuration file."""
-        tree = ET.parse(file_path)
-        root = tree.getroot()
+        with open(file_path, "r", encoding="utf-8") as f:
+            return cls.parse_from_xml_string(f.read())
+
+    @classmethod
+    def parse_from_xml_string(cls, xml_string: str) -> List[FirewallRule]:
+        """Parses Palo Alto rules from an XML string."""
+        root = ET.fromstring(xml_string)
         rules_reference = root.find(".//rules")
         
         rules = []

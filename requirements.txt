@@ -6,3 +6,8 @@ z3-solver
 fastapi
 uvicorn
 ollama
+sqlalchemy
+celery
+redis
+psycopg2-binary
+intervaltree==3.1.0

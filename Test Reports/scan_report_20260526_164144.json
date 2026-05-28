@@ -1,0 +1,4472 @@
+{
+  "metadata": {
+    "timestamp": "2026-05-26T16:41:44.063261",
+    "target_file": "custom_test_rules.txt",
+    "vendor": "paloalto",
+    "total_rules_parsed": 100
+  },
+  "comprehensive_analysis_issues": [
+    {
+      "severity": "medium",
+      "rule_id": "7846806c-a2f2-4462-a106-e8377d9966c6-c9a9403b-10ea-47aa-b177-82487072019c",
+      "rule_name": "Core-Rule-1<->Core-Rule-15",
+      "description": "SMT Correlation Conflict detected between 7846806c-a2f2-4462-a106-e8377d9966c6 and c9a9403b-10ea-47aa-b177-82487072019c",
+      "details": {
+        "conflict_type": "Correlation Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "7846806c-a2f2-4462-a106-e8377d9966c6-e9b4c20e-7dae-4228-ae9b-b88d5651697c",
+      "rule_name": "Core-Rule-1<->Core-Rule-22",
+      "description": "SMT Shadowing Conflict detected between 7846806c-a2f2-4462-a106-e8377d9966c6 and e9b4c20e-7dae-4228-ae9b-b88d5651697c",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "32a46ad2-7ec6-4c2a-aba2-ddb1339b397f",
+      "rule_name": "Core-Rule-36",
+      "description": "Redundancy: Rule 32a46ad2-7ec6-4c2a-aba2-ddb1339b397f is fully covered by earlier rule 7846806c-a2f2-4462-a106-e8377d9966c6",
+      "details": {
+        "covered_by": "7846806c-a2f2-4462-a106-e8377d9966c6"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "7846806c-a2f2-4462-a106-e8377d9966c6-a3a96551-2a76-4fe5-b13a-ad9204569caf",
+      "rule_name": "Core-Rule-1<->Shadowed-Rule-13-Blocked-by-Core-Rule-36",
+      "description": "SMT Shadowing Conflict detected between 7846806c-a2f2-4462-a106-e8377d9966c6 and a3a96551-2a76-4fe5-b13a-ad9204569caf",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "7846806c-a2f2-4462-a106-e8377d9966c6-f5af575b-d66a-4a01-8d12-9eeac5c8b087",
+      "rule_name": "Core-Rule-1<->Collision-Rule-3-Opposes-Core-Rule-36",
+      "description": "SMT Shadowing Conflict detected between 7846806c-a2f2-4462-a106-e8377d9966c6 and f5af575b-d66a-4a01-8d12-9eeac5c8b087",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "7846806c-a2f2-4462-a106-e8377d9966c6-d1500ea8-5146-4339-87f7-d759fb974e90",
+      "rule_name": "Core-Rule-1<->Shadowed-Rule-11-Blocked-by-Core-Rule-1",
+      "description": "SMT Shadowing Conflict detected between 7846806c-a2f2-4462-a106-e8377d9966c6 and d1500ea8-5146-4339-87f7-d759fb974e90",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "7846806c-a2f2-4462-a106-e8377d9966c6-ac570709-3133-4cfe-9830-84a1fd92953d",
+      "rule_name": "Core-Rule-1<->Redundant-Rule-5-Subset-of-Core-Rule-22",
+      "description": "SMT Shadowing Conflict detected between 7846806c-a2f2-4462-a106-e8377d9966c6 and ac570709-3133-4cfe-9830-84a1fd92953d",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "38d05adf-a8fb-4226-989c-6fe96a8722b0",
+      "rule_name": "Core-Rule-6",
+      "description": "Redundancy: Rule 38d05adf-a8fb-4226-989c-6fe96a8722b0 is fully covered by earlier rule 96f21430-2ab6-41af-bd7c-450d9eb24774",
+      "details": {
+        "covered_by": "96f21430-2ab6-41af-bd7c-450d9eb24774"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "96f21430-2ab6-41af-bd7c-450d9eb24774-ee05b660-726d-425e-b75a-b810dbebcc9a",
+      "rule_name": "Core-Rule-2<->Core-Rule-31",
+      "description": "SMT Shadowing Conflict detected between 96f21430-2ab6-41af-bd7c-450d9eb24774 and ee05b660-726d-425e-b75a-b810dbebcc9a",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "96f21430-2ab6-41af-bd7c-450d9eb24774-4c810655-c2f2-451b-a41c-52ac1d6fa030",
+      "rule_name": "Core-Rule-2<->Shadowed-Rule-15-Blocked-by-Core-Rule-6",
+      "description": "SMT Shadowing Conflict detected between 96f21430-2ab6-41af-bd7c-450d9eb24774 and 4c810655-c2f2-451b-a41c-52ac1d6fa030",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "112eeb4e-0e1b-4f21-be83-369b048257b0",
+      "rule_name": "Redundant-Rule-8-Subset-of-Core-Rule-6",
+      "description": "Redundancy: Rule 112eeb4e-0e1b-4f21-be83-369b048257b0 is fully covered by earlier rule 96f21430-2ab6-41af-bd7c-450d9eb24774",
+      "details": {
+        "covered_by": "96f21430-2ab6-41af-bd7c-450d9eb24774"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c2538165-3596-449b-a3ca-86692b604703",
+      "rule_name": "Collision-Rule-6-Opposes-Core-Rule-31",
+      "description": "Redundancy: Rule c2538165-3596-449b-a3ca-86692b604703 is fully covered by earlier rule 96f21430-2ab6-41af-bd7c-450d9eb24774",
+      "details": {
+        "covered_by": "96f21430-2ab6-41af-bd7c-450d9eb24774"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c2ec5c23-fdf8-43ce-aff9-3592b600832d",
+      "rule_name": "Redundant-Rule-13-Subset-of-Core-Rule-2",
+      "description": "Redundancy: Rule c2ec5c23-fdf8-43ce-aff9-3592b600832d is fully covered by earlier rule 96f21430-2ab6-41af-bd7c-450d9eb24774",
+      "details": {
+        "covered_by": "96f21430-2ab6-41af-bd7c-450d9eb24774"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "0d66e222-479a-43bc-93ef-1041077d0035-7934be59-0b9d-465f-a3b1-993e58d92522",
+      "rule_name": "Core-Rule-3<->Shadowed-Rule-12-Blocked-by-Core-Rule-3",
+      "description": "SMT Shadowing Conflict detected between 0d66e222-479a-43bc-93ef-1041077d0035 and 7934be59-0b9d-465f-a3b1-993e58d92522",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "28be12a0-949b-4214-83d8-444514ea9a60",
+      "rule_name": "Redundant-Rule-15-Subset-of-Core-Rule-3",
+      "description": "Redundancy: Rule 28be12a0-949b-4214-83d8-444514ea9a60 is fully covered by earlier rule 0d66e222-479a-43bc-93ef-1041077d0035",
+      "details": {
+        "covered_by": "0d66e222-479a-43bc-93ef-1041077d0035"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "0a3c59c8-1c3a-4b87-8c4e-3c9d758a528a-151a5dfb-f52d-46df-97c3-779e18332ad9",
+      "rule_name": "Core-Rule-4<->Core-Rule-34",
+      "description": "SMT Correlation Conflict detected between 0a3c59c8-1c3a-4b87-8c4e-3c9d758a528a and 151a5dfb-f52d-46df-97c3-779e18332ad9",
+      "details": {
+        "conflict_type": "Correlation Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "0a3c59c8-1c3a-4b87-8c4e-3c9d758a528a-e20fe546-cabb-4601-b4bc-0ba0f3fd38f3",
+      "rule_name": "Core-Rule-4<->Redundant-Rule-4-Subset-of-Core-Rule-34",
+      "description": "SMT Correlation Conflict detected between 0a3c59c8-1c3a-4b87-8c4e-3c9d758a528a and e20fe546-cabb-4601-b4bc-0ba0f3fd38f3",
+      "details": {
+        "conflict_type": "Correlation Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "2f291022-4b14-4f09-bc13-90cf3a657029-c6e40b6d-b018-4ee8-be70-3825ce3de801",
+      "rule_name": "Core-Rule-5<->Core-Rule-13",
+      "description": "SMT Shadowing Conflict detected between 2f291022-4b14-4f09-bc13-90cf3a657029 and c6e40b6d-b018-4ee8-be70-3825ce3de801",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "2f291022-4b14-4f09-bc13-90cf3a657029-d419119f-6f61-40e7-8856-172d06365c30",
+      "rule_name": "Core-Rule-5<->Shadowed-Rule-4-Blocked-by-Core-Rule-5",
+      "description": "SMT Shadowing Conflict detected between 2f291022-4b14-4f09-bc13-90cf3a657029 and d419119f-6f61-40e7-8856-172d06365c30",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "38d05adf-a8fb-4226-989c-6fe96a8722b0-ee05b660-726d-425e-b75a-b810dbebcc9a",
+      "rule_name": "Core-Rule-6<->Core-Rule-31",
+      "description": "SMT Shadowing Conflict detected between 38d05adf-a8fb-4226-989c-6fe96a8722b0 and ee05b660-726d-425e-b75a-b810dbebcc9a",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "38d05adf-a8fb-4226-989c-6fe96a8722b0-4c810655-c2f2-451b-a41c-52ac1d6fa030",
+      "rule_name": "Core-Rule-6<->Shadowed-Rule-15-Blocked-by-Core-Rule-6",
+      "description": "SMT Shadowing Conflict detected between 38d05adf-a8fb-4226-989c-6fe96a8722b0 and 4c810655-c2f2-451b-a41c-52ac1d6fa030",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "112eeb4e-0e1b-4f21-be83-369b048257b0",
+      "rule_name": "Redundant-Rule-8-Subset-of-Core-Rule-6",
+      "description": "Redundancy: Rule 112eeb4e-0e1b-4f21-be83-369b048257b0 is fully covered by earlier rule 38d05adf-a8fb-4226-989c-6fe96a8722b0",
+      "details": {
+        "covered_by": "38d05adf-a8fb-4226-989c-6fe96a8722b0"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c2538165-3596-449b-a3ca-86692b604703",
+      "rule_name": "Collision-Rule-6-Opposes-Core-Rule-31",
+      "description": "Redundancy: Rule c2538165-3596-449b-a3ca-86692b604703 is fully covered by earlier rule 38d05adf-a8fb-4226-989c-6fe96a8722b0",
+      "details": {
+        "covered_by": "38d05adf-a8fb-4226-989c-6fe96a8722b0"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c2ec5c23-fdf8-43ce-aff9-3592b600832d",
+      "rule_name": "Redundant-Rule-13-Subset-of-Core-Rule-2",
+      "description": "Redundancy: Rule c2ec5c23-fdf8-43ce-aff9-3592b600832d is fully covered by earlier rule 38d05adf-a8fb-4226-989c-6fe96a8722b0",
+      "details": {
+        "covered_by": "38d05adf-a8fb-4226-989c-6fe96a8722b0"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "54dbc5cf-6393-4576-9269-a706861331f6-fc2c6f71-8e72-4d74-8bc1-0e4655c59e75",
+      "rule_name": "Core-Rule-8<->Core-Rule-29",
+      "description": "SMT Shadowing Conflict detected between 54dbc5cf-6393-4576-9269-a706861331f6 and fc2c6f71-8e72-4d74-8bc1-0e4655c59e75",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "54dbc5cf-6393-4576-9269-a706861331f6-bc445e59-9010-41ea-ae72-403e156eb175",
+      "rule_name": "Core-Rule-8<->Redundant-Rule-11-Subset-of-Core-Rule-29",
+      "description": "SMT Shadowing Conflict detected between 54dbc5cf-6393-4576-9269-a706861331f6 and bc445e59-9010-41ea-ae72-403e156eb175",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "54dbc5cf-6393-4576-9269-a706861331f6-03c5c716-03dd-423f-9376-e9bcae0015e6",
+      "rule_name": "Core-Rule-8<->Redundant-Rule-7-Subset-of-Core-Rule-29",
+      "description": "SMT Shadowing Conflict detected between 54dbc5cf-6393-4576-9269-a706861331f6 and 03c5c716-03dd-423f-9376-e9bcae0015e6",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "3b8022f0-b7d1-4cff-bbb2-4f1418416b8f",
+      "rule_name": "Redundant-Rule-10-Subset-of-Core-Rule-8",
+      "description": "Redundancy: Rule 3b8022f0-b7d1-4cff-bbb2-4f1418416b8f is fully covered by earlier rule 54dbc5cf-6393-4576-9269-a706861331f6",
+      "details": {
+        "covered_by": "54dbc5cf-6393-4576-9269-a706861331f6"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "476d3829-d052-425c-8ced-b37e1045225a-b1d78a06-47ba-4c5a-8c8b-72caf205f898",
+      "rule_name": "Core-Rule-10<->Core-Rule-27",
+      "description": "SMT Shadowing Conflict detected between 476d3829-d052-425c-8ced-b37e1045225a and b1d78a06-47ba-4c5a-8c8b-72caf205f898",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a8a1c6ce-292d-4277-98bf-2ecd35266373",
+      "rule_name": "Redundant-Rule-12-Subset-of-Core-Rule-10",
+      "description": "Redundancy: Rule a8a1c6ce-292d-4277-98bf-2ecd35266373 is fully covered by earlier rule 476d3829-d052-425c-8ced-b37e1045225a",
+      "details": {
+        "covered_by": "476d3829-d052-425c-8ced-b37e1045225a"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "76529374-7738-4d71-b81e-8cf896be099e-1ae819b5-1af2-44c0-9cd8-aea466ead8ed",
+      "rule_name": "Core-Rule-11<->Collision-Rule-4-Opposes-Core-Rule-11",
+      "description": "SMT Shadowing Conflict detected between 76529374-7738-4d71-b81e-8cf896be099e and 1ae819b5-1af2-44c0-9cd8-aea466ead8ed",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c4f35ab4-7572-4efc-801a-5eb34e0f2846",
+      "rule_name": "Redundant-Rule-9-Subset-of-Core-Rule-11",
+      "description": "Redundancy: Rule c4f35ab4-7572-4efc-801a-5eb34e0f2846 is fully covered by earlier rule 76529374-7738-4d71-b81e-8cf896be099e",
+      "details": {
+        "covered_by": "76529374-7738-4d71-b81e-8cf896be099e"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "d419119f-6f61-40e7-8856-172d06365c30",
+      "rule_name": "Shadowed-Rule-4-Blocked-by-Core-Rule-5",
+      "description": "Redundancy: Rule d419119f-6f61-40e7-8856-172d06365c30 is fully covered by earlier rule c6e40b6d-b018-4ee8-be70-3825ce3de801",
+      "details": {
+        "covered_by": "c6e40b6d-b018-4ee8-be70-3825ce3de801"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c6e40b6d-b018-4ee8-be70-3825ce3de801-fa7d5187-0ac4-4683-b06f-3de97b4f9d5a",
+      "rule_name": "Core-Rule-13<->Collision-Rule-9-Opposes-Core-Rule-13",
+      "description": "SMT Shadowing Conflict detected between c6e40b6d-b018-4ee8-be70-3825ce3de801 and fa7d5187-0ac4-4683-b06f-3de97b4f9d5a",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "3071ce18-bb65-4815-9f79-265aef5278c5-eaa61829-10c8-4311-8b7f-bc6513dc8465",
+      "rule_name": "Core-Rule-14<->Core-Rule-43",
+      "description": "SMT Shadowing Conflict detected between 3071ce18-bb65-4815-9f79-265aef5278c5 and eaa61829-10c8-4311-8b7f-bc6513dc8465",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e9226ec5-e8ea-40c0-87ca-a872b37df914",
+      "rule_name": "Shadowed-Rule-5-Blocked-by-Core-Rule-43",
+      "description": "Redundancy: Rule e9226ec5-e8ea-40c0-87ca-a872b37df914 is fully covered by earlier rule 3071ce18-bb65-4815-9f79-265aef5278c5",
+      "details": {
+        "covered_by": "3071ce18-bb65-4815-9f79-265aef5278c5"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c9a9403b-10ea-47aa-b177-82487072019c-32a46ad2-7ec6-4c2a-aba2-ddb1339b397f",
+      "rule_name": "Core-Rule-15<->Core-Rule-36",
+      "description": "SMT Shadowing Conflict detected between c9a9403b-10ea-47aa-b177-82487072019c and 32a46ad2-7ec6-4c2a-aba2-ddb1339b397f",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a3a96551-2a76-4fe5-b13a-ad9204569caf",
+      "rule_name": "Shadowed-Rule-13-Blocked-by-Core-Rule-36",
+      "description": "Redundancy: Rule a3a96551-2a76-4fe5-b13a-ad9204569caf is fully covered by earlier rule c9a9403b-10ea-47aa-b177-82487072019c",
+      "details": {
+        "covered_by": "c9a9403b-10ea-47aa-b177-82487072019c"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "f5af575b-d66a-4a01-8d12-9eeac5c8b087",
+      "rule_name": "Collision-Rule-3-Opposes-Core-Rule-36",
+      "description": "Redundancy: Rule f5af575b-d66a-4a01-8d12-9eeac5c8b087 is fully covered by earlier rule c9a9403b-10ea-47aa-b177-82487072019c",
+      "details": {
+        "covered_by": "c9a9403b-10ea-47aa-b177-82487072019c"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c9a9403b-10ea-47aa-b177-82487072019c-c217e722-749d-4ae4-8575-94eaf31a7b91",
+      "rule_name": "Core-Rule-15<->Collision-Rule-2-Opposes-Core-Rule-15",
+      "description": "SMT Shadowing Conflict detected between c9a9403b-10ea-47aa-b177-82487072019c and c217e722-749d-4ae4-8575-94eaf31a7b91",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "d1500ea8-5146-4339-87f7-d759fb974e90",
+      "rule_name": "Shadowed-Rule-11-Blocked-by-Core-Rule-1",
+      "description": "Redundancy: Rule d1500ea8-5146-4339-87f7-d759fb974e90 is fully covered by earlier rule c9a9403b-10ea-47aa-b177-82487072019c",
+      "details": {
+        "covered_by": "c9a9403b-10ea-47aa-b177-82487072019c"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c9a9403b-10ea-47aa-b177-82487072019c-2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "rule_name": "Core-Rule-15<->Shadowed-Rule-9-Blocked-by-Core-Rule-15",
+      "description": "SMT Shadowing Conflict detected between c9a9403b-10ea-47aa-b177-82487072019c and 2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a4175e1c-6fa3-46d3-8912-81fd7157e64d",
+      "rule_name": "Redundant-Rule-2-Subset-of-Core-Rule-17",
+      "description": "Redundancy: Rule a4175e1c-6fa3-46d3-8912-81fd7157e64d is fully covered by earlier rule 076eff0b-8e8e-4cca-b138-f68201558df8",
+      "details": {
+        "covered_by": "076eff0b-8e8e-4cca-b138-f68201558df8"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e591a1dc-2d69-4bca-b7f4-2462e7a86be3",
+      "rule_name": "Core-Rule-39",
+      "description": "Redundancy: Rule e591a1dc-2d69-4bca-b7f4-2462e7a86be3 is fully covered by earlier rule a3c9cc77-d4d1-4b6c-8b3d-e3e50139b0f2",
+      "details": {
+        "covered_by": "a3c9cc77-d4d1-4b6c-8b3d-e3e50139b0f2"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "a3c9cc77-d4d1-4b6c-8b3d-e3e50139b0f2-d6707a15-a235-4143-8b7a-c760ad1ebf52",
+      "rule_name": "Core-Rule-18<->Shadowed-Rule-10-Blocked-by-Core-Rule-18",
+      "description": "SMT Shadowing Conflict detected between a3c9cc77-d4d1-4b6c-8b3d-e3e50139b0f2 and d6707a15-a235-4143-8b7a-c760ad1ebf52",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "0b9a9674-5e2a-4a18-806f-50df9f9148f9-c6b2f2d7-7008-4a0e-bf1c-11f5df92b13b",
+      "rule_name": "Core-Rule-19<->Collision-Rule-7-Opposes-Core-Rule-19",
+      "description": "SMT Shadowing Conflict detected between 0b9a9674-5e2a-4a18-806f-50df9f9148f9 and c6b2f2d7-7008-4a0e-bf1c-11f5df92b13b",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "9e064581-2245-4181-a31e-9a441bd47da3",
+      "rule_name": "Redundant-Rule-3-Subset-of-Core-Rule-20",
+      "description": "Redundancy: Rule 9e064581-2245-4181-a31e-9a441bd47da3 is fully covered by earlier rule fa2515ae-1405-488e-b3f2-1b7d2cc942db",
+      "details": {
+        "covered_by": "fa2515ae-1405-488e-b3f2-1b7d2cc942db"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "e9b4c20e-7dae-4228-ae9b-b88d5651697c-32a46ad2-7ec6-4c2a-aba2-ddb1339b397f",
+      "rule_name": "Core-Rule-22<->Core-Rule-36",
+      "description": "SMT Shadowing Conflict detected between e9b4c20e-7dae-4228-ae9b-b88d5651697c and 32a46ad2-7ec6-4c2a-aba2-ddb1339b397f",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a3a96551-2a76-4fe5-b13a-ad9204569caf",
+      "rule_name": "Shadowed-Rule-13-Blocked-by-Core-Rule-36",
+      "description": "Redundancy: Rule a3a96551-2a76-4fe5-b13a-ad9204569caf is fully covered by earlier rule e9b4c20e-7dae-4228-ae9b-b88d5651697c",
+      "details": {
+        "covered_by": "e9b4c20e-7dae-4228-ae9b-b88d5651697c"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "f5af575b-d66a-4a01-8d12-9eeac5c8b087",
+      "rule_name": "Collision-Rule-3-Opposes-Core-Rule-36",
+      "description": "Redundancy: Rule f5af575b-d66a-4a01-8d12-9eeac5c8b087 is fully covered by earlier rule e9b4c20e-7dae-4228-ae9b-b88d5651697c",
+      "details": {
+        "covered_by": "e9b4c20e-7dae-4228-ae9b-b88d5651697c"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "e9b4c20e-7dae-4228-ae9b-b88d5651697c-c217e722-749d-4ae4-8575-94eaf31a7b91",
+      "rule_name": "Core-Rule-22<->Collision-Rule-2-Opposes-Core-Rule-15",
+      "description": "SMT Shadowing Conflict detected between e9b4c20e-7dae-4228-ae9b-b88d5651697c and c217e722-749d-4ae4-8575-94eaf31a7b91",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "d1500ea8-5146-4339-87f7-d759fb974e90",
+      "rule_name": "Shadowed-Rule-11-Blocked-by-Core-Rule-1",
+      "description": "Redundancy: Rule d1500ea8-5146-4339-87f7-d759fb974e90 is fully covered by earlier rule e9b4c20e-7dae-4228-ae9b-b88d5651697c",
+      "details": {
+        "covered_by": "e9b4c20e-7dae-4228-ae9b-b88d5651697c"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "e9b4c20e-7dae-4228-ae9b-b88d5651697c-2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "rule_name": "Core-Rule-22<->Shadowed-Rule-9-Blocked-by-Core-Rule-15",
+      "description": "SMT Shadowing Conflict detected between e9b4c20e-7dae-4228-ae9b-b88d5651697c and 2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "ac570709-3133-4cfe-9830-84a1fd92953d",
+      "rule_name": "Redundant-Rule-5-Subset-of-Core-Rule-22",
+      "description": "Redundancy: Rule ac570709-3133-4cfe-9830-84a1fd92953d is fully covered by earlier rule e9b4c20e-7dae-4228-ae9b-b88d5651697c",
+      "details": {
+        "covered_by": "e9b4c20e-7dae-4228-ae9b-b88d5651697c"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "2969f5c1-bc9c-469a-ab87-24a1e22c7b85-d2752049-b2dd-46c0-b18c-1ebfce9f5f70",
+      "rule_name": "Core-Rule-26<->Redundant-Rule-1-Subset-of-Core-Rule-9",
+      "description": "SMT Shadowing Conflict detected between 2969f5c1-bc9c-469a-ab87-24a1e22c7b85 and d2752049-b2dd-46c0-b18c-1ebfce9f5f70",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "b1d78a06-47ba-4c5a-8c8b-72caf205f898-a8a1c6ce-292d-4277-98bf-2ecd35266373",
+      "rule_name": "Core-Rule-27<->Redundant-Rule-12-Subset-of-Core-Rule-10",
+      "description": "SMT Correlation Conflict detected between b1d78a06-47ba-4c5a-8c8b-72caf205f898 and a8a1c6ce-292d-4277-98bf-2ecd35266373",
+      "details": {
+        "conflict_type": "Correlation Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "8ad74fd6-9a77-41ec-86d9-1634abf0fa85-dffcef48-888c-4efc-908c-576f65e2aa2a",
+      "rule_name": "Core-Rule-28<->Collision-Rule-8-Opposes-Core-Rule-28",
+      "description": "SMT Shadowing Conflict detected between 8ad74fd6-9a77-41ec-86d9-1634abf0fa85 and dffcef48-888c-4efc-908c-576f65e2aa2a",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "8ad74fd6-9a77-41ec-86d9-1634abf0fa85-93e0083e-f8c0-4465-9d5f-68e9b7d4c4e0",
+      "rule_name": "Core-Rule-28<->Shadowed-Rule-8-Blocked-by-Core-Rule-28",
+      "description": "SMT Shadowing Conflict detected between 8ad74fd6-9a77-41ec-86d9-1634abf0fa85 and 93e0083e-f8c0-4465-9d5f-68e9b7d4c4e0",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "bc445e59-9010-41ea-ae72-403e156eb175",
+      "rule_name": "Redundant-Rule-11-Subset-of-Core-Rule-29",
+      "description": "Redundancy: Rule bc445e59-9010-41ea-ae72-403e156eb175 is fully covered by earlier rule fc2c6f71-8e72-4d74-8bc1-0e4655c59e75",
+      "details": {
+        "covered_by": "fc2c6f71-8e72-4d74-8bc1-0e4655c59e75"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "03c5c716-03dd-423f-9376-e9bcae0015e6",
+      "rule_name": "Redundant-Rule-7-Subset-of-Core-Rule-29",
+      "description": "Redundancy: Rule 03c5c716-03dd-423f-9376-e9bcae0015e6 is fully covered by earlier rule fc2c6f71-8e72-4d74-8bc1-0e4655c59e75",
+      "details": {
+        "covered_by": "fc2c6f71-8e72-4d74-8bc1-0e4655c59e75"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "fc2c6f71-8e72-4d74-8bc1-0e4655c59e75-3b8022f0-b7d1-4cff-bbb2-4f1418416b8f",
+      "rule_name": "Core-Rule-29<->Redundant-Rule-10-Subset-of-Core-Rule-8",
+      "description": "SMT Shadowing Conflict detected between fc2c6f71-8e72-4d74-8bc1-0e4655c59e75 and 3b8022f0-b7d1-4cff-bbb2-4f1418416b8f",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "ee05b660-726d-425e-b75a-b810dbebcc9a-112eeb4e-0e1b-4f21-be83-369b048257b0",
+      "rule_name": "Core-Rule-31<->Redundant-Rule-8-Subset-of-Core-Rule-6",
+      "description": "SMT Correlation Conflict detected between ee05b660-726d-425e-b75a-b810dbebcc9a and 112eeb4e-0e1b-4f21-be83-369b048257b0",
+      "details": {
+        "conflict_type": "Correlation Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "ee05b660-726d-425e-b75a-b810dbebcc9a-c2538165-3596-449b-a3ca-86692b604703",
+      "rule_name": "Core-Rule-31<->Collision-Rule-6-Opposes-Core-Rule-31",
+      "description": "SMT Shadowing Conflict detected between ee05b660-726d-425e-b75a-b810dbebcc9a and c2538165-3596-449b-a3ca-86692b604703",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "ee05b660-726d-425e-b75a-b810dbebcc9a-c2ec5c23-fdf8-43ce-aff9-3592b600832d",
+      "rule_name": "Core-Rule-31<->Redundant-Rule-13-Subset-of-Core-Rule-2",
+      "description": "SMT Correlation Conflict detected between ee05b660-726d-425e-b75a-b810dbebcc9a and c2ec5c23-fdf8-43ce-aff9-3592b600832d",
+      "details": {
+        "conflict_type": "Correlation Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "4e0d3fc4-618a-40f3-b63e-e5db103d6237-1192e951-fd37-4dbb-846e-c75e517d76b0",
+      "rule_name": "Core-Rule-33<->Collision-Rule-5-Opposes-Core-Rule-33",
+      "description": "SMT Shadowing Conflict detected between 4e0d3fc4-618a-40f3-b63e-e5db103d6237 and 1192e951-fd37-4dbb-846e-c75e517d76b0",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e20fe546-cabb-4601-b4bc-0ba0f3fd38f3",
+      "rule_name": "Redundant-Rule-4-Subset-of-Core-Rule-34",
+      "description": "Redundancy: Rule e20fe546-cabb-4601-b4bc-0ba0f3fd38f3 is fully covered by earlier rule 151a5dfb-f52d-46df-97c3-779e18332ad9",
+      "details": {
+        "covered_by": "151a5dfb-f52d-46df-97c3-779e18332ad9"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "32a46ad2-7ec6-4c2a-aba2-ddb1339b397f-a3a96551-2a76-4fe5-b13a-ad9204569caf",
+      "rule_name": "Core-Rule-36<->Shadowed-Rule-13-Blocked-by-Core-Rule-36",
+      "description": "SMT Shadowing Conflict detected between 32a46ad2-7ec6-4c2a-aba2-ddb1339b397f and a3a96551-2a76-4fe5-b13a-ad9204569caf",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "32a46ad2-7ec6-4c2a-aba2-ddb1339b397f-f5af575b-d66a-4a01-8d12-9eeac5c8b087",
+      "rule_name": "Core-Rule-36<->Collision-Rule-3-Opposes-Core-Rule-36",
+      "description": "SMT Shadowing Conflict detected between 32a46ad2-7ec6-4c2a-aba2-ddb1339b397f and f5af575b-d66a-4a01-8d12-9eeac5c8b087",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "32a46ad2-7ec6-4c2a-aba2-ddb1339b397f-d1500ea8-5146-4339-87f7-d759fb974e90",
+      "rule_name": "Core-Rule-36<->Shadowed-Rule-11-Blocked-by-Core-Rule-1",
+      "description": "SMT Shadowing Conflict detected between 32a46ad2-7ec6-4c2a-aba2-ddb1339b397f and d1500ea8-5146-4339-87f7-d759fb974e90",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "32a46ad2-7ec6-4c2a-aba2-ddb1339b397f-ac570709-3133-4cfe-9830-84a1fd92953d",
+      "rule_name": "Core-Rule-36<->Redundant-Rule-5-Subset-of-Core-Rule-22",
+      "description": "SMT Shadowing Conflict detected between 32a46ad2-7ec6-4c2a-aba2-ddb1339b397f and ac570709-3133-4cfe-9830-84a1fd92953d",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "4702d9d9-4015-46e6-88a1-713f586e527e",
+      "rule_name": "Core-Rule-52",
+      "description": "Redundancy: Rule 4702d9d9-4015-46e6-88a1-713f586e527e is fully covered by earlier rule c4aee743-71ea-46d2-8432-a68b40c5ca5a",
+      "details": {
+        "covered_by": "c4aee743-71ea-46d2-8432-a68b40c5ca5a"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c4aee743-71ea-46d2-8432-a68b40c5ca5a-d2752049-b2dd-46c0-b18c-1ebfce9f5f70",
+      "rule_name": "Core-Rule-38<->Redundant-Rule-1-Subset-of-Core-Rule-9",
+      "description": "SMT Shadowing Conflict detected between c4aee743-71ea-46d2-8432-a68b40c5ca5a and d2752049-b2dd-46c0-b18c-1ebfce9f5f70",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "8f7bf45b-c5b0-4278-9ec2-73011b799d37",
+      "rule_name": "Shadowed-Rule-7-Blocked-by-Core-Rule-30",
+      "description": "Redundancy: Rule 8f7bf45b-c5b0-4278-9ec2-73011b799d37 is fully covered by earlier rule 2650c8ab-8850-4da0-b12f-f64a306d3fa7",
+      "details": {
+        "covered_by": "2650c8ab-8850-4da0-b12f-f64a306d3fa7"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c6ee76e7-bc00-4e75-88e0-5c0840b35cc7",
+      "rule_name": "Shadowed-Rule-6-Blocked-by-Core-Rule-30",
+      "description": "Redundancy: Rule c6ee76e7-bc00-4e75-88e0-5c0840b35cc7 is fully covered by earlier rule 2650c8ab-8850-4da0-b12f-f64a306d3fa7",
+      "details": {
+        "covered_by": "2650c8ab-8850-4da0-b12f-f64a306d3fa7"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a8a9ad13-e4bb-43bd-b9b8-cbc71f3927c4",
+      "rule_name": "Collision-Rule-10-Opposes-Core-Rule-30",
+      "description": "Redundancy: Rule a8a9ad13-e4bb-43bd-b9b8-cbc71f3927c4 is fully covered by earlier rule 2650c8ab-8850-4da0-b12f-f64a306d3fa7",
+      "details": {
+        "covered_by": "2650c8ab-8850-4da0-b12f-f64a306d3fa7"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "2650c8ab-8850-4da0-b12f-f64a306d3fa7-5d48828a-436b-482c-b360-21f546cb4dea",
+      "rule_name": "Core-Rule-40<->Shadowed-Rule-2-Blocked-by-Core-Rule-40",
+      "description": "SMT Shadowing Conflict detected between 2650c8ab-8850-4da0-b12f-f64a306d3fa7 and 5d48828a-436b-482c-b360-21f546cb4dea",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "50a2c5a1-6f89-43b3-ab7b-17dff148ebd1-e7d89864-b3b5-4e89-8991-b801e73f1c14",
+      "rule_name": "Core-Rule-42<->Shadowed-Rule-3-Blocked-by-Core-Rule-42",
+      "description": "SMT Shadowing Conflict detected between 50a2c5a1-6f89-43b3-ab7b-17dff148ebd1 and e7d89864-b3b5-4e89-8991-b801e73f1c14",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "eaa61829-10c8-4311-8b7f-bc6513dc8465-e9226ec5-e8ea-40c0-87ca-a872b37df914",
+      "rule_name": "Core-Rule-43<->Shadowed-Rule-5-Blocked-by-Core-Rule-43",
+      "description": "SMT Shadowing Conflict detected between eaa61829-10c8-4311-8b7f-bc6513dc8465 and e9226ec5-e8ea-40c0-87ca-a872b37df914",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e0ccc2ec-edb2-427e-b606-9f4df33c5bc7",
+      "rule_name": "Redundant-Rule-6-Subset-of-Core-Rule-44",
+      "description": "Redundancy: Rule e0ccc2ec-edb2-427e-b606-9f4df33c5bc7 is fully covered by earlier rule db446b68-8f11-405c-8388-eb2f7aebbeff",
+      "details": {
+        "covered_by": "db446b68-8f11-405c-8388-eb2f7aebbeff"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "db446b68-8f11-405c-8388-eb2f7aebbeff-2ac639e6-05fd-4e7a-a0cc-eb2257d1d53a",
+      "rule_name": "Core-Rule-44<->Shadowed-Rule-1-Blocked-by-Core-Rule-44",
+      "description": "SMT Shadowing Conflict detected between db446b68-8f11-405c-8388-eb2f7aebbeff and 2ac639e6-05fd-4e7a-a0cc-eb2257d1d53a",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "58dc1f80-0aca-4a8b-bacf-4d99a752edd1-1192e951-fd37-4dbb-846e-c75e517d76b0",
+      "rule_name": "Core-Rule-45<->Collision-Rule-5-Opposes-Core-Rule-33",
+      "description": "SMT Shadowing Conflict detected between 58dc1f80-0aca-4a8b-bacf-4d99a752edd1 and 1192e951-fd37-4dbb-846e-c75e517d76b0",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "269edf8d-ccd0-46ae-bf3b-2a3ee395ae7a-a68d25dd-5b4c-47e7-97e4-d1c3427e910d",
+      "rule_name": "Core-Rule-46<->Collision-Rule-1-Opposes-Core-Rule-46",
+      "description": "SMT Shadowing Conflict detected between 269edf8d-ccd0-46ae-bf3b-2a3ee395ae7a and a68d25dd-5b4c-47e7-97e4-d1c3427e910d",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "00ab89e7-e6d5-4fed-b7cf-3345af1dae3d",
+      "rule_name": "Redundant-Rule-14-Subset-of-Core-Rule-46",
+      "description": "Redundancy: Rule 00ab89e7-e6d5-4fed-b7cf-3345af1dae3d is fully covered by earlier rule 269edf8d-ccd0-46ae-bf3b-2a3ee395ae7a",
+      "details": {
+        "covered_by": "269edf8d-ccd0-46ae-bf3b-2a3ee395ae7a"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "16f37de6-4c0c-48ba-9765-212bb244227a-f056d9e0-bd52-4786-a6ac-3083392651a1",
+      "rule_name": "Core-Rule-49<->Shadowed-Rule-14-Blocked-by-Core-Rule-49",
+      "description": "SMT Shadowing Conflict detected between 16f37de6-4c0c-48ba-9765-212bb244227a and f056d9e0-bd52-4786-a6ac-3083392651a1",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "03c5c716-03dd-423f-9376-e9bcae0015e6",
+      "rule_name": "Redundant-Rule-7-Subset-of-Core-Rule-29",
+      "description": "Redundancy: Rule 03c5c716-03dd-423f-9376-e9bcae0015e6 is fully covered by earlier rule bc445e59-9010-41ea-ae72-403e156eb175",
+      "details": {
+        "covered_by": "bc445e59-9010-41ea-ae72-403e156eb175"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "bc445e59-9010-41ea-ae72-403e156eb175-3b8022f0-b7d1-4cff-bbb2-4f1418416b8f",
+      "rule_name": "Redundant-Rule-11-Subset-of-Core-Rule-29<->Redundant-Rule-10-Subset-of-Core-Rule-8",
+      "description": "SMT Shadowing Conflict detected between bc445e59-9010-41ea-ae72-403e156eb175 and 3b8022f0-b7d1-4cff-bbb2-4f1418416b8f",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "d419119f-6f61-40e7-8856-172d06365c30-fa7d5187-0ac4-4683-b06f-3de97b4f9d5a",
+      "rule_name": "Shadowed-Rule-4-Blocked-by-Core-Rule-5<->Collision-Rule-9-Opposes-Core-Rule-13",
+      "description": "SMT Shadowing Conflict detected between d419119f-6f61-40e7-8856-172d06365c30 and fa7d5187-0ac4-4683-b06f-3de97b4f9d5a",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "4c810655-c2f2-451b-a41c-52ac1d6fa030-112eeb4e-0e1b-4f21-be83-369b048257b0",
+      "rule_name": "Shadowed-Rule-15-Blocked-by-Core-Rule-6<->Redundant-Rule-8-Subset-of-Core-Rule-6",
+      "description": "SMT Correlation Conflict detected between 4c810655-c2f2-451b-a41c-52ac1d6fa030 and 112eeb4e-0e1b-4f21-be83-369b048257b0",
+      "details": {
+        "conflict_type": "Correlation Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "4c810655-c2f2-451b-a41c-52ac1d6fa030-c2ec5c23-fdf8-43ce-aff9-3592b600832d",
+      "rule_name": "Shadowed-Rule-15-Blocked-by-Core-Rule-6<->Redundant-Rule-13-Subset-of-Core-Rule-2",
+      "description": "SMT Correlation Conflict detected between 4c810655-c2f2-451b-a41c-52ac1d6fa030 and c2ec5c23-fdf8-43ce-aff9-3592b600832d",
+      "details": {
+        "conflict_type": "Correlation Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "1ae819b5-1af2-44c0-9cd8-aea466ead8ed-c4f35ab4-7572-4efc-801a-5eb34e0f2846",
+      "rule_name": "Collision-Rule-4-Opposes-Core-Rule-11<->Redundant-Rule-9-Subset-of-Core-Rule-11",
+      "description": "SMT Shadowing Conflict detected between 1ae819b5-1af2-44c0-9cd8-aea466ead8ed and c4f35ab4-7572-4efc-801a-5eb34e0f2846",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "f5af575b-d66a-4a01-8d12-9eeac5c8b087",
+      "rule_name": "Collision-Rule-3-Opposes-Core-Rule-36",
+      "description": "Redundancy: Rule f5af575b-d66a-4a01-8d12-9eeac5c8b087 is fully covered by earlier rule a3a96551-2a76-4fe5-b13a-ad9204569caf",
+      "details": {
+        "covered_by": "a3a96551-2a76-4fe5-b13a-ad9204569caf"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "a3a96551-2a76-4fe5-b13a-ad9204569caf-c217e722-749d-4ae4-8575-94eaf31a7b91",
+      "rule_name": "Shadowed-Rule-13-Blocked-by-Core-Rule-36<->Collision-Rule-2-Opposes-Core-Rule-15",
+      "description": "SMT Shadowing Conflict detected between a3a96551-2a76-4fe5-b13a-ad9204569caf and c217e722-749d-4ae4-8575-94eaf31a7b91",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "a3a96551-2a76-4fe5-b13a-ad9204569caf-2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "rule_name": "Shadowed-Rule-13-Blocked-by-Core-Rule-36<->Shadowed-Rule-9-Blocked-by-Core-Rule-15",
+      "description": "SMT Shadowing Conflict detected between a3a96551-2a76-4fe5-b13a-ad9204569caf and 2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c2ec5c23-fdf8-43ce-aff9-3592b600832d",
+      "rule_name": "Redundant-Rule-13-Subset-of-Core-Rule-2",
+      "description": "Redundancy: Rule c2ec5c23-fdf8-43ce-aff9-3592b600832d is fully covered by earlier rule 112eeb4e-0e1b-4f21-be83-369b048257b0",
+      "details": {
+        "covered_by": "112eeb4e-0e1b-4f21-be83-369b048257b0"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "7934be59-0b9d-465f-a3b1-993e58d92522-28be12a0-949b-4214-83d8-444514ea9a60",
+      "rule_name": "Shadowed-Rule-12-Blocked-by-Core-Rule-3<->Redundant-Rule-15-Subset-of-Core-Rule-3",
+      "description": "SMT Shadowing Conflict detected between 7934be59-0b9d-465f-a3b1-993e58d92522 and 28be12a0-949b-4214-83d8-444514ea9a60",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "93e0083e-f8c0-4465-9d5f-68e9b7d4c4e0",
+      "rule_name": "Shadowed-Rule-8-Blocked-by-Core-Rule-28",
+      "description": "Redundancy: Rule 93e0083e-f8c0-4465-9d5f-68e9b7d4c4e0 is fully covered by earlier rule dffcef48-888c-4efc-908c-576f65e2aa2a",
+      "details": {
+        "covered_by": "dffcef48-888c-4efc-908c-576f65e2aa2a"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "e0ccc2ec-edb2-427e-b606-9f4df33c5bc7-2ac639e6-05fd-4e7a-a0cc-eb2257d1d53a",
+      "rule_name": "Redundant-Rule-6-Subset-of-Core-Rule-44<->Shadowed-Rule-1-Blocked-by-Core-Rule-44",
+      "description": "SMT Shadowing Conflict detected between e0ccc2ec-edb2-427e-b606-9f4df33c5bc7 and 2ac639e6-05fd-4e7a-a0cc-eb2257d1d53a",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "f5af575b-d66a-4a01-8d12-9eeac5c8b087-c217e722-749d-4ae4-8575-94eaf31a7b91",
+      "rule_name": "Collision-Rule-3-Opposes-Core-Rule-36<->Collision-Rule-2-Opposes-Core-Rule-15",
+      "description": "SMT Shadowing Conflict detected between f5af575b-d66a-4a01-8d12-9eeac5c8b087 and c217e722-749d-4ae4-8575-94eaf31a7b91",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "f5af575b-d66a-4a01-8d12-9eeac5c8b087-2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "rule_name": "Collision-Rule-3-Opposes-Core-Rule-36<->Shadowed-Rule-9-Blocked-by-Core-Rule-15",
+      "description": "SMT Shadowing Conflict detected between f5af575b-d66a-4a01-8d12-9eeac5c8b087 and 2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c217e722-749d-4ae4-8575-94eaf31a7b91-d1500ea8-5146-4339-87f7-d759fb974e90",
+      "rule_name": "Collision-Rule-2-Opposes-Core-Rule-15<->Shadowed-Rule-11-Blocked-by-Core-Rule-1",
+      "description": "SMT Shadowing Conflict detected between c217e722-749d-4ae4-8575-94eaf31a7b91 and d1500ea8-5146-4339-87f7-d759fb974e90",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "rule_name": "Shadowed-Rule-9-Blocked-by-Core-Rule-15",
+      "description": "Redundancy: Rule 2ffd64c7-bdf2-4a1c-b0ca-3320551dc789 is fully covered by earlier rule c217e722-749d-4ae4-8575-94eaf31a7b91",
+      "details": {
+        "covered_by": "c217e722-749d-4ae4-8575-94eaf31a7b91"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c217e722-749d-4ae4-8575-94eaf31a7b91-ac570709-3133-4cfe-9830-84a1fd92953d",
+      "rule_name": "Collision-Rule-2-Opposes-Core-Rule-15<->Redundant-Rule-5-Subset-of-Core-Rule-22",
+      "description": "SMT Shadowing Conflict detected between c217e722-749d-4ae4-8575-94eaf31a7b91 and ac570709-3133-4cfe-9830-84a1fd92953d",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "03c5c716-03dd-423f-9376-e9bcae0015e6-3b8022f0-b7d1-4cff-bbb2-4f1418416b8f",
+      "rule_name": "Redundant-Rule-7-Subset-of-Core-Rule-29<->Redundant-Rule-10-Subset-of-Core-Rule-8",
+      "description": "SMT Shadowing Conflict detected between 03c5c716-03dd-423f-9376-e9bcae0015e6 and 3b8022f0-b7d1-4cff-bbb2-4f1418416b8f",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "d1500ea8-5146-4339-87f7-d759fb974e90-2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "rule_name": "Shadowed-Rule-11-Blocked-by-Core-Rule-1<->Shadowed-Rule-9-Blocked-by-Core-Rule-15",
+      "description": "SMT Shadowing Conflict detected between d1500ea8-5146-4339-87f7-d759fb974e90 and 2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "2ffd64c7-bdf2-4a1c-b0ca-3320551dc789-ac570709-3133-4cfe-9830-84a1fd92953d",
+      "rule_name": "Shadowed-Rule-9-Blocked-by-Core-Rule-15<->Redundant-Rule-5-Subset-of-Core-Rule-22",
+      "description": "SMT Shadowing Conflict detected between 2ffd64c7-bdf2-4a1c-b0ca-3320551dc789 and ac570709-3133-4cfe-9830-84a1fd92953d",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "a68d25dd-5b4c-47e7-97e4-d1c3427e910d-00ab89e7-e6d5-4fed-b7cf-3345af1dae3d",
+      "rule_name": "Collision-Rule-1-Opposes-Core-Rule-46<->Redundant-Rule-14-Subset-of-Core-Rule-46",
+      "description": "SMT Shadowing Conflict detected between a68d25dd-5b4c-47e7-97e4-d1c3427e910d and 00ab89e7-e6d5-4fed-b7cf-3345af1dae3d",
+      "details": {
+        "conflict_type": "Shadowing Conflict"
+      }
+    }
+  ],
+  "basic_anomaly_issues": [
+    {
+      "severity": "medium",
+      "rule_id": "32a46ad2-7ec6-4c2a-aba2-ddb1339b397f",
+      "rule_name": "Core-Rule-36",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-1",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "7846806c-a2f2-4462-a106-e8377d9966c6"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a3a96551-2a76-4fe5-b13a-ad9204569caf",
+      "rule_name": "Shadowed-Rule-13-Blocked-by-Core-Rule-36",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-1",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "7846806c-a2f2-4462-a106-e8377d9966c6"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "f5af575b-d66a-4a01-8d12-9eeac5c8b087",
+      "rule_name": "Collision-Rule-3-Opposes-Core-Rule-36",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-1",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "7846806c-a2f2-4462-a106-e8377d9966c6"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "d1500ea8-5146-4339-87f7-d759fb974e90",
+      "rule_name": "Shadowed-Rule-11-Blocked-by-Core-Rule-1",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-1",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "7846806c-a2f2-4462-a106-e8377d9966c6"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "38d05adf-a8fb-4226-989c-6fe96a8722b0",
+      "rule_name": "Core-Rule-6",
+      "description": "[REDUNDANT] Rule adds no value. Identical to earlier rule Core-Rule-2",
+      "details": {
+        "type": "redundant",
+        "covered_by": "96f21430-2ab6-41af-bd7c-450d9eb24774"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "38d05adf-a8fb-4226-989c-6fe96a8722b0",
+      "rule_name": "Core-Rule-6",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-2",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "96f21430-2ab6-41af-bd7c-450d9eb24774"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "ee05b660-726d-425e-b75a-b810dbebcc9a",
+      "rule_name": "Core-Rule-31",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-2",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "96f21430-2ab6-41af-bd7c-450d9eb24774"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "4c810655-c2f2-451b-a41c-52ac1d6fa030",
+      "rule_name": "Shadowed-Rule-15-Blocked-by-Core-Rule-6",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-2",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "96f21430-2ab6-41af-bd7c-450d9eb24774"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "112eeb4e-0e1b-4f21-be83-369b048257b0",
+      "rule_name": "Redundant-Rule-8-Subset-of-Core-Rule-6",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-2",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "96f21430-2ab6-41af-bd7c-450d9eb24774"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c2538165-3596-449b-a3ca-86692b604703",
+      "rule_name": "Collision-Rule-6-Opposes-Core-Rule-31",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-2",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "96f21430-2ab6-41af-bd7c-450d9eb24774"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c2ec5c23-fdf8-43ce-aff9-3592b600832d",
+      "rule_name": "Redundant-Rule-13-Subset-of-Core-Rule-2",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-2",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "96f21430-2ab6-41af-bd7c-450d9eb24774"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "7934be59-0b9d-465f-a3b1-993e58d92522",
+      "rule_name": "Shadowed-Rule-12-Blocked-by-Core-Rule-3",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-3",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "0d66e222-479a-43bc-93ef-1041077d0035"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "7934be59-0b9d-465f-a3b1-993e58d92522",
+      "rule_name": "Shadowed-Rule-12-Blocked-by-Core-Rule-3",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-3",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "0d66e222-479a-43bc-93ef-1041077d0035"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "28be12a0-949b-4214-83d8-444514ea9a60",
+      "rule_name": "Redundant-Rule-15-Subset-of-Core-Rule-3",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-3",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "0d66e222-479a-43bc-93ef-1041077d0035"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "d419119f-6f61-40e7-8856-172d06365c30",
+      "rule_name": "Shadowed-Rule-4-Blocked-by-Core-Rule-5",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-5",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "2f291022-4b14-4f09-bc13-90cf3a657029"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "d419119f-6f61-40e7-8856-172d06365c30",
+      "rule_name": "Shadowed-Rule-4-Blocked-by-Core-Rule-5",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-5",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "2f291022-4b14-4f09-bc13-90cf3a657029"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "3b8022f0-b7d1-4cff-bbb2-4f1418416b8f",
+      "rule_name": "Redundant-Rule-10-Subset-of-Core-Rule-8",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-8",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "54dbc5cf-6393-4576-9269-a706861331f6"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "d2752049-b2dd-46c0-b18c-1ebfce9f5f70",
+      "rule_name": "Redundant-Rule-1-Subset-of-Core-Rule-9",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-9",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "cfde1fa7-b314-42f4-8251-b27e5957eb2e"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "b1d78a06-47ba-4c5a-8c8b-72caf205f898",
+      "rule_name": "Core-Rule-27",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-10",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "476d3829-d052-425c-8ced-b37e1045225a"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a8a1c6ce-292d-4277-98bf-2ecd35266373",
+      "rule_name": "Redundant-Rule-12-Subset-of-Core-Rule-10",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-10",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "476d3829-d052-425c-8ced-b37e1045225a"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "1ae819b5-1af2-44c0-9cd8-aea466ead8ed",
+      "rule_name": "Collision-Rule-4-Opposes-Core-Rule-11",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-11",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "76529374-7738-4d71-b81e-8cf896be099e"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "1ae819b5-1af2-44c0-9cd8-aea466ead8ed",
+      "rule_name": "Collision-Rule-4-Opposes-Core-Rule-11",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-11",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "76529374-7738-4d71-b81e-8cf896be099e"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c4f35ab4-7572-4efc-801a-5eb34e0f2846",
+      "rule_name": "Redundant-Rule-9-Subset-of-Core-Rule-11",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-11",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "76529374-7738-4d71-b81e-8cf896be099e"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "fa7d5187-0ac4-4683-b06f-3de97b4f9d5a",
+      "rule_name": "Collision-Rule-9-Opposes-Core-Rule-13",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-13",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "c6e40b6d-b018-4ee8-be70-3825ce3de801"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "fa7d5187-0ac4-4683-b06f-3de97b4f9d5a",
+      "rule_name": "Collision-Rule-9-Opposes-Core-Rule-13",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-13",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "c6e40b6d-b018-4ee8-be70-3825ce3de801"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "eaa61829-10c8-4311-8b7f-bc6513dc8465",
+      "rule_name": "Core-Rule-43",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-14",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "3071ce18-bb65-4815-9f79-265aef5278c5"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e9226ec5-e8ea-40c0-87ca-a872b37df914",
+      "rule_name": "Shadowed-Rule-5-Blocked-by-Core-Rule-43",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-14",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "3071ce18-bb65-4815-9f79-265aef5278c5"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c217e722-749d-4ae4-8575-94eaf31a7b91",
+      "rule_name": "Collision-Rule-2-Opposes-Core-Rule-15",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-15",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "c9a9403b-10ea-47aa-b177-82487072019c"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c217e722-749d-4ae4-8575-94eaf31a7b91",
+      "rule_name": "Collision-Rule-2-Opposes-Core-Rule-15",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-15",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "c9a9403b-10ea-47aa-b177-82487072019c"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "rule_name": "Shadowed-Rule-9-Blocked-by-Core-Rule-15",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-15",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "c9a9403b-10ea-47aa-b177-82487072019c"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "rule_name": "Shadowed-Rule-9-Blocked-by-Core-Rule-15",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-15",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "c9a9403b-10ea-47aa-b177-82487072019c"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "a4175e1c-6fa3-46d3-8912-81fd7157e64d",
+      "rule_name": "Redundant-Rule-2-Subset-of-Core-Rule-17",
+      "description": "[REDUNDANT] Rule adds no value. Identical to earlier rule Core-Rule-17",
+      "details": {
+        "type": "redundant",
+        "covered_by": "076eff0b-8e8e-4cca-b138-f68201558df8"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a4175e1c-6fa3-46d3-8912-81fd7157e64d",
+      "rule_name": "Redundant-Rule-2-Subset-of-Core-Rule-17",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-17",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "076eff0b-8e8e-4cca-b138-f68201558df8"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e591a1dc-2d69-4bca-b7f4-2462e7a86be3",
+      "rule_name": "Core-Rule-39",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-18",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "a3c9cc77-d4d1-4b6c-8b3d-e3e50139b0f2"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "d6707a15-a235-4143-8b7a-c760ad1ebf52",
+      "rule_name": "Shadowed-Rule-10-Blocked-by-Core-Rule-18",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-18",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "a3c9cc77-d4d1-4b6c-8b3d-e3e50139b0f2"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c6b2f2d7-7008-4a0e-bf1c-11f5df92b13b",
+      "rule_name": "Collision-Rule-7-Opposes-Core-Rule-19",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-19",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "0b9a9674-5e2a-4a18-806f-50df9f9148f9"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c6b2f2d7-7008-4a0e-bf1c-11f5df92b13b",
+      "rule_name": "Collision-Rule-7-Opposes-Core-Rule-19",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-19",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "0b9a9674-5e2a-4a18-806f-50df9f9148f9"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "23660827-2b63-4696-bbe6-316e40fabb40",
+      "rule_name": "Core-Rule-25",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-20",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "fa2515ae-1405-488e-b3f2-1b7d2cc942db"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "16f37de6-4c0c-48ba-9765-212bb244227a",
+      "rule_name": "Core-Rule-49",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-20",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "fa2515ae-1405-488e-b3f2-1b7d2cc942db"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "f056d9e0-bd52-4786-a6ac-3083392651a1",
+      "rule_name": "Shadowed-Rule-14-Blocked-by-Core-Rule-49",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-20",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "fa2515ae-1405-488e-b3f2-1b7d2cc942db"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "9e064581-2245-4181-a31e-9a441bd47da3",
+      "rule_name": "Redundant-Rule-3-Subset-of-Core-Rule-20",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-20",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "fa2515ae-1405-488e-b3f2-1b7d2cc942db"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "ac570709-3133-4cfe-9830-84a1fd92953d",
+      "rule_name": "Redundant-Rule-5-Subset-of-Core-Rule-22",
+      "description": "[REDUNDANT] Rule adds no value. Identical to earlier rule Core-Rule-22",
+      "details": {
+        "type": "redundant",
+        "covered_by": "e9b4c20e-7dae-4228-ae9b-b88d5651697c"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "ac570709-3133-4cfe-9830-84a1fd92953d",
+      "rule_name": "Redundant-Rule-5-Subset-of-Core-Rule-22",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-22",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "e9b4c20e-7dae-4228-ae9b-b88d5651697c"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "2969f5c1-bc9c-469a-ab87-24a1e22c7b85",
+      "rule_name": "Core-Rule-26",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-23",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "4bb7b1e8-2974-4146-9b71-9d638cf07e72"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "1937ae1a-6c19-48de-bb94-e8b9ffbd9dcc",
+      "rule_name": "Core-Rule-41",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-23",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "4bb7b1e8-2974-4146-9b71-9d638cf07e72"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "6784b156-dd0c-449e-bbc6-7632b59ae95b",
+      "rule_name": "Core-Rule-47",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-23",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "4bb7b1e8-2974-4146-9b71-9d638cf07e72"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "140ad7dc-1c0e-47eb-b11a-0f278dee1ffc",
+      "rule_name": "Core-Rule-51",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-23",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "4bb7b1e8-2974-4146-9b71-9d638cf07e72"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "4702d9d9-4015-46e6-88a1-713f586e527e",
+      "rule_name": "Core-Rule-52",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-23",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "4bb7b1e8-2974-4146-9b71-9d638cf07e72"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "8f7bf45b-c5b0-4278-9ec2-73011b799d37",
+      "rule_name": "Shadowed-Rule-7-Blocked-by-Core-Rule-30",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-23",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "4bb7b1e8-2974-4146-9b71-9d638cf07e72"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "c6ee76e7-bc00-4e75-88e0-5c0840b35cc7",
+      "rule_name": "Shadowed-Rule-6-Blocked-by-Core-Rule-30",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-23",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "4bb7b1e8-2974-4146-9b71-9d638cf07e72"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "5d48828a-436b-482c-b360-21f546cb4dea",
+      "rule_name": "Shadowed-Rule-2-Blocked-by-Core-Rule-40",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-23",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "4bb7b1e8-2974-4146-9b71-9d638cf07e72"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "dffcef48-888c-4efc-908c-576f65e2aa2a",
+      "rule_name": "Collision-Rule-8-Opposes-Core-Rule-28",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-28",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "8ad74fd6-9a77-41ec-86d9-1634abf0fa85"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "dffcef48-888c-4efc-908c-576f65e2aa2a",
+      "rule_name": "Collision-Rule-8-Opposes-Core-Rule-28",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-28",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "8ad74fd6-9a77-41ec-86d9-1634abf0fa85"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "93e0083e-f8c0-4465-9d5f-68e9b7d4c4e0",
+      "rule_name": "Shadowed-Rule-8-Blocked-by-Core-Rule-28",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-28",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "8ad74fd6-9a77-41ec-86d9-1634abf0fa85"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "93e0083e-f8c0-4465-9d5f-68e9b7d4c4e0",
+      "rule_name": "Shadowed-Rule-8-Blocked-by-Core-Rule-28",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-28",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "8ad74fd6-9a77-41ec-86d9-1634abf0fa85"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "bc445e59-9010-41ea-ae72-403e156eb175",
+      "rule_name": "Redundant-Rule-11-Subset-of-Core-Rule-29",
+      "description": "[REDUNDANT] Rule adds no value. Identical to earlier rule Core-Rule-29",
+      "details": {
+        "type": "redundant",
+        "covered_by": "fc2c6f71-8e72-4d74-8bc1-0e4655c59e75"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "bc445e59-9010-41ea-ae72-403e156eb175",
+      "rule_name": "Redundant-Rule-11-Subset-of-Core-Rule-29",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-29",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "fc2c6f71-8e72-4d74-8bc1-0e4655c59e75"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "03c5c716-03dd-423f-9376-e9bcae0015e6",
+      "rule_name": "Redundant-Rule-7-Subset-of-Core-Rule-29",
+      "description": "[REDUNDANT] Rule adds no value. Identical to earlier rule Core-Rule-29",
+      "details": {
+        "type": "redundant",
+        "covered_by": "fc2c6f71-8e72-4d74-8bc1-0e4655c59e75"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "03c5c716-03dd-423f-9376-e9bcae0015e6",
+      "rule_name": "Redundant-Rule-7-Subset-of-Core-Rule-29",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-29",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "fc2c6f71-8e72-4d74-8bc1-0e4655c59e75"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a8a9ad13-e4bb-43bd-b9b8-cbc71f3927c4",
+      "rule_name": "Collision-Rule-10-Opposes-Core-Rule-30",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-30",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "67996e19-4b05-4de3-8875-641406c91d6d"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "a8a9ad13-e4bb-43bd-b9b8-cbc71f3927c4",
+      "rule_name": "Collision-Rule-10-Opposes-Core-Rule-30",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-30",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "67996e19-4b05-4de3-8875-641406c91d6d"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c2538165-3596-449b-a3ca-86692b604703",
+      "rule_name": "Collision-Rule-6-Opposes-Core-Rule-31",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-31",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "ee05b660-726d-425e-b75a-b810dbebcc9a"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "1192e951-fd37-4dbb-846e-c75e517d76b0",
+      "rule_name": "Collision-Rule-5-Opposes-Core-Rule-33",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-33",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "4e0d3fc4-618a-40f3-b63e-e5db103d6237"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "1192e951-fd37-4dbb-846e-c75e517d76b0",
+      "rule_name": "Collision-Rule-5-Opposes-Core-Rule-33",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-33",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "4e0d3fc4-618a-40f3-b63e-e5db103d6237"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e20fe546-cabb-4601-b4bc-0ba0f3fd38f3",
+      "rule_name": "Redundant-Rule-4-Subset-of-Core-Rule-34",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-34",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "151a5dfb-f52d-46df-97c3-779e18332ad9"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "a3a96551-2a76-4fe5-b13a-ad9204569caf",
+      "rule_name": "Shadowed-Rule-13-Blocked-by-Core-Rule-36",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-36",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "32a46ad2-7ec6-4c2a-aba2-ddb1339b397f"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "f5af575b-d66a-4a01-8d12-9eeac5c8b087",
+      "rule_name": "Collision-Rule-3-Opposes-Core-Rule-36",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-36",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "32a46ad2-7ec6-4c2a-aba2-ddb1339b397f"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e7d89864-b3b5-4e89-8991-b801e73f1c14",
+      "rule_name": "Shadowed-Rule-3-Blocked-by-Core-Rule-42",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-42",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "50a2c5a1-6f89-43b3-ab7b-17dff148ebd1"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "e9226ec5-e8ea-40c0-87ca-a872b37df914",
+      "rule_name": "Shadowed-Rule-5-Blocked-by-Core-Rule-43",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-43",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "eaa61829-10c8-4311-8b7f-bc6513dc8465"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "e0ccc2ec-edb2-427e-b606-9f4df33c5bc7",
+      "rule_name": "Redundant-Rule-6-Subset-of-Core-Rule-44",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-44",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "db446b68-8f11-405c-8388-eb2f7aebbeff"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "2ac639e6-05fd-4e7a-a0cc-eb2257d1d53a",
+      "rule_name": "Shadowed-Rule-1-Blocked-by-Core-Rule-44",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-44",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "db446b68-8f11-405c-8388-eb2f7aebbeff"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "2ac639e6-05fd-4e7a-a0cc-eb2257d1d53a",
+      "rule_name": "Shadowed-Rule-1-Blocked-by-Core-Rule-44",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-44",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "db446b68-8f11-405c-8388-eb2f7aebbeff"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "a68d25dd-5b4c-47e7-97e4-d1c3427e910d",
+      "rule_name": "Collision-Rule-1-Opposes-Core-Rule-46",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-46",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "269edf8d-ccd0-46ae-bf3b-2a3ee395ae7a"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "a68d25dd-5b4c-47e7-97e4-d1c3427e910d",
+      "rule_name": "Collision-Rule-1-Opposes-Core-Rule-46",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Core-Rule-46",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "269edf8d-ccd0-46ae-bf3b-2a3ee395ae7a"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "00ab89e7-e6d5-4fed-b7cf-3345af1dae3d",
+      "rule_name": "Redundant-Rule-14-Subset-of-Core-Rule-46",
+      "description": "[REDUNDANT] Rule adds no value. Identical to earlier rule Core-Rule-46",
+      "details": {
+        "type": "redundant",
+        "covered_by": "269edf8d-ccd0-46ae-bf3b-2a3ee395ae7a"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "00ab89e7-e6d5-4fed-b7cf-3345af1dae3d",
+      "rule_name": "Redundant-Rule-14-Subset-of-Core-Rule-46",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-46",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "269edf8d-ccd0-46ae-bf3b-2a3ee395ae7a"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "6795d393-4c64-4e9e-b805-4df02c91442e",
+      "rule_name": "Core-Rule-57",
+      "description": "[SHADOW] Rule will never be reached. Shadowed by earlier rule Core-Rule-50",
+      "details": {
+        "type": "shadowed",
+        "shadowed_by": "1d44e409-2bee-47bf-8693-e9449854bae9"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "f5af575b-d66a-4a01-8d12-9eeac5c8b087",
+      "rule_name": "Collision-Rule-3-Opposes-Core-Rule-36",
+      "description": "[REDUNDANT] Rule adds no value. Identical to earlier rule Shadowed-Rule-13-Blocked-by-Core-Rule-36",
+      "details": {
+        "type": "redundant",
+        "covered_by": "a3a96551-2a76-4fe5-b13a-ad9204569caf"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "c2ec5c23-fdf8-43ce-aff9-3592b600832d",
+      "rule_name": "Redundant-Rule-13-Subset-of-Core-Rule-2",
+      "description": "[REDUNDANT] Rule adds no value. Identical to earlier rule Redundant-Rule-8-Subset-of-Core-Rule-6",
+      "details": {
+        "type": "redundant",
+        "covered_by": "112eeb4e-0e1b-4f21-be83-369b048257b0"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "93e0083e-f8c0-4465-9d5f-68e9b7d4c4e0",
+      "rule_name": "Shadowed-Rule-8-Blocked-by-Core-Rule-28",
+      "description": "[REDUNDANT] Rule adds no value. Identical to earlier rule Collision-Rule-8-Opposes-Core-Rule-28",
+      "details": {
+        "type": "redundant",
+        "covered_by": "dffcef48-888c-4efc-908c-576f65e2aa2a"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "rule_name": "Shadowed-Rule-9-Blocked-by-Core-Rule-15",
+      "description": "[REDUNDANT] Rule adds no value. Identical to earlier rule Collision-Rule-2-Opposes-Core-Rule-15",
+      "details": {
+        "type": "redundant",
+        "covered_by": "c217e722-749d-4ae4-8575-94eaf31a7b91"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "c6ee76e7-bc00-4e75-88e0-5c0840b35cc7",
+      "rule_name": "Shadowed-Rule-6-Blocked-by-Core-Rule-30",
+      "description": "[REDUNDANT] Rule adds no value. Identical to earlier rule Shadowed-Rule-7-Blocked-by-Core-Rule-30",
+      "details": {
+        "type": "redundant",
+        "covered_by": "8f7bf45b-c5b0-4278-9ec2-73011b799d37"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "00ab89e7-e6d5-4fed-b7cf-3345af1dae3d",
+      "rule_name": "Redundant-Rule-14-Subset-of-Core-Rule-46",
+      "description": "[COLLISION] Conflicting action for identical traffic as earlier rule Collision-Rule-1-Opposes-Core-Rule-46",
+      "details": {
+        "type": "collision",
+        "conflicts_with": "a68d25dd-5b4c-47e7-97e4-d1c3427e910d"
+      }
+    }
+  ],
+  "intent_analysis": [
+    {
+      "severity": "low",
+      "rule_id": "7846806c-a2f2-4462-a106-e8377d9966c6",
+      "rule_name": "Core-Rule-1",
+      "description": "Deny ICMP from External to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "7846806c-a2f2-4462-a106-e8377d9966c6",
+          "summary": "Deny ICMP from External to DMZ",
+          "mitre": [
+            "T1090"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3",
+            "8.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Deny-ICMP' source 'external'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "96f21430-2ab6-41af-bd7c-450d9eb24774",
+      "rule_name": "Core-Rule-2",
+      "description": "Deny RDP from DMZ to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "96f21430-2ab6-41af-bd7c-450d9eb24774",
+          "summary": "Deny RDP from DMZ to Internal",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "set rulebase security rules 'Deny-RDP' source 'dmz'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "0d66e222-479a-43bc-93ef-1041077d0035",
+      "rule_name": "Core-Rule-3",
+      "description": "Allow SSH from External to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "0d66e222-479a-43bc-93ef-1041077d0035",
+          "summary": "Allow SSH from External to Internal",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "8.2"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "set rulebase security rules 'Allow-SSH' source '10.0.1.10/32'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "0a3c59c8-1c3a-4b87-8c4e-3c9d758a528a",
+      "rule_name": "Core-Rule-4",
+      "description": "Allow ICMP from External to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "0a3c59c8-1c3a-4b87-8c4e-3c9d758a528a",
+          "summary": "Allow ICMP from External to Internal",
+          "mitre": [
+            "T1090"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3",
+            "8.2"
+          ]
+        },
+        "risk_score": 40,
+        "suggested_action": "set rulebase security rules 'Allow-ICMP' source 'any'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "2f291022-4b14-4f09-bc13-90cf3a657029",
+      "rule_name": "Core-Rule-5",
+      "description": "Allow RDP from External to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "2f291022-4b14-4f09-bc13-90cf3a657029",
+          "summary": "Allow RDP from External to Internal",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Allow-RDP' source '10.0.1.10/32'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "38d05adf-a8fb-4226-989c-6fe96a8722b0",
+      "rule_name": "Core-Rule-6",
+      "description": "Deny RDP from DMZ to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "38d05adf-a8fb-4226-989c-6fe96a8722b0",
+          "summary": "Deny RDP from DMZ to Internal",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3",
+            "7.2"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Deny-RDP' source 'dmz'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c08dc3d1-742b-4a23-989c-9b4fd15760c6",
+      "rule_name": "Core-Rule-7",
+      "description": "Deny Web-Browsing from Internal to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "c08dc3d1-742b-4a23-989c-9b4fd15760c6",
+          "summary": "Deny Web-Browsing from Internal to DMZ",
+          "mitre": [
+            "T1040"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "set rulebase security rules 'Deny-Web-Browsing' source 'internal'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "54dbc5cf-6393-4576-9269-a706861331f6",
+      "rule_name": "Core-Rule-8",
+      "description": "Allow DNS from DMZ to External",
+      "details": {
+        "intent": {
+          "rule_id": "54dbc5cf-6393-4576-9269-a706861331f6",
+          "summary": "Allow DNS from DMZ to External",
+          "mitre": [
+            "T1040"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Allow-DNS' source 'dmz'"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "cfde1fa7-b314-42f4-8251-b27e5957eb2e",
+      "rule_name": "Core-Rule-9",
+      "description": "Allow RDP from Internal to External",
+      "details": {
+        "intent": {
+          "rule_id": "cfde1fa7-b314-42f4-8251-b27e5957eb2e",
+          "summary": "Allow RDP from Internal to External",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3"
+          ]
+        },
+        "risk_score": 60,
+        "suggested_action": "set rulebase security rules 'Allow-RDP' source 'internal'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "476d3829-d052-425c-8ced-b37e1045225a",
+      "rule_name": "Core-Rule-10",
+      "description": "Deny Web-Browsing from DMZ to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "476d3829-d052-425c-8ced-b37e1045225a",
+          "summary": "Deny Web-Browsing from DMZ to Internal",
+          "mitre": [
+            "T1040"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Deny-Web-Browsing' source 'dmz'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "76529374-7738-4d71-b81e-8cf896be099e",
+      "rule_name": "Core-Rule-11",
+      "description": "Deny DNS on UDP/53 from DMZ to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "76529374-7738-4d71-b81e-8cf896be099e",
+          "summary": "Deny DNS on UDP/53 from DMZ to Internal",
+          "mitre": [
+            "T1560.002"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Deny-DNS' source 'dmz'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "37dad371-eba7-4bb0-bed4-5640718b0678",
+      "rule_name": "Core-Rule-12",
+      "description": "Deny Ping from DMZ to External",
+      "details": {
+        "intent": {
+          "rule_id": "37dad371-eba7-4bb0-bed4-5640718b0678",
+          "summary": "Deny Ping from DMZ to External",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Deny-Ping' source 'dmz'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c6e40b6d-b018-4ee8-be70-3825ce3de801",
+      "rule_name": "Core-Rule-13",
+      "description": "Deny RDP from External to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "c6e40b6d-b018-4ee8-be70-3825ce3de801",
+          "summary": "Deny RDP from External to Internal",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "6.2"
+          ]
+        },
+        "risk_score": 98,
+        "suggested_action": "set rulebase security rules 'Deny-RDP' source 'external'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "3071ce18-bb65-4815-9f79-265aef5278c5",
+      "rule_name": "Core-Rule-14",
+      "description": "Permissive SSH from Any to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "3071ce18-bb65-4815-9f79-265aef5278c5",
+          "summary": "Permissive SSH from Any to DMZ",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "6.2"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "set rulebase security rules 'Allow-SSH' source 'any'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c9a9403b-10ea-47aa-b177-82487072019c",
+      "rule_name": "Core-Rule-15",
+      "description": "Allow Ping from External to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "c9a9403b-10ea-47aa-b177-82487072019c",
+          "summary": "Allow Ping from External to DMZ",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "set rulebase security rules 'Allow-Ping' source 'external'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "a78f14d8-259d-49c2-b7dc-e8f84a67b40e",
+      "rule_name": "Core-Rule-16",
+      "description": "Deny HTTPS from DMZ to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "a78f14d8-259d-49c2-b7dc-e8f84a67b40e",
+          "summary": "Deny HTTPS from DMZ to Internal",
+          "mitre": [
+            "T1560.002"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-6"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.1",
+            "7.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Deny-HTTPS' source 'dmz'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "076eff0b-8e8e-4cca-b138-f68201558df8",
+      "rule_name": "Core-Rule-17",
+      "description": "Allow RDP from External to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "076eff0b-8e8e-4cca-b138-f68201558df8",
+          "summary": "Allow RDP from External to DMZ",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-6"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Allow-RDP' source 'external'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "a3c9cc77-d4d1-4b6c-8b3d-e3e50139b0f2",
+      "rule_name": "Core-Rule-18",
+      "description": "Deny HTTPS from DMZ to External",
+      "details": {
+        "intent": {
+          "rule_id": "a3c9cc77-d4d1-4b6c-8b3d-e3e50139b0f2",
+          "summary": "Deny HTTPS from DMZ to External",
+          "mitre": [
+            "T1560.002"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-6"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.1"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Deny-HTTPS' source 'dmz'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "0b9a9674-5e2a-4a18-806f-50df9f9148f9",
+      "rule_name": "Core-Rule-19",
+      "description": "Deny HTTP from External to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "0b9a9674-5e2a-4a18-806f-50df9f9148f9",
+          "summary": "Deny HTTP from External to Internal",
+          "mitre": [
+            "T1560.002"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-6"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.1"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Deny-HTTP' source 'external'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "fa2515ae-1405-488e-b3f2-1b7d2cc942db",
+      "rule_name": "Core-Rule-20",
+      "description": "Allow Any from DMZ to External on TCP/Any",
+      "details": {
+        "intent": {
+          "rule_id": "fa2515ae-1405-488e-b3f2-1b7d2cc942db",
+          "summary": "Allow Any from DMZ to External on TCP/Any",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-6"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Allow-Any' source 'dmz'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "58bff81c-760b-4f7a-84a9-3aa99fdd6884",
+      "rule_name": "Core-Rule-21",
+      "description": "Permissive Web Browsing",
+      "details": {
+        "intent": {
+          "rule_id": "58bff81c-760b-4f7a-84a9-3aa99fdd6884",
+          "summary": "Permissive Web Browsing",
+          "mitre": [
+            "T1055"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-19"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "1.2",
+            "7.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Allow-Web-Browsing' source '10.0.50.0/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "e9b4c20e-7dae-4228-ae9b-b88d5651697c",
+      "rule_name": "Core-Rule-22",
+      "description": "Permissive ICMP",
+      "details": {
+        "intent": {
+          "rule_id": "e9b4c20e-7dae-4228-ae9b-b88d5651697c",
+          "summary": "Permissive ICMP",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-19"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "1.2"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Allow-Ping' source 'any'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "4bb7b1e8-2974-4146-9b71-9d638cf07e72",
+      "rule_name": "Core-Rule-23",
+      "description": "Restrictive TCP Any",
+      "details": {
+        "intent": {
+          "rule_id": "4bb7b1e8-2974-4146-9b71-9d638cf07e72",
+          "summary": "Restrictive TCP Any",
+          "mitre": [
+            "T1055"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-19"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "1.2"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "set rulebase security rules 'Deny-TCP-Any' source '192.168.1.0/24'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "a08f609a-200b-4195-bae3-396275d202c0",
+      "rule_name": "Core-Rule-24",
+      "description": "Restrictive DNS",
+      "details": {
+        "intent": {
+          "rule_id": "a08f609a-200b-4195-bae3-396275d202c0",
+          "summary": "Restrictive DNS",
+          "mitre": [
+            "T1044"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-19"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "7.2"
+          ]
+        },
+        "risk_score": 40,
+        "suggested_action": "set rulebase security rules 'Deny-DNS' source '10.0.1.0/24'"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "23660827-2b63-4696-bbe6-316e40fabb40",
+      "rule_name": "Core-Rule-25",
+      "description": "Restrictive SSH",
+      "details": {
+        "intent": {
+          "rule_id": "23660827-2b63-4696-bbe6-316e40fabb40",
+          "summary": "Restrictive SSH",
+          "mitre": [
+            "T1055"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-19"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "1.2"
+          ]
+        },
+        "risk_score": 70,
+        "suggested_action": "set rulebase security rules 'Deny-SSH' source '10.0.50.0/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "2969f5c1-bc9c-469a-ab87-24a1e22c7b85",
+      "rule_name": "Core-Rule-26",
+      "description": "Deny RDP from internal to external",
+      "details": {
+        "intent": {
+          "rule_id": "2969f5c1-bc9c-469a-ab87-24a1e22c7b85",
+          "summary": "Deny RDP from internal to external",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "AC-17(2)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3",
+            "6.2"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Deny-RDP' source 'internal' destination 'external'"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "b1d78a06-47ba-4c5a-8c8b-72caf205f898",
+      "rule_name": "Core-Rule-27",
+      "description": "Allow web-browsing from DMZ to internal",
+      "details": {
+        "intent": {
+          "rule_id": "b1d78a06-47ba-4c5a-8c8b-72caf205f898",
+          "summary": "Allow web-browsing from DMZ to internal",
+          "mitre": [
+            "T1046"
+          ],
+          "nist": [
+            "AC-17(2)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "7.1"
+          ]
+        },
+        "risk_score": 60,
+        "suggested_action": "set rulebase security rules 'Allow-Web-Browsing' source 'dmz' destination 'internal'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "8ad74fd6-9a77-41ec-86d9-1634abf0fa85",
+      "rule_name": "Core-Rule-28",
+      "description": "Permissive Any to Any on TCP/any from external to internal",
+      "details": {
+        "intent": {
+          "rule_id": "8ad74fd6-9a77-41ec-86d9-1634abf0fa85",
+          "summary": "Permissive Any to Any on TCP/any from external to internal",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "AC-17(2)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Allow-Any' source 'external' destination 'internal'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "fc2c6f71-8e72-4d74-8bc1-0e4655c59e75",
+      "rule_name": "Core-Rule-29",
+      "description": "Deny DNS from DMZ to external",
+      "details": {
+        "intent": {
+          "rule_id": "fc2c6f71-8e72-4d74-8bc1-0e4655c59e75",
+          "summary": "Deny DNS from DMZ to external",
+          "mitre": [
+            "T1046"
+          ],
+          "nist": [
+            "AC-17(2)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "7.1"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "set rulebase security rules 'Deny-DNS' source 'dmz' destination 'external'"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "67996e19-4b05-4de3-8875-641406c91d6d",
+      "rule_name": "Core-Rule-30",
+      "description": "Deny ICMP from internal to external",
+      "details": {
+        "intent": {
+          "rule_id": "67996e19-4b05-4de3-8875-641406c91d6d",
+          "summary": "Deny ICMP from internal to external",
+          "mitre": [
+            "T1046"
+          ],
+          "nist": [
+            "AC-17(2)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "7.1"
+          ]
+        },
+        "risk_score": 70,
+        "suggested_action": "set rulebase security rules 'Deny-ICMP' source 'internal' destination 'external'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "ee05b660-726d-425e-b75a-b810dbebcc9a",
+      "rule_name": "Core-Rule-31",
+      "description": "Permissive RDP",
+      "details": {
+        "intent": {
+          "rule_id": "ee05b660-726d-425e-b75a-b810dbebcc9a",
+          "summary": "Permissive RDP",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "AC-17"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2",
+            "7.1"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Block-RDP' source '10.0.50.0/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "628f76b1-60c7-4f85-9251-b1108878da15",
+      "rule_name": "Core-Rule-32",
+      "description": "Deny Ping from Internal to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "628f76b1-60c7-4f85-9251-b1108878da15",
+          "summary": "Deny Ping from Internal to DMZ",
+          "mitre": [
+            "T1090"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-6"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "7.2"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "set rulebase security rules 'Deny-Ping' source 'internal'"
+      }
+    },
+    {
+      "severity": "medium",
+      "rule_id": "4e0d3fc4-618a-40f3-b63e-e5db103d6237",
+      "rule_name": "Core-Rule-33",
+      "description": "Allow DNS from Single IP to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "4e0d3fc4-618a-40f3-b63e-e5db103d6237",
+          "summary": "Allow DNS from Single IP to DMZ",
+          "mitre": [
+            "T1046"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-6"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "7.2"
+          ]
+        },
+        "risk_score": 70,
+        "suggested_action": "set rulebase security rules 'Allow-DNS' source '198.51.100.166/32'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "151a5dfb-f52d-46df-97c3-779e18332ad9",
+      "rule_name": "Core-Rule-34",
+      "description": "Deny Ping from External to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "151a5dfb-f52d-46df-97c3-779e18332ad9",
+          "summary": "Deny Ping from External to Internal",
+          "mitre": [
+            "T1090"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-6"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "7.2"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Deny-Ping' source 'external'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "1382272b-5efa-48ee-91e7-176eaa9d1d90",
+      "rule_name": "Core-Rule-35",
+      "description": "Permissive SMB",
+      "details": {
+        "intent": {
+          "rule_id": "1382272b-5efa-48ee-91e7-176eaa9d1d90",
+          "summary": "Permissive SMB",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "AC-17"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "set rulebase security rules 'Block-SMB' source '198.51.100.146/32'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "32a46ad2-7ec6-4c2a-aba2-ddb1339b397f",
+      "rule_name": "Core-Rule-36",
+      "description": "Deny ICMP to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "32a46ad2-7ec6-4c2a-aba2-ddb1339b397f",
+          "summary": "Deny ICMP to DMZ",
+          "mitre": [
+            "T1055"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Deny-ICMP' source 'external'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "9ed6ec62-bdb9-40fd-956f-bb47ae90e9e4",
+      "rule_name": "Core-Rule-37",
+      "description": "Allow DNS from DMZ to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "9ed6ec62-bdb9-40fd-956f-bb47ae90e9e4",
+          "summary": "Allow DNS from DMZ to Internal",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "set rulebase security rules 'Allow-DNS' source 'dmz'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c4aee743-71ea-46d2-8432-a68b40c5ca5a",
+      "rule_name": "Core-Rule-38",
+      "description": "Permissive RDP from Internal to External",
+      "details": {
+        "intent": {
+          "rule_id": "c4aee743-71ea-46d2-8432-a68b40c5ca5a",
+          "summary": "Permissive RDP from Internal to External",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "6.3"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "set rulebase security rules 'Allow-RDP' source 'internal'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "e591a1dc-2d69-4bca-b7f4-2462e7a86be3",
+      "rule_name": "Core-Rule-39",
+      "description": "Deny SSL to External from DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "e591a1dc-2d69-4bca-b7f4-2462e7a86be3",
+          "summary": "Deny SSL to External from DMZ",
+          "mitre": [
+            "T1055"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Deny-SSL' source 'dmz'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "2650c8ab-8850-4da0-b12f-f64a306d3fa7",
+      "rule_name": "Core-Rule-40",
+      "description": "Allow ICMP to External from Internal",
+      "details": {
+        "intent": {
+          "rule_id": "2650c8ab-8850-4da0-b12f-f64a306d3fa7",
+          "summary": "Allow ICMP to External from Internal",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "set rulebase security rules 'Allow-ICMP' source 'internal'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "1937ae1a-6c19-48de-bb94-e8b9ffbd9dcc",
+      "rule_name": "Core-Rule-41",
+      "description": "Deny HTTPS to External",
+      "details": {
+        "intent": {
+          "rule_id": "1937ae1a-6c19-48de-bb94-e8b9ffbd9dcc",
+          "summary": "Deny HTTPS to External",
+          "mitre": [
+            "T1562.001"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.1",
+            "6.3"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Deny-HTTPS' source 'internal' destination 'external'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "50a2c5a1-6f89-43b3-ab7b-17dff148ebd1",
+      "rule_name": "Core-Rule-42",
+      "description": "Permissive SSH from DMZ to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "50a2c5a1-6f89-43b3-ab7b-17dff148ebd1",
+          "summary": "Permissive SSH from DMZ to Internal",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "set rulebase security rules 'Allow-SSH' source 'dmz' destination 'internal'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "eaa61829-10c8-4311-8b7f-bc6513dc8465",
+      "rule_name": "Core-Rule-43",
+      "description": "Allow SSH from External to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "eaa61829-10c8-4311-8b7f-bc6513dc8465",
+          "summary": "Allow SSH from External to DMZ",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "set rulebase security rules 'Allow-SSH' source 'external' destination 'dmz'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "db446b68-8f11-405c-8388-eb2f7aebbeff",
+      "rule_name": "Core-Rule-44",
+      "description": "Deny SSH from Internal to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "db446b68-8f11-405c-8388-eb2f7aebbeff",
+          "summary": "Deny SSH from Internal to DMZ",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "set rulebase security rules 'Deny-SSH' source 'internal' destination 'dmz'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "58dc1f80-0aca-4a8b-bacf-4d99a752edd1",
+      "rule_name": "Core-Rule-45",
+      "description": "Permissive DNS from Internal to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "58dc1f80-0aca-4a8b-bacf-4d99a752edd1",
+          "summary": "Permissive DNS from Internal to DMZ",
+          "mitre": [
+            "T1021.005"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Allow-DNS' source 'internal' destination 'dmz'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "269edf8d-ccd0-46ae-bf3b-2a3ee395ae7a",
+      "rule_name": "Core-Rule-46",
+      "description": "Deny All Traffic",
+      "details": {
+        "intent": {
+          "rule_id": "269edf8d-ccd0-46ae-bf3b-2a3ee395ae7a",
+          "summary": "Deny All Traffic",
+          "mitre": [],
+          "nist": [
+            "AC-1",
+            "AC-2"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.4"
+          ]
+        },
+        "risk_score": 100,
+        "suggested_action": "set rulebase security rules 'Deny-All' source 'any'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "6784b156-dd0c-449e-bbc6-7632b59ae95b",
+      "rule_name": "Core-Rule-47",
+      "description": "Allow DNS from specific IP to specific host",
+      "details": {
+        "intent": {
+          "rule_id": "6784b156-dd0c-449e-bbc6-7632b59ae95b",
+          "summary": "Allow DNS from specific IP to specific host",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "8.1"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Allow-DNS' source '45.67.104/32' destination '192.168.2.184/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "4f8f9d1a-55ac-41bf-890b-b72bccb921b9",
+      "rule_name": "Core-Rule-48",
+      "description": "Deny SMB from DMZ to internal network",
+      "details": {
+        "intent": {
+          "rule_id": "4f8f9d1a-55ac-41bf-890b-b72bccb921b9",
+          "summary": "Deny SMB from DMZ to internal network",
+          "mitre": [
+            "T1210"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "8.1"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "set rulebase security rules 'Deny-SMB' source 'dmz' destination '192.168.1.0/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "16f37de6-4c0c-48ba-9765-212bb244227a",
+      "rule_name": "Core-Rule-49",
+      "description": "Allow SMB from DMZ to external network",
+      "details": {
+        "intent": {
+          "rule_id": "16f37de6-4c0c-48ba-9765-212bb244227a",
+          "summary": "Allow SMB from DMZ to external network",
+          "mitre": [
+            "T1210"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "8.1"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Allow-SMB' source '10.0.50.0/24' destination 'any'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "1d44e409-2bee-47bf-8693-e9449854bae9",
+      "rule_name": "Core-Rule-50",
+      "description": "Allow All Traffic from internal to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "1d44e409-2bee-47bf-8693-e9449854bae9",
+          "summary": "Allow All Traffic from internal to DMZ",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "8.1"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "set rulebase security rules 'Allow-All' source '192.168.1.0/24' destination '10.0.50.0/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "140ad7dc-1c0e-47eb-b11a-0f278dee1ffc",
+      "rule_name": "Core-Rule-51",
+      "description": "Permissive HTTPS",
+      "details": {
+        "intent": {
+          "rule_id": "140ad7dc-1c0e-47eb-b11a-0f278dee1ffc",
+          "summary": "Permissive HTTPS",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "AC-17"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2",
+            "7.2"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Allow-HTTPS' source '192.168.1.0/24'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "4702d9d9-4015-46e6-88a1-713f586e527e",
+      "rule_name": "Core-Rule-52",
+      "description": "Deny RDP from specific IP",
+      "details": {
+        "intent": {
+          "rule_id": "4702d9d9-4015-46e6-88a1-713f586e527e",
+          "summary": "Deny RDP from specific IP",
+          "mitre": [
+            "T1210"
+          ],
+          "nist": [
+            "AC-4",
+            "AC-17"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Deny-RDP' source '45.67.75/32'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "8119b465-41e8-433a-b513-d7b756343f05",
+      "rule_name": "Core-Rule-53",
+      "description": "Block RDP from external to internal",
+      "details": {
+        "intent": {
+          "rule_id": "8119b465-41e8-433a-b513-d7b756343f05",
+          "summary": "Block RDP from external to internal",
+          "mitre": [
+            "T1210"
+          ],
+          "nist": [
+            "AC-4",
+            "AC-17"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "set rulebase security rules 'Block-RDP' source 'any'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "f047a81c-d053-4513-868f-09f07a5f642f",
+      "rule_name": "Core-Rule-54",
+      "description": "Allow DNS from external to internal",
+      "details": {
+        "intent": {
+          "rule_id": "f047a81c-d053-4513-868f-09f07a5f642f",
+          "summary": "Allow DNS from external to internal",
+          "mitre": [
+            "T1046"
+          ],
+          "nist": [
+            "AC-4",
+            "AC-17"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "7.2"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "set rulebase security rules 'Allow-DNS' source '10.0.1.0/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "3f352df3-322b-42f2-a091-d01208a1d951",
+      "rule_name": "Core-Rule-55",
+      "description": "Deny HTTPS from external to internal",
+      "details": {
+        "intent": {
+          "rule_id": "3f352df3-322b-42f2-a091-d01208a1d951",
+          "summary": "Deny HTTPS from external to internal",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "AC-17"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Deny-HTTPS' source '10.0.1.0/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "59a647a9-e031-4f1e-b1dd-31f043fffac2",
+      "rule_name": "Core-Rule-56",
+      "description": "Permissive Web Browsing",
+      "details": {
+        "intent": {
+          "rule_id": "59a647a9-e031-4f1e-b1dd-31f043fffac2",
+          "summary": "Permissive Web Browsing",
+          "mitre": [
+            "T1021.001"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3",
+            "7.2"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Block-Web-Browsing' source '10.0.0.0/8'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "6795d393-4c64-4e9e-b805-4df02c91442e",
+      "rule_name": "Core-Rule-57",
+      "description": "Deny SMB from internal to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "6795d393-4c64-4e9e-b805-4df02c91442e",
+          "summary": "Deny SMB from internal to DMZ",
+          "mitre": [
+            "T1210"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3",
+            "7.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Block-SMB' source '192.168.1.0/24'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "aca0481c-c00d-4ae8-8da0-4d34579463ca",
+      "rule_name": "Core-Rule-58",
+      "description": "Deny SSL from internal to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "aca0481c-c00d-4ae8-8da0-4d34579463ca",
+          "summary": "Deny SSL from internal to DMZ",
+          "mitre": [
+            "T1210"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3",
+            "7.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Block-SSL' source '10.0.50.0/24'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "c662ca98-7151-42d5-8637-da4727977301",
+      "rule_name": "Core-Rule-59",
+      "description": "Deny SSL from external to internal",
+      "details": {
+        "intent": {
+          "rule_id": "c662ca98-7151-42d5-8637-da4727977301",
+          "summary": "Deny SSL from external to internal",
+          "mitre": [
+            "T1210"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3",
+            "7.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Block-SSL' destination '192.168.1.0/24'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "35b06419-6354-463c-99c5-d054b0b5093b",
+      "rule_name": "Core-Rule-60",
+      "description": "Deny RDP from DMZ to external",
+      "details": {
+        "intent": {
+          "rule_id": "35b06419-6354-463c-99c5-d054b0b5093b",
+          "summary": "Deny RDP from DMZ to external",
+          "mitre": [
+            "T1210"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3",
+            "7.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Block-RDP' destination '198.51.100.116/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "bc445e59-9010-41ea-ae72-403e156eb175",
+      "rule_name": "Redundant-Rule-11-Subset-of-Core-Rule-29",
+      "description": "Permissive DNS",
+      "details": {
+        "intent": {
+          "rule_id": "bc445e59-9010-41ea-ae72-403e156eb175",
+          "summary": "Permissive DNS",
+          "mitre": [
+            "T1090"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.1",
+            "6.2"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Block-DNS' source 'any'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "d419119f-6f61-40e7-8856-172d06365c30",
+      "rule_name": "Shadowed-Rule-4-Blocked-by-Core-Rule-5",
+      "description": "Permissive RDP from External",
+      "details": {
+        "intent": {
+          "rule_id": "d419119f-6f61-40e7-8856-172d06365c30",
+          "summary": "Permissive RDP from External",
+          "mitre": [
+            "T1210"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.1",
+            "6.2"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Block-RDP' source '10.0.1.10/32'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "4c810655-c2f2-451b-a41c-52ac1d6fa030",
+      "rule_name": "Shadowed-Rule-15-Blocked-by-Core-Rule-6",
+      "description": "Allow RDP from DMZ to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "4c810655-c2f2-451b-a41c-52ac1d6fa030",
+          "summary": "Allow RDP from DMZ to Internal",
+          "mitre": [
+            "T1210"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.1",
+            "6.2"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "set rulebase security rules 'Allow-RDP' source '10.0.50.0/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "1ae819b5-1af2-44c0-9cd8-aea466ead8ed",
+      "rule_name": "Collision-Rule-4-Opposes-Core-Rule-11",
+      "description": "Allow DNS from DMZ to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "1ae819b5-1af2-44c0-9cd8-aea466ead8ed",
+          "summary": "Allow DNS from DMZ to Internal",
+          "mitre": [
+            "T1090"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.1",
+            "6.2"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "set rulebase security rules 'Allow-DNS' source '10.0.50.0/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "a3a96551-2a76-4fe5-b13a-ad9204569caf",
+      "rule_name": "Shadowed-Rule-13-Blocked-by-Core-Rule-36",
+      "description": "Permissive Ping from External to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "a3a96551-2a76-4fe5-b13a-ad9204569caf",
+          "summary": "Permissive Ping from External to DMZ",
+          "mitre": [
+            "T1090"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.1",
+            "6.2"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Block-Ping' source '10.0.1.10/32'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "fa7d5187-0ac4-4683-b06f-3de97b4f9d5a",
+      "rule_name": "Collision-Rule-9-Opposes-Core-Rule-13",
+      "description": "Permissive RDP from External to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "fa7d5187-0ac4-4683-b06f-3de97b4f9d5a",
+          "summary": "Permissive RDP from External to Internal",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-19"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2",
+            "7.1"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Deny-RDP' source 'external'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "112eeb4e-0e1b-4f21-be83-369b048257b0",
+      "rule_name": "Redundant-Rule-8-Subset-of-Core-Rule-6",
+      "description": "Restrictive RDP from DMZ to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "112eeb4e-0e1b-4f21-be83-369b048257b0",
+          "summary": "Restrictive RDP from DMZ to Internal",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-19"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2",
+            "7.1"
+          ]
+        },
+        "risk_score": 10,
+        "suggested_action": "set rulebase security rules 'Allow-RDP' source 'dmz'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "a8a1c6ce-292d-4277-98bf-2ecd35266373",
+      "rule_name": "Redundant-Rule-12-Subset-of-Core-Rule-10",
+      "description": "Restrictive Web-Browsing from DMZ to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "a8a1c6ce-292d-4277-98bf-2ecd35266373",
+          "summary": "Restrictive Web-Browsing from DMZ to Internal",
+          "mitre": [
+            "T1190"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-19"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.1",
+            "7.2"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "set rulebase security rules 'Allow-Web-Browsing' source 'dmz'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "d2752049-b2dd-46c0-b18c-1ebfce9f5f70",
+      "rule_name": "Redundant-Rule-1-Subset-of-Core-Rule-9",
+      "description": "Permissive RDP from Internal to External",
+      "details": {
+        "intent": {
+          "rule_id": "d2752049-b2dd-46c0-b18c-1ebfce9f5f70",
+          "summary": "Permissive RDP from Internal to External",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-19"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2",
+            "7.1"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Deny-RDP' source 'internal'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "e9226ec5-e8ea-40c0-87ca-a872b37df914",
+      "rule_name": "Shadowed-Rule-5-Blocked-by-Core-Rule-43",
+      "description": "Restrictive SSH from External to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "e9226ec5-e8ea-40c0-87ca-a872b37df914",
+          "summary": "Restrictive SSH from External to DMZ",
+          "mitre": [
+            "T1210"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-19"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2",
+            "7.1"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "set rulebase security rules 'Allow-SH' source 'external'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "7934be59-0b9d-465f-a3b1-993e58d92522",
+      "rule_name": "Shadowed-Rule-12-Blocked-by-Core-Rule-3",
+      "description": "Deny SSH from external to internal",
+      "details": {
+        "intent": {
+          "rule_id": "7934be59-0b9d-465f-a3b1-993e58d92522",
+          "summary": "Deny SSH from external to internal",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-4"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2",
+            "7.1"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Deny-SSH' source 'external'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "c4f35ab4-7572-4efc-801a-5eb34e0f2846",
+      "rule_name": "Redundant-Rule-9-Subset-of-Core-Rule-11",
+      "description": "Deny DNS from DMZ to internal",
+      "details": {
+        "intent": {
+          "rule_id": "c4f35ab4-7572-4efc-801a-5eb34e0f2846",
+          "summary": "Deny DNS from DMZ to internal",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-4"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "7.1"
+          ]
+        },
+        "risk_score": 15,
+        "suggested_action": "set rulebase security rules 'Deny-DNS' source 'dmz'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c6b2f2d7-7008-4a0e-bf1c-11f5df92b13b",
+      "rule_name": "Collision-Rule-7-Opposes-Core-Rule-19",
+      "description": "Allow web-browsing from external to internal",
+      "details": {
+        "intent": {
+          "rule_id": "c6b2f2d7-7008-4a0e-bf1c-11f5df92b13b",
+          "summary": "Allow web-browsing from external to internal",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-4"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "7.1"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Allow-Web' source 'external'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "a4175e1c-6fa3-46d3-8912-81fd7157e64d",
+      "rule_name": "Redundant-Rule-2-Subset-of-Core-Rule-17",
+      "description": "Permissive RDP from external to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "a4175e1c-6fa3-46d3-8912-81fd7157e64d",
+          "summary": "Permissive RDP from external to DMZ",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-4"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "set rulebase security rules 'Allow-RDP' source 'any'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "d6707a15-a235-4143-8b7a-c760ad1ebf52",
+      "rule_name": "Shadowed-Rule-10-Blocked-by-Core-Rule-18",
+      "description": "Allow SSL from DMZ to external",
+      "details": {
+        "intent": {
+          "rule_id": "d6707a15-a235-4143-8b7a-c760ad1ebf52",
+          "summary": "Allow SSL from DMZ to external",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17",
+            "AC-4"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "7.1"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "set rulebase security rules 'Allow-SSL' source 'dmz'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "e20fe546-cabb-4601-b4bc-0ba0f3fd38f3",
+      "rule_name": "Redundant-Rule-4-Subset-of-Core-Rule-34",
+      "description": "Deny ICMP from External to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "e20fe546-cabb-4601-b4bc-0ba0f3fd38f3",
+          "summary": "Deny ICMP from External to Internal",
+          "mitre": [
+            "T1057"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-001"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "/controls/1.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Deny-ICMP' source 'external'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "dffcef48-888c-4efc-908c-576f65e2aa2a",
+      "rule_name": "Collision-Rule-8-Opposes-Core-Rule-28",
+      "description": "Permissive TCP from External to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "dffcef48-888c-4efc-908c-576f65e2aa2a",
+          "summary": "Permissive TCP from External to Internal",
+          "mitre": [
+            "T1057"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-001"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "/controls/1.2"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "set rulebase security rules 'Allow-TCP' source 'external'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "e0ccc2ec-edb2-427e-b606-9f4df33c5bc7",
+      "rule_name": "Redundant-Rule-6-Subset-of-Core-Rule-44",
+      "description": "Deny SSH from Internal to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "e0ccc2ec-edb2-427e-b606-9f4df33c5bc7",
+          "summary": "Deny SSH from Internal to DMZ",
+          "mitre": [
+            "T1057"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-001"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "/controls/1.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Deny-SSH' source 'internal'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "f056d9e0-bd52-4786-a6ac-3083392651a1",
+      "rule_name": "Shadowed-Rule-14-Blocked-by-Core-Rule-49",
+      "description": "Permissive SMB from DMZ to External",
+      "details": {
+        "intent": {
+          "rule_id": "f056d9e0-bd52-4786-a6ac-3083392651a1",
+          "summary": "Permissive SMB from DMZ to External",
+          "mitre": [
+            "T1057"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-001"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "/controls/1.2"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "set rulebase security rules 'Allow-SMB' source 'dmz'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "93e0083e-f8c0-4465-9d5f-68e9b7d4c4e0",
+      "rule_name": "Shadowed-Rule-8-Blocked-by-Core-Rule-28",
+      "description": "Permissive TCP from External to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "93e0083e-f8c0-4465-9d5f-68e9b7d4c4e0",
+          "summary": "Permissive TCP from External to Internal",
+          "mitre": [
+            "T1057"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-001"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "/controls/1.2"
+          ]
+        },
+        "risk_score": 85,
+        "suggested_action": "set rulebase security rules 'Allow-TCP' source 'external'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "9e064581-2245-4181-a31e-9a441bd47da3",
+      "rule_name": "Redundant-Rule-3-Subset-of-Core-Rule-20",
+      "description": "Permissive External Access",
+      "details": {
+        "intent": {
+          "rule_id": "9e064581-2245-4181-a31e-9a441bd47da3",
+          "summary": "Permissive External Access",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "AC-17"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2",
+            "7.1"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Deny-External' source '10.0.50.10/32'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "f5af575b-d66a-4a01-8d12-9eeac5c8b087",
+      "rule_name": "Collision-Rule-3-Opposes-Core-Rule-36",
+      "description": "Allow Ping from External to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "f5af575b-d66a-4a01-8d12-9eeac5c8b087",
+          "summary": "Allow Ping from External to DMZ",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "2.1"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Allow-Ping' source '10.0.1.10/32'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "1192e951-fd37-4dbb-846e-c75e517d76b0",
+      "rule_name": "Collision-Rule-5-Opposes-Core-Rule-33",
+      "description": "Deny DNS from Internal to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "1192e951-fd37-4dbb-846e-c75e517d76b0",
+          "summary": "Deny DNS from Internal to DMZ",
+          "mitre": [
+            "T1489"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "2.1"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "set rulebase security rules 'Deny-DNS' source '198.51.100.166/32'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "c217e722-749d-4ae4-8575-94eaf31a7b91",
+      "rule_name": "Collision-Rule-2-Opposes-Core-Rule-15",
+      "description": "Deny Ping from External to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "c217e722-749d-4ae4-8575-94eaf31a7b91",
+          "summary": "Deny Ping from External to DMZ",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "2.1"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Deny-Ping' source '10.0.1.0/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c2538165-3596-449b-a3ca-86692b604703",
+      "rule_name": "Collision-Rule-6-Opposes-Core-Rule-31",
+      "description": "Deny RDP from DMZ to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "c2538165-3596-449b-a3ca-86692b604703",
+          "summary": "Deny RDP from DMZ to Internal",
+          "mitre": [
+            "T1210"
+          ],
+          "nist": [
+            "AC-17",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "2.1"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Deny-RDP' source '10.0.50.0/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "03c5c716-03dd-423f-9376-e9bcae0015e6",
+      "rule_name": "Redundant-Rule-7-Subset-of-Core-Rule-29",
+      "description": "Permissive DNS",
+      "details": {
+        "intent": {
+          "rule_id": "03c5c716-03dd-423f-9376-e9bcae0015e6",
+          "summary": "Permissive DNS",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2",
+            "8.3"
+          ]
+        },
+        "risk_score": 90,
+        "suggested_action": "set rulebase security rules 'Block-DNS' source 'any'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "d1500ea8-5146-4339-87f7-d759fb974e90",
+      "rule_name": "Shadowed-Rule-11-Blocked-by-Core-Rule-1",
+      "description": "Allow ICMP from external to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "d1500ea8-5146-4339-87f7-d759fb974e90",
+          "summary": "Allow ICMP from external to DMZ",
+          "mitre": [
+            "T1090"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Allow-Ping' source '10.0.1.10/32'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+      "rule_name": "Shadowed-Rule-9-Blocked-by-Core-Rule-15",
+      "description": "Deny ICMP from external to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "2ffd64c7-bdf2-4a1c-b0ca-3320551dc789",
+          "summary": "Deny ICMP from external to DMZ",
+          "mitre": [
+            "T1090"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "set rulebase security rules 'Block-Ping' source '10.0.1.0/24'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "3b8022f0-b7d1-4cff-bbb2-4f1418416b8f",
+      "rule_name": "Redundant-Rule-10-Subset-of-Core-Rule-8",
+      "description": "Allow DNS from DMZ to external",
+      "details": {
+        "intent": {
+          "rule_id": "3b8022f0-b7d1-4cff-bbb2-4f1418416b8f",
+          "summary": "Allow DNS from DMZ to external",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Allow-DNS' source '10.0.50.10/32'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "8f7bf45b-c5b0-4278-9ec2-73011b799d37",
+      "rule_name": "Shadowed-Rule-7-Blocked-by-Core-Rule-30",
+      "description": "Allow ICMP from internal to external",
+      "details": {
+        "intent": {
+          "rule_id": "8f7bf45b-c5b0-4278-9ec2-73011b799d37",
+          "summary": "Allow ICMP from internal to external",
+          "mitre": [
+            "T1090"
+          ],
+          "nist": [
+            "AC-4",
+            "CM-7"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Allow-Ping' source '192.168.1.0/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "a68d25dd-5b4c-47e7-97e4-d1c3427e910d",
+      "rule_name": "Collision-Rule-1-Opposes-Core-Rule-46",
+      "description": "Permissive SSH",
+      "details": {
+        "intent": {
+          "rule_id": "a68d25dd-5b4c-47e7-97e4-d1c3427e910d",
+          "summary": "Permissive SSH",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-17(2)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3",
+            "6.2"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Allow-SSH' source '10.0.0.0/8'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "c6ee76e7-bc00-4e75-88e0-5c0840b35cc7",
+      "rule_name": "Shadowed-Rule-6-Blocked-by-Core-Rule-30",
+      "description": "Ping to External DNS",
+      "details": {
+        "intent": {
+          "rule_id": "c6ee76e7-bc00-4e75-88e0-5c0840b35cc7",
+          "summary": "Ping to External DNS",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "6.2"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Allow-Ping' source '192.168.1.0/24' destination '8.8.224/24'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "00ab89e7-e6d5-4fed-b7cf-3345af1dae3d",
+      "rule_name": "Redundant-Rule-14-Subset-of-Core-Rule-46",
+      "description": "Deny All TCP Traffic from External to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "00ab89e7-e6d5-4fed-b7cf-3345af1dae3d",
+          "summary": "Deny All TCP Traffic from External to DMZ",
+          "mitre": [
+            "T1060"
+          ],
+          "nist": [
+            "AC-17(2)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "6.2"
+          ]
+        },
+        "risk_score": 5,
+        "suggested_action": "set rulebase security rules 'Deny-TCP' source 'any' destination 'any'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "ac570709-3133-4cfe-9830-84a1fd92953d",
+      "rule_name": "Redundant-Rule-5-Subset-of-Core-Rule-22",
+      "description": "Allow Ping from External to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "ac570709-3133-4cfe-9830-84a1fd92953d",
+          "summary": "Allow Ping from External to DMZ",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "6.2"
+          ]
+        },
+        "risk_score": 30,
+        "suggested_action": "set rulebase security rules 'Allow-Ping' source 'any' destination 'any'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "a8a9ad13-e4bb-43bd-b9b8-cbc71f3927c4",
+      "rule_name": "Collision-Rule-10-Opposes-Core-Rule-30",
+      "description": "Ping to External DNS from Internal",
+      "details": {
+        "intent": {
+          "rule_id": "a8a9ad13-e4bb-43bd-b9b8-cbc71f3927c4",
+          "summary": "Ping to External DNS from Internal",
+          "mitre": [
+            "T1043"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "6.2"
+          ]
+        },
+        "risk_score": 40,
+        "suggested_action": "set rulebase security rules 'Allow-Ping' source '192.168.1.0/24' destination '8.8.224/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "28be12a0-949b-4214-83d8-444514ea9a60",
+      "rule_name": "Redundant-Rule-15-Subset-of-Core-Rule-3",
+      "description": "Permissive SSH from External to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "28be12a0-949b-4214-83d8-444514ea9a60",
+          "summary": "Permissive SSH from External to Internal",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-17(2)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3",
+            "7.2"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Allow-SSH' source '10.0.0.0/8'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "2ac639e6-05fd-4e7a-a0cc-eb2257d1d53a",
+      "rule_name": "Shadowed-Rule-1-Blocked-by-Core-Rule-44",
+      "description": "Permissive SSH from Internal to DMZ",
+      "details": {
+        "intent": {
+          "rule_id": "2ac639e6-05fd-4e7a-a0cc-eb2257d1d53a",
+          "summary": "Permissive SSH from Internal to DMZ",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-17(2)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3",
+            "7.2"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Allow-SSH' source '172.16.5.84/32'"
+      }
+    },
+    {
+      "severity": "low",
+      "rule_id": "5d48828a-436b-482c-b360-21f546cb4dea",
+      "rule_name": "Shadowed-Rule-2-Blocked-by-Core-Rule-40",
+      "description": "Deny Ping from Internal to External",
+      "details": {
+        "intent": {
+          "rule_id": "5d48828a-436b-482c-b360-21f546cb4dea",
+          "summary": "Deny Ping from Internal to External",
+          "mitre": [
+            "T1090"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2",
+            "7.1"
+          ]
+        },
+        "risk_score": 20,
+        "suggested_action": "set rulebase security rules 'Deny-Ping' source '192.168.1.0/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "e7d89864-b3b5-4e89-8991-b801e73f1c14",
+      "rule_name": "Shadowed-Rule-3-Blocked-by-Core-Rule-42",
+      "description": "Permissive SSH from DMZ to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "e7d89864-b3b5-4e89-8991-b801e73f1c14",
+          "summary": "Permissive SSH from DMZ to Internal",
+          "mitre": [
+            "T1021.004"
+          ],
+          "nist": [
+            "AC-17(2)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.3",
+            "7.2"
+          ]
+        },
+        "risk_score": 95,
+        "suggested_action": "set rulebase security rules 'Allow-SSH' source '192.168.1.0/24'"
+      }
+    },
+    {
+      "severity": "high",
+      "rule_id": "c2ec5c23-fdf8-43ce-aff9-3592b600832d",
+      "rule_name": "Redundant-Rule-13-Subset-of-Core-Rule-2",
+      "description": "Deny RDP from DMZ to Internal",
+      "details": {
+        "intent": {
+          "rule_id": "c2ec5c23-fdf8-43ce-aff9-3592b600832d",
+          "summary": "Deny RDP from DMZ to Internal",
+          "mitre": [
+            "T1210"
+          ],
+          "nist": [
+            "AC-17(1)"
+          ],
+          "iso_27001": [],
+          "cis": [
+            "5.2",
+            "7.1"
+          ]
+        },
+        "risk_score": 80,
+        "suggested_action": "set rulebase security rules 'Deny-RDP' source '10.0.50.10/32'"
+      }
+    }
+  ],
+  "hardening_plan": {
+    "top_n": 10,
+    "threshold": 70,
+    "high_risk_count": 60,
+    "plan_items": [
+      {
+        "priority": 1,
+        "rule_id": "269edf8d-ccd0-46ae-bf3b-2a3ee395ae7a",
+        "rule_name": "Core-Rule-46",
+        "risk_score": 100,
+        "mitre": [],
+        "nist": [
+          "AC-1",
+          "AC-2"
+        ],
+        "cis": [
+          "5.4"
+        ],
+        "recommendation": "set rulebase security rules 'Deny-All' source 'any'"
+      },
+      {
+        "priority": 2,
+        "rule_id": "c6e40b6d-b018-4ee8-be70-3825ce3de801",
+        "rule_name": "Core-Rule-13",
+        "risk_score": 98,
+        "mitre": [
+          "T1021.004"
+        ],
+        "nist": [
+          "AC-4"
+        ],
+        "cis": [
+          "6.2"
+        ],
+        "recommendation": "set rulebase security rules 'Deny-RDP' source 'external'"
+      },
+      {
+        "priority": 3,
+        "rule_id": "38d05adf-a8fb-4226-989c-6fe96a8722b0",
+        "rule_name": "Core-Rule-6",
+        "risk_score": 95,
+        "mitre": [
+          "T1021.004"
+        ],
+        "nist": [
+          "AC-4",
+          "AC-17(1)"
+        ],
+        "cis": [
+          "5.3",
+          "7.2"
+        ],
+        "recommendation": "set rulebase security rules 'Deny-RDP' source 'dmz'"
+      },
+      {
+        "priority": 4,
+        "rule_id": "37dad371-eba7-4bb0-bed4-5640718b0678",
+        "rule_name": "Core-Rule-12",
+        "risk_score": 95,
+        "mitre": [
+          "T1043"
+        ],
+        "nist": [
+          "AC-17(1)"
+        ],
+        "cis": [
+          "5.2"
+        ],
+        "recommendation": "set rulebase security rules 'Deny-Ping' source 'dmz'"
+      },
+      {
+        "priority": 5,
+        "rule_id": "fa2515ae-1405-488e-b3f2-1b7d2cc942db",
+        "rule_name": "Core-Rule-20",
+        "risk_score": 95,
+        "mitre": [
+          "T1021.004"
+        ],
+        "nist": [
+          "AC-17",
+          "CM-6"
+        ],
+        "cis": [
+          "5.2"
+        ],
+        "recommendation": "set rulebase security rules 'Allow-Any' source 'dmz'"
+      },
+      {
+        "priority": 6,
+        "rule_id": "8ad74fd6-9a77-41ec-86d9-1634abf0fa85",
+        "rule_name": "Core-Rule-28",
+        "risk_score": 95,
+        "mitre": [
+          "T1021.004"
+        ],
+        "nist": [
+          "AC-4",
+          "AC-17(2)"
+        ],
+        "cis": [
+          "5.3"
+        ],
+        "recommendation": "set rulebase security rules 'Allow-Any' source 'external' destination 'internal'"
+      },
+      {
+        "priority": 7,
+        "rule_id": "ee05b660-726d-425e-b75a-b810dbebcc9a",
+        "rule_name": "Core-Rule-31",
+        "risk_score": 95,
+        "mitre": [
+          "T1021.004"
+        ],
+        "nist": [
+          "AC-4",
+          "AC-17"
+        ],
+        "cis": [
+          "5.2",
+          "7.1"
+        ],
+        "recommendation": "set rulebase security rules 'Block-RDP' source '10.0.50.0/24'"
+      },
+      {
+        "priority": 8,
+        "rule_id": "140ad7dc-1c0e-47eb-b11a-0f278dee1ffc",
+        "rule_name": "Core-Rule-51",
+        "risk_score": 95,
+        "mitre": [
+          "T1021.004"
+        ],
+        "nist": [
+          "AC-4",
+          "AC-17"
+        ],
+        "cis": [
+          "5.2",
+          "7.2"
+        ],
+        "recommendation": "set rulebase security rules 'Allow-HTTPS' source '192.168.1.0/24'"
+      },
+      {
+        "priority": 9,
+        "rule_id": "59a647a9-e031-4f1e-b1dd-31f043fffac2",
+        "rule_name": "Core-Rule-56",
+        "risk_score": 95,
+        "mitre": [
+          "T1021.001"
+        ],
+        "nist": [
+          "AC-17(1)"
+        ],
+        "cis": [
+          "5.3",
+          "7.2"
+        ],
+        "recommendation": "set rulebase security rules 'Block-Web-Browsing' source '10.0.0.0/8'"
+      },
+      {
+        "priority": 10,
+        "rule_id": "bc445e59-9010-41ea-ae72-403e156eb175",
+        "rule_name": "Redundant-Rule-11-Subset-of-Core-Rule-29",
+        "risk_score": 95,
+        "mitre": [
+          "T1090"
+        ],
+        "nist": [
+          "AC-4",
+          "CM-7"
+        ],
+        "cis": [
+          "5.1",
+          "6.2"
+        ],
+        "recommendation": "set rulebase security rules 'Block-DNS' source 'any'"
+      }
+    ]
+  }
+}

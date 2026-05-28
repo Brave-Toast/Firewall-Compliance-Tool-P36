@@ -41,9 +41,14 @@ class LLMRuleAnalysis(BaseModel):
     intent_summary: str = Field(description="A plain English summary of what the rule allows or denies.")
     mitre_techniques: List[str] = Field(description="Applicable MITRE ATT&CK technique IDs (e.g., T1071.001).")
     nist_controls: List[str] = Field(description="Applicable NIST 800-53 controls (e.g., AC-4).")
+    iso_27001_controls: List[str] = Field(default_factory=list, description="Applicable ISO 27001 controls (e.g., A.13.1.1).")
     cis_controls: List[str] = Field(description="Applicable CIS Controls (e.g., Control 12).")
     risk_score: int = Field(description="Risk score from 0 to 100 based on exposure and zero trust principles.")
     recommendation: str = Field(description="Specific advice to harden this rule or apply micro-segmentation.")
+
+class RuleUpload(BaseModel):
+    vendor: str
+    rules: List[str]
 
 class BulkAnalysisResponse(BaseModel):
     analyses: List[LLMRuleAnalysis]
