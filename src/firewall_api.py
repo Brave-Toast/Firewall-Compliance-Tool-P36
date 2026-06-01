@@ -28,45 +28,57 @@ def get_rules():
     """Returns the current rules of the firewall. 
     
     Acts as the source for the compliance tool to intake raw rules.
-    Loads panos-random-100rules.xml or sample_rules.txt if available, otherwise returns baseline.
+    Loads  first hte Suricata Firewall rules and if there is issue with that file then loads panos-random-100rules.xml or sample_rules.txt if available, otherwise returns baseline.
     """
-    logger.info("Intake request received from compliance tool.")
-    
-    xml_path = "panos-random-100rules.xml"
-    txt_path = "sample_rules.txt"
-    
-    if os.path.exists(xml_path):
+    suricata_path="suricata_generated.rules"
+    if os.path.exists(suricata_path):
         try:
-            with open(xml_path, "r", encoding="utf-8") as f:
-                content = f.read()
+            with open(suricata_path,"r") as f:
+                content=f.read()
             return {
-                "vendor": "paloalto",
-                "rules": [content]
+                "vendor":"suricata",
+                "rules":[content]
             }
         except Exception as e:
-            logger.error(f"Error reading {xml_path}: {e}")
-            
-    if os.path.exists(txt_path):
-        try:
-            with open(txt_path, "r", encoding="utf-8") as f:
-                content = f.read()
-            return {
-                "vendor": "paloalto",
-                "rules": [content]
-            }
-        except Exception as e:
-            logger.error(f"Error reading {txt_path}: {e}")
-            
-    # Hardcoded baseline fallback
-    fallback_rules = (
-        "id:1|name:Allow-HTTP|from:internal|to:external|source:any|destination:any|application:web-browsing|service:tcp/80|action:allow\n"
-        "id:2|name:Allow-SSL|from:internal|to:external|source:any|destination:any|application:ssl|service:tcp/443|action:allow\n"
-        "id:3|name:Block-Ping|from:any|to:any|source:any|destination:any|application:ping|service:icmp/any|action:deny"
-    )
-    return {
-        "vendor": "paloalto",
-        "rules": [fallback_rules]
-    }
+            logger.error(f"Error reading {suricata_path}: {e}")    
+    else:
+        logger.info("Intake request received from compliance tool.")
+        
+        xml_path = "panos-random-100rules.xml"
+        txt_path = "sample_rules.txt"
+        
+        if os.path.exists(xml_path):
+            try:
+                with open(xml_path, "r", encoding="utf-8") as f:
+                    content = f.read()
+                return {
+                    "vendor": "paloalto",
+                    "rules": [content]
+                }
+            except Exception as e:
+                logger.error(f"Error reading {xml_path}: {e}")
+                
+        if os.path.exists(txt_path):
+            try:
+                with open(txt_path, "r", encoding="utf-8") as f:
+                    content = f.read()
+                return {
+                    "vendor": "paloalto",
+                    "rules": [content]
+                }
+            except Exception as e:
+                logger.error(f"Error reading {txt_path}: {e}")
+                
+        # Hardcoded baseline fallback
+        fallback_rules = (
+            "id:1|name:Allow-HTTP|from:internal|to:external|source:any|destination:any|application:web-browsing|service:tcp/80|action:allow\n"
+            "id:2|name:Allow-SSL|from:internal|to:external|source:any|destination:any|application:ssl|service:tcp/443|action:allow\n"
+            "id:3|name:Block-Ping|from:any|to:any|source:any|destination:any|application:ping|service:icmp/any|action:deny"
+        )
+        return {
+            "vendor": "paloalto",
+            "rules": [fallback_rules]
+        }
 
 def is_container_running(name: str) -> bool:
     """Checks if a Docker container is running by name."""
